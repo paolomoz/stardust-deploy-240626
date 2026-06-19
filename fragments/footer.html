@@ -1,0 +1,108 @@
+<style>
+  footer.footer {
+    background: #000;
+    color: rgb(255 255 255 / 70%);
+    padding: 64px 0 40px;
+  }
+
+  footer.footer .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  footer.footer .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  footer.footer .foot-brand .brand {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--disp);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  footer.footer .foot-brand p {
+    font-size: 13px;
+    margin-top: 14px;
+    max-width: 30ch;
+    line-height: 1.5;
+  }
+
+  footer.footer .foot-col h4 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 50%);
+    margin-bottom: 14px;
+  }
+
+  footer.footer .foot-col a {
+    display: block;
+    font-size: 14px;
+    color: rgb(255 255 255 / 78%);
+    margin-bottom: 9px;
+  }
+
+  footer.footer .foot-col a:hover { color: #fff; }
+
+  footer.footer .foot-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgb(255 255 255 / 14%);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: rgb(255 255 255 / 50%);
+  }
+
+  @media (max-width: 900px) {
+    footer.footer .foot-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+<div class="wrap">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div class="brand">DevRev</div>
+      <p>The platform behind Computer, the AI teammate with native Shared Memory.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Product</h4>
+      <a href="/devrev/index">Meet Computer</a>
+      <a href="/devrev/index">Agent Studio</a>
+      <a href="/devrev/index">Apps</a>
+      <a href="/devrev/index">Pricing</a>
+    </div>
+    <div class="foot-col">
+      <h4>Use cases</h4>
+      <a href="/devrev/index">Customer support</a>
+      <a href="/devrev/index">Service desk</a>
+      <a href="/devrev/index">Sales teams</a>
+      <a href="/devrev/index">Operations</a>
+    </div>
+    <div class="foot-col">
+      <h4>Resources</h4>
+      <a href="/devrev/index">Blog</a>
+      <a href="/devrev/index">Documentation</a>
+      <a href="/devrev/index">Marketplace</a>
+      <a href="/devrev/index">API references</a>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <a href="/devrev/index">About us</a>
+      <a href="/devrev/index">Careers</a>
+      <a href="/devrev/index">Contact</a>
+      <a href="/devrev/index">Security</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; DevRev, Inc.</span>
+    <span>All systems operational</span>
+  </div>
+</div>

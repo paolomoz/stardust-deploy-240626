@@ -1,0 +1,33 @@
+.trust { padding: 54px 0 0; }
+
+.trust .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.trust p {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+.trust .logos {
+  display: flex;
+  justify-content: center;
+  gap: 54px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+  opacity: 0.6;
+}
+
+.trust .logos span {
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: 20px;
+  color: #9a9a9a;
+  letter-spacing: -0.02em;
+}

@@ -1,0 +1,45 @@
+.mem { padding: 96px 0; }
+
+.mem .mem-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.mem h2 {
+  font-size: clamp(30px, 4vw, 52px);
+  margin-top: 14px;
+}
+
+.mem p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 20px;
+  line-height: 1.5;
+  max-width: 48ch;
+}
+
+.mem .actions { margin-top: 26px; }
+
+.mem .mem-img img,
+.mem .mem-img picture {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: rgb(0 0 0 / 10%) 0 14px 40px;
+}
+
+.mem .mem-img:empty {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 18px;
+  background: var(--ink);
+}
+
+@media (width <= 900px) {
+  .mem .mem-grid { grid-template-columns: 1fr; }
+}

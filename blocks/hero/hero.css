@@ -1,37 +1,117 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
+.hero { padding: 84px 0 0; }
 
-.hero {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+.hero .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  font-size: clamp(48px, 7.5vw, 108px);
+  letter-spacing: -0.04em;
+  margin-top: 18px;
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero h1 .em { color: var(--coral); }
+
+.hero .lede {
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 24px 0 0;
 }
 
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.hero .router-label {
+  margin: 48px 0 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
+.hero .router {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.hero .route {
+  border: 1.5px solid var(--ink);
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 140px;
+}
+
+.hero .route:hover {
+  transform: translateY(-4px);
+  background: var(--ink);
+  color: #fff;
+}
+
+.hero .route .who {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero .route:hover .who { color: var(--yellow); }
+
+.hero .route h3 { font-size: 24px; }
+
+.hero .route .task {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: auto;
+}
+
+.hero .route:hover .task { color: rgb(255 255 255 / 80%); }
+
+.hero .route .go {
+  font-family: var(--mono);
+  font-size: 18px;
+  align-self: flex-end;
+}
+
+.hero .hero-foot {
+  display: flex;
+  gap: 16px;
+  margin: 36px 0 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero .hero-foot .actions {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+}
+
+.hero .hero-foot .small {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+@media (width <= 900px) {
+  .hero .router { grid-template-columns: 1fr 1fr; }
+}
+
+@media (width <= 560px) {
+  .hero .router { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .route { transition: none; }
 }

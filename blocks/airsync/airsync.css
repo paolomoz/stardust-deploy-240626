@@ -1,0 +1,29 @@
+.airsync { padding: 96px 0; }
+
+.airsync .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.airsync .eyebrow { color: var(--muted); }
+
+.airsync h2 {
+  font-size: clamp(28px, 3.6vw, 46px);
+  margin-top: 14px;
+}
+
+.airsync p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 18px;
+  max-width: 52ch;
+}
+
+.airsync .airsync-img img,
+.airsync .airsync-img picture {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  margin-top: 42px;
+}

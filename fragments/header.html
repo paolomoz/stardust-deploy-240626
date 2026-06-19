@@ -1,0 +1,86 @@
+<style>
+  header.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(255 255 255 / 88%);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  header.header .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  header.header .nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    height: 66px;
+  }
+
+  header.header .brand {
+    font-family: var(--disp);
+    font-weight: 700;
+    font-size: 23px;
+    letter-spacing: -0.03em;
+  }
+
+  header.header .nav-links {
+    display: flex;
+    gap: 26px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  header.header .nav-cta {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  header.header .signin {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  header.header .nav-cta .hbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--text);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 999px;
+    padding: 14px 26px;
+    border: 1.5px solid var(--ink);
+    background: var(--ink);
+    color: var(--white);
+    transition: transform 0.15s ease;
+  }
+
+  header.header .nav-cta .hbtn:hover { transform: translateY(-2px); }
+
+  @media (max-width: 900px) {
+    header.header .nav-links { display: none; }
+  }
+</style>
+<div class="wrap nav">
+  <a class="brand" href="/devrev/index">DevRev</a>
+  <nav class="nav-links">
+    <a href="/devrev/index">Products</a>
+    <a href="/devrev/index#router">Use cases</a>
+    <a href="/devrev/index">Resources</a>
+    <a href="/devrev/index">Our customers</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="signin" href="/devrev/index">Sign in</a>
+    <a class="hbtn" href="/devrev/index#demo">Book a demo</a>
+  </div>
+</div>

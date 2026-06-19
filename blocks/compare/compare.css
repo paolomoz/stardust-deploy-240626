@@ -1,0 +1,61 @@
+.compare {
+  background: var(--offwhite);
+  padding: 96px 0;
+}
+
+.compare .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.compare .eyebrow { color: var(--muted); }
+
+.compare h2 {
+  font-size: clamp(30px, 4vw, 52px);
+  margin-top: 14px;
+}
+
+.compare .cmp {
+  margin-top: 46px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.compare .cmp .row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.compare .cmp .row:last-child { border-bottom: 0; }
+
+.compare .cmp .row > div {
+  padding: 20px 26px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.compare .cmp .row.h > div {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--grey);
+}
+
+.compare .cmp .row .us {
+  background: rgb(245 224 3 / 18%);
+  font-weight: 600;
+  font-family: var(--disp);
+}
+
+.compare .cmp .feat { font-weight: 500; }
+
+@media (width <= 560px) {
+  .compare .cmp .row { grid-template-columns: 1.3fr 1fr 1fr; }
+}
