@@ -1,0 +1,42 @@
+.trust {
+  padding: 42px 0;
+  border-bottom: 1px solid rgb(107 218 205 / 20%);
+}
+
+.trust .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.trust .label {
+  font-family: var(--body);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pacific);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.trust .logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex: 1;
+}
+
+.trust .logos span {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: rgb(255 255 255 / 60%);
+}
+
+@media (width <= 820px) {
+  .trust .wrap { padding: 0 24px; }
+}

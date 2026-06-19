@@ -1,0 +1,35 @@
+.endcta {
+  background: var(--pacific);
+  color: var(--arctic-900);
+  text-align: center;
+  padding: 130px 0;
+}
+
+.endcta .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.endcta h2 {
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  max-width: 14ch;
+  margin: 0 auto;
+  color: var(--arctic-900);
+}
+
+.endcta h2 em,
+.endcta h2 .em { font-style: italic; }
+
+.endcta .hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.4rem;
+}
+
+@media (width <= 820px) {
+  .endcta .wrap { padding: 0 24px; }
+}

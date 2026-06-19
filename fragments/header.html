@@ -1,0 +1,87 @@
+<style>
+  header.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(4 64 78 / 82%);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(107 218 205 / 18%);
+  }
+  header.header .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  header.header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+  }
+  header.header .brand {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  header.header .brand .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--pacific);
+  }
+  header.header .nav-links {
+    display: flex;
+    gap: 2.1rem;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 0.94rem;
+  }
+  header.header .nav-links a { color: rgb(255 255 255 / 78%); }
+  header.header .nav-links a:hover { color: var(--pacific); }
+  header.header .nav-cta {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+  }
+  header.header .nav-cta .login {
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 0.94rem;
+    color: rgb(255 255 255 / 80%);
+  }
+  header.header .nav-cta .cta {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--body);
+    font-weight: 700;
+    font-size: 0.96rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 999px;
+    background: var(--pacific);
+    color: var(--arctic-900);
+    transition: background 0.2s;
+  }
+  header.header .nav-cta .cta:hover { background: #fff; }
+  @media (max-width: 900px) {
+    header.header .nav-links,
+    header.header .nav-cta .login { display: none; }
+    header.header .wrap { padding: 0 24px; }
+  }
+</style>
+<div class="wrap nav">
+  <a class="brand" href="/velocity-global/index"><span class="dot"></span>Pebl</a>
+  <nav class="nav-links">
+    <a href="/velocity-global/index">Employer of Record</a>
+    <a href="/velocity-global/index">Countries</a>
+    <a href="/velocity-global/index">Pricing</a>
+    <a href="/velocity-global/index">Resources</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="login" href="/velocity-global/index">Login</a>
+    <a class="cta" href="/velocity-global/index">Get started</a>
+  </div>
+</div>

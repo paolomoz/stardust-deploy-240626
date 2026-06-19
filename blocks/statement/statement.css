@@ -1,0 +1,47 @@
+.statement {
+  padding: 120px 0;
+}
+
+.statement .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.statement .eyebrow { margin-bottom: 24px; }
+
+.statement .statement-quote {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--paper);
+  max-width: 20ch;
+}
+
+.statement .statement-quote em,
+.statement .statement-quote .em {
+  font-style: italic;
+  color: var(--pacific);
+}
+
+.statement .attr {
+  margin-top: 32px;
+  font-family: var(--body);
+  font-size: 1rem;
+  color: rgb(255 255 255 / 60%);
+  letter-spacing: 0.06em;
+}
+
+.statement .hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+@media (width <= 820px) {
+  .statement .wrap { padding: 0 24px; }
+}

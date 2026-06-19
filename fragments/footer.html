@@ -1,0 +1,95 @@
+<style>
+  footer.footer {
+    background: var(--arctic-900);
+    color: rgb(255 255 255 / 65%);
+    padding: 80px 0 40px;
+  }
+  footer.footer .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  footer.footer .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  footer.footer .foot-grid h4 {
+    font-family: var(--body);
+    color: var(--pacific);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  footer.footer .foot-grid a {
+    display: block;
+    padding: 0.3rem 0;
+    font-family: var(--body);
+    font-size: 0.95rem;
+    color: rgb(255 255 255 / 60%);
+  }
+  footer.footer .foot-grid a:hover { color: var(--pacific); }
+  footer.footer .foot-brand {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--paper);
+    margin-bottom: 1rem;
+  }
+  footer.footer .foot-blurb {
+    max-width: 30ch;
+    font-family: var(--body);
+    color: rgb(255 255 255 / 60%);
+  }
+  footer.footer .foot-bottom {
+    margin-top: 52px;
+    padding-top: 24px;
+    border-top: 1px solid rgb(255 255 255 / 12%);
+    font-family: var(--body);
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  @media (max-width: 880px) {
+    footer.footer .foot-grid { grid-template-columns: 1fr 1fr; }
+    footer.footer .wrap { padding: 0 24px; }
+  }
+</style>
+<div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Pebl</div>
+      <p class="foot-blurb">The AI-powered Employer of Record for teams that build everywhere.</p>
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <a href="/velocity-global/index">Employer of Record</a>
+      <a href="/velocity-global/index">Global Payroll</a>
+      <a href="/velocity-global/index">Global Benefits</a>
+      <a href="/velocity-global/index">Global Immigration</a>
+      <a href="/velocity-global/index">Alfie AI Assistant</a>
+    </div>
+    <div>
+      <h4>Who We Serve</h4>
+      <a href="/velocity-global/index">Human Resources</a>
+      <a href="/velocity-global/index">Finance Teams</a>
+      <a href="/velocity-global/index">Legal Teams</a>
+      <a href="/velocity-global/index">Technology</a>
+      <a href="/velocity-global/index">Professional Services</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="/velocity-global/index">About</a>
+      <a href="/velocity-global/index">Pricing</a>
+      <a href="/velocity-global/index">Resources</a>
+      <a href="/velocity-global/index">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 Pebl. All rights reserved.</span>
+    <span>Privacy Policy &middot; Terms</span>
+  </div>
+</div>

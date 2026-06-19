@@ -1,0 +1,66 @@
+.faq {
+  padding: 104px 0;
+}
+
+.faq .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.faq .chapter-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: baseline;
+  margin-bottom: 56px;
+}
+
+.faq .chapter-head h2 {
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  max-width: 18ch;
+  color: var(--paper);
+}
+
+.faq .faq-acc {
+  max-width: 880px;
+}
+
+.faq .faq-acc details {
+  border-bottom: 1px solid rgb(107 218 205 / 20%);
+  padding: 26px 0;
+}
+
+.faq .faq-acc summary {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--paper);
+}
+
+.faq .faq-acc summary::-webkit-details-marker { display: none; }
+
+.faq .faq-acc summary::after {
+  content: "+";
+  color: var(--pacific);
+  font-size: 1.7rem;
+}
+
+.faq .faq-acc details[open] summary::after { content: "\2013"; }
+
+.faq .faq-acc p {
+  margin-top: 1rem;
+  font-family: var(--body);
+  color: rgb(255 255 255 / 78%);
+  font-size: 1.1rem;
+  max-width: 60ch;
+}
+
+@media (width <= 820px) {
+  .faq .wrap { padding: 0 24px; }
+}
