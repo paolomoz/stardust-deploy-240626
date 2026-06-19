@@ -1,0 +1,120 @@
+<style>
+  header.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(0 0 0 / 82%);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+    font-family: var(--body, arial, sans-serif);
+    color: #fff;
+  }
+
+  .header .wrap {
+    max-width: var(--maxw, 1280px);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .header .logo {
+    font-family: var(--display, sans-serif);
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .header .logo span { color: var(--blue-accent, #5e83e2); }
+
+  .header .nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.92rem;
+    color: #d8dae0;
+  }
+
+  .header .nav-links a { transition: color 0.2s ease; }
+  .header .nav-links a:hover { color: #fff; }
+
+  .header .nav-cta { display: flex; gap: 0.75rem; align-items: center; }
+
+  .header .nav-cta a {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--body, sans-serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .header .nav-cta .ghost { background: transparent; color: #fff; border-color: rgb(255 255 255 / 35%); }
+  .header .nav-cta .ghost:hover { border-color: #fff; }
+  .header .nav-cta .primary { background: var(--blue, #2849d2); color: #fff; }
+  .header .nav-cta .primary:hover { background: var(--blue-alt, #2a2aea); }
+
+  /* mobile menu toggle (CSS-only checkbox hack) */
+  .header #mnav-toggle { position: absolute; opacity: 0; pointer-events: none; }
+
+  .header .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .header .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+  }
+
+  @media (max-width: 900px) {
+    .header .burger { display: flex; }
+
+    .header .nav-links,
+    .header .nav-cta {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 68px;
+      flex-direction: column;
+      gap: 1.2rem;
+      padding: 1.5rem 32px;
+      background: rgb(0 0 0 / 96%);
+      border-bottom: 1px solid rgb(255 255 255 / 8%);
+    }
+
+    .header #mnav-toggle:checked ~ .wrap .nav-links,
+    .header #mnav-toggle:checked ~ .wrap .nav-cta { display: flex; }
+  }
+</style>
+<header class="header">
+  <input type="checkbox" id="mnav-toggle" aria-label="Toggle navigation" />
+  <div class="wrap nav">
+    <div class="logo">Qualcomm<span>.</span></div>
+    <label class="burger" for="mnav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="nav-links">
+      <a href="/products">Products</a>
+      <a href="/applications">Applications</a>
+      <a href="/developer">Developer</a>
+      <a href="/support">Support</a>
+      <a href="/company">Company</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="ghost" href="/investors">Investors</a>
+      <a class="primary" href="/contact">Contact us</a>
+    </div>
+  </div>
+</header>

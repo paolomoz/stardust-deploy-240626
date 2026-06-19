@@ -1,0 +1,54 @@
+.developer {
+  padding: 6rem 0;
+  background: linear-gradient(160deg, #05060a, #0c1530);
+  color: var(--white);
+}
+
+.developer .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.developer .dev-intro .eyebrow { margin-bottom: 0.8rem; }
+
+.developer .dev-intro h2 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.developer .dev-intro h2 em { font-style: normal; color: var(--blue-accent); }
+
+.developer .dev-intro p {
+  color: var(--mute-d);
+  margin: 1.2rem 0 2rem;
+  font-size: 1.1rem;
+}
+
+.developer .dev-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.developer .dev-tile {
+  background: rgb(255 255 255 / 4%);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 12px;
+  padding: 1.4rem;
+}
+
+.developer .dev-tile h4 {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.developer .dev-tile p { font-size: 0.92rem; margin: 0; color: var(--mute-d); }
+
+@media (max-width: 900px) {
+  .developer .wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+  .developer .dev-grid { grid-template-columns: 1fr; }
+}

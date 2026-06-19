@@ -1,0 +1,110 @@
+<style>
+  footer.footer {
+    background: #000;
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    padding: 4rem 0 2.5rem;
+    font-family: var(--body, arial, sans-serif);
+    color: #fff;
+  }
+
+  .footer .wrap {
+    max-width: var(--maxw, 1280px);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .footer .foot-grid {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .footer .logo {
+    font-family: var(--display, sans-serif);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .footer .logo span { color: var(--blue-accent, #5e83e2); }
+
+  .footer .foot-mission {
+    font-family: var(--display, sans-serif);
+    font-size: 1.3rem;
+    line-height: 1.35;
+    color: #e9eaee;
+    max-width: 340px;
+  }
+
+  .footer .foot-grid h4 {
+    font-family: var(--body, sans-serif);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--mute-d, #a9afbc);
+    margin-bottom: 1rem;
+  }
+
+  .footer .foot-grid ul { list-style: none; display: grid; gap: 0.6rem; }
+  .footer .foot-grid a { color: #cfd2d8; font-size: 0.95rem; transition: color 0.2s ease; }
+  .footer .foot-grid a:hover { color: #fff; }
+
+  .footer .foot-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgb(255 255 255 / 8%);
+    display: flex;
+    justify-content: space-between;
+    color: var(--mute-d, #a9afbc);
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .footer .foot-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Qualcomm<span>.</span></div>
+        <p class="foot-mission">Relentlessly innovating to deliver intelligent computing everywhere &mdash; helping the world connect, compute, and communicate.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/support">Support</a></li>
+          <li><a href="/partners">Partners</a></li>
+          <li><a href="/contact">Contact us</a></li>
+          <li><a href="/developer">Developer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/investors">Investors</a></li>
+          <li><a href="/news">News &amp; media</a></li>
+          <li><a href="/businesses">Our businesses</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay connected</h4>
+        <ul>
+          <li><a href="/subscriptions">Email subscriptions</a></li>
+          <li><a href="/insider">Snapdragon Insider</a></li>
+          <li><a href="/onq">OnQ Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Qualcomm Technologies, Inc.</span>
+      <span>Terms of Use &middot; Privacy &middot; Cookie Policy &middot; Accessibility &middot; Responsible AI</span>
+    </div>
+  </div>
+</footer>

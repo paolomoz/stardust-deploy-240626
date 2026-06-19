@@ -1,0 +1,41 @@
+.insider {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+  background-color: #1a0408;
+  background-image: url("/img/qualcomm/insider-6g.webp");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+
+.insider .ov {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(228 0 43 / 92%) 0%, rgb(120 0 22 / 60%) 55%, rgb(0 0 0 / 20%) 100%);
+}
+
+.insider .wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insider .wrap { max-width: var(--maxw); }
+
+.insider .wrap > * { max-width: 620px; }
+
+.insider .eyebrow { color: #fff; margin-bottom: 0.8rem; }
+
+.insider h2 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.insider p { margin: 1rem 0 2rem; color: #fff; font-size: 1.1rem; }
+
+.insider .insider-actions a.btn { background: #fff; color: var(--red); border-color: #fff; }
+.insider .insider-actions a.btn:hover { background: #f4f5f7; border-color: #f4f5f7; }
