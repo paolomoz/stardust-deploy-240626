@@ -1,0 +1,104 @@
+.about {
+  padding: var(--pad) 0;
+}
+
+.about h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4.4vw, 58px);
+  line-height: 1.04;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 18px;
+  max-width: 16ch;
+}
+
+.about .intro {
+  max-width: 60ch;
+  color: var(--body-color);
+  margin: 0 0 52px;
+}
+
+.about .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 40px 0;
+  margin-bottom: 56px;
+}
+
+.about .stat .n {
+  font-family: var(--ultra);
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: 0.9;
+  color: var(--red);
+  letter-spacing: -0.02em;
+}
+
+.about .stat .l {
+  font-size: 16px;
+  color: var(--ink);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.about .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about .feat {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.about .feat .ph {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.about .feat .ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about .feat:hover .ph img {
+  transform: scale(1.05);
+}
+
+.about .feat .body {
+  padding: 24px;
+}
+
+.about .feat h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.about .feat p {
+  font-size: 15px;
+  margin: 0 0 18px;
+}
+
+.about .feat .go {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (width <= 900px) {
+  .about .stats,
+  .about .features {
+    grid-template-columns: 1fr;
+  }
+}

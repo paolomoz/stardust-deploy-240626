@@ -1,0 +1,86 @@
+.conditions {
+  padding: var(--pad) 0;
+}
+
+.conditions h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.05;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 16px;
+  max-width: 20ch;
+}
+
+.conditions .intro {
+  max-width: 60ch;
+  margin: 0 0 40px;
+  color: var(--body-color);
+}
+
+.conditions .cond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.conditions .cond {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+.conditions .cond img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.conditions .cond::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0 0 0 / 0%) 40%, rgb(0 0 0 / 72%) 100%);
+}
+
+.conditions .cond:hover img {
+  transform: scale(1.06);
+}
+
+.conditions .cond .lab {
+  position: relative;
+  z-index: 2;
+  padding: 26px;
+}
+
+.conditions .cond .lab h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.conditions .cond .lab span {
+  font-size: 14px;
+  opacity: 0.85;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+@media (width <= 900px) {
+  .conditions .cond-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .conditions .cond {
+    aspect-ratio: 16 / 10;
+  }
+}

@@ -1,0 +1,87 @@
+<style>
+  footer.footer {
+    background: var(--red);
+    color: #fff;
+    padding: 72px 0 40px;
+  }
+
+  footer.footer .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding-inline: 32px;
+  }
+
+  footer.footer .foot-top {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgb(255 255 255 / 25%);
+  }
+
+  footer.footer .foot-mark {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 54px;
+    font-weight: 500;
+  }
+
+  footer.footer .foot-mark p {
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 15px;
+    max-width: 30ch;
+    margin: 16px 0 0;
+    opacity: 0.92;
+  }
+
+  footer.footer .fcol h4 {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    opacity: 0.85;
+  }
+
+  footer.footer .fcol a {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 11px;
+    opacity: 0.95;
+  }
+
+  footer.footer .fcol a:hover {
+    text-decoration: underline;
+  }
+
+  footer.footer .foot-bot {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 900px) {
+    footer.footer .foot-top {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+<div class="wrap">
+  <div class="foot-top">
+    <div>
+      <div class="foot-mark">Lilly</div>
+      <p>A medicine company that puts health above all. Indianapolis, Indiana.</p>
+    </div>
+    <div class="fcol"><h4>For patients</h4><a href="/">Find care</a><a href="/">LillyDirect</a><a href="/">Clinical trials</a><a href="/">Savings &amp; support</a></div>
+    <div class="fcol"><h4>Company</h4><a href="/">About Lilly</a><a href="/">Research</a><a href="/">Newsroom</a><a href="/">Careers</a></div>
+    <div class="fcol"><h4>Investors</h4><a href="/">Annual report</a><a href="/">Governance</a><a href="/">Stock information</a><a href="/">ESG</a></div>
+  </div>
+  <div class="foot-bot">
+    <span>&copy; 2026 Eli Lilly and Company. All rights reserved.</span>
+    <span>Privacy &middot; Terms &middot; Accessibility &middot; Your privacy choices</span>
+  </div>
+</div>
