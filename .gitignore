@@ -19,3 +19,6 @@ qa/
 samples/
 brands/
 node_modules/
+
+# Stardust working dir (prototype source + media binaries) — not part of the EDS site
+stardust/
