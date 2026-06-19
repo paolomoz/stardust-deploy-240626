@@ -1,5 +1,5 @@
 /* ============================================================
-   capabilities — editorial ruled list + wide dashboard mockup
+   capabilities — full-width editorial ruled list
    Lifted from prototype home-D-refined.html (.section / .caps), scoped.
    Brand tokens are GLOBAL in styles/styles.css — not redefined here.
    ============================================================ */
@@ -90,20 +90,4 @@
     grid-template-columns: 1fr;
     gap: 8px;
   }
-}
-
-/* the "Your team" dashboard mockup as a wide banner */
-.capabilities .caps-visual {
-  margin-top: clamp(40px, 5vw, 64px);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--line-light);
-  box-shadow: 0 40px 90px -50px rgb(4 64 78 / 40%);
-  background: var(--mint-card);
-}
-
-.capabilities .caps-visual img {
-  width: 100%;
-  height: auto;
-  display: block;
 }

@@ -1,0 +1,2593 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-06-19T16:21:15.472Z",
+    "waitMs": 2800,
+    "waitMode": "domcontentloaded",
+    "httpStatus": 200,
+    "finalUrl": "https://hellopebl.com/",
+    "headed": false
+  },
+  "slug": "home",
+  "url": "https://hellopebl.com/",
+  "title": "Global HR Platform | Employer of Record | Pebl",
+  "description": "Hire, pay, and support talent across 185+ countries with Pebl. Our AI-powered Employer of Record platform and expertise make global HR simple and seamless.",
+  "themeColor": "#ffffff",
+  "og": {
+    "title": "Global HR Platform | Employer of Record | Pebl",
+    "description": null,
+    "image": "https://hellopebl.com/sites/default/files/image/2025-09/pebl-og-img.jpg",
+    "siteName": "Pebl",
+    "type": null
+  },
+  "headings": [
+    {
+      "level": 1,
+      "text": "Build teams anywhere. Yes, even there.",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "85px",
+      "lineHeight": "85px",
+      "letterSpacing": "-4.25px",
+      "color": "rgb(254, 254, 254)"
+    },
+    {
+      "level": 2,
+      "text": "End-to-End Global HR",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-2px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 4,
+      "text": "Employer of Record",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.78px",
+      "color": "rgb(23, 23, 23)"
+    },
+    {
+      "level": 4,
+      "text": "Payroll",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.78px",
+      "color": "rgb(23, 23, 23)"
+    },
+    {
+      "level": 4,
+      "text": "Compliance",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.78px",
+      "color": "rgb(23, 23, 23)"
+    },
+    {
+      "level": 4,
+      "text": "Local HR Experts",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.78px",
+      "color": "rgb(23, 23, 23)"
+    },
+    {
+      "level": 4,
+      "text": "Benefits",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.78px",
+      "color": "rgb(23, 23, 23)"
+    },
+    {
+      "level": 4,
+      "text": "Relocation",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.78px",
+      "color": "rgb(23, 23, 23)"
+    },
+    {
+      "level": 2,
+      "text": "Meet Pebl",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-2px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 4,
+      "text": "The only platform you need to build global teams",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "28px",
+      "lineHeight": "30.8px",
+      "letterSpacing": "-0.38px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 2,
+      "text": "Meet Pebl",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-1.56px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 4,
+      "text": "The only platform you need to build global teams",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "28px",
+      "lineHeight": "30.8px",
+      "letterSpacing": "-0.38px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 2,
+      "text": "Rated #1 in compliance on G2",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-1.56px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 2,
+      "text": "Hire anywhere in 24 hours",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-1.56px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 2,
+      "text": "Experience the competition can’t match",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-1.56px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 2,
+      "text": "Explore Pebl insights",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-1.56px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 4,
+      "text": "2025 Global Hiring Report",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.26px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 4,
+      "text": "Strategic Workforce Expansion With Human-Centered EOR",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.26px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 4,
+      "text": "What Is an Employer of Record (EOR)? A Complete Guide for Global Employers",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "28.6px",
+      "letterSpacing": "-0.26px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "FAQs",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "54px",
+      "lineHeight": "70px",
+      "letterSpacing": "-2px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "How does Pebl ensure compliance with local labor laws in 185+ countries?",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "How does Pebl prevent worker misclassification when hiring internationally?",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "Does Pebl manage payroll taxes, benefits, employment contracts, onboarding, and offboarding compliance in each country?",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "What is included in Pebl's EOR pricing? How does it vary by country?",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "How does Pebl's EOR pricing compare to setting up a local entity?",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "Are there any hidden fees in Pebl's EOR services?",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 3,
+      "text": "How do Pebl's EOR services reduce legal and financial risk when expanding globally?",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 2,
+      "text": "Build teams anywhere. No local entities needed.",
+      "fontFamily": "\"FK Roman Standard\", serif",
+      "fontWeight": "700",
+      "fontSize": "52px",
+      "lineHeight": "57.2px",
+      "letterSpacing": "-1.56px",
+      "color": "rgb(0, 0, 0)"
+    },
+    {
+      "level": 4,
+      "text": "Join our newsletter",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "18px",
+      "lineHeight": "22.5px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "level": 5,
+      "text": "Platform",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "level": 5,
+      "text": "Who We Serve",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "level": 5,
+      "text": "How EOR Helps",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "level": 5,
+      "text": "Resources",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "level": 5,
+      "text": "About Us",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "level": 5,
+      "text": "Choose Language:",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.18px",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "level": 2,
+      "text": "Cookie Settings",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "600",
+      "fontSize": "19.2px",
+      "lineHeight": "24.96px",
+      "letterSpacing": "normal",
+      "color": "rgb(18, 18, 18)"
+    }
+  ],
+  "landmarks": [
+    {
+      "tag": "nav",
+      "role": "navigation",
+      "id": null,
+      "className": "utility-nav max-md:hidden",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 8,
+        "height": 30
+      },
+      "innerText": "Watch demo Resources Search Login",
+      "body": [],
+      "lists": [
+        {
+          "ordered": false,
+          "items": [
+            "Watch demo",
+            "Resources",
+            "Search",
+            "Login"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "header",
+      "role": "banner",
+      "id": null,
+      "className": "navigation-container py-5 bg-white w-full relative",
+      "childCount": 1,
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "20px 20px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 46,
+        "height": 98
+      },
+      "innerText": "Employer of Record Countries Pricing Get started Contact us",
+      "body": [
+        "Explore",
+        "EOR 101",
+        "How EOR Helps",
+        "Key Features",
+        "Integrations",
+        "Teams",
+        "Industries",
+        "Hire In",
+        "Tools and Resources",
+        "EOR 101",
+        "How EOR Helps",
+        "Key Features"
+      ],
+      "lists": [
+        {
+          "ordered": false,
+          "items": [
+            "How EOR Works",
+            "What's Included",
+            "Who We Serve"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "What is EOR?",
+            "EOR vs Entity Setup",
+            "How Much Does an EOR Cost?",
+            "Compare EOR Competitors"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Global Expansion",
+            "HR Compliance",
+            "Mergers & Acquisitions",
+            "Global Hiring"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Employer of Record",
+            "Global Payroll",
+            "Benefits Administration",
+            "Immigration Support",
+            "Talent Sourcing",
+            "Alfie AI Assistant"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Greenhouse",
+            "ADP",
+            "JazzHR",
+            "Oracle",
+            "See All"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Human Resources",
+            "Finance",
+            "Legal"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": null,
+      "className": "main-nav flex items-center gap-8 font-normal leading-[1.2] tracking-[0.225px] relative",
+      "childCount": 3,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 66,
+        "height": 58
+      },
+      "innerText": "Employer of Record Countries Pricing",
+      "body": [
+        "Explore",
+        "EOR 101",
+        "How EOR Helps",
+        "Key Features",
+        "Integrations",
+        "Teams",
+        "Industries",
+        "Hire In",
+        "Tools and Resources"
+      ],
+      "lists": [
+        {
+          "ordered": false,
+          "items": [
+            "How EOR Works",
+            "What's Included",
+            "Who We Serve"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "What is EOR?",
+            "EOR vs Entity Setup",
+            "How Much Does an EOR Cost?",
+            "Compare EOR Competitors"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Global Expansion",
+            "HR Compliance",
+            "Mergers & Acquisitions",
+            "Global Hiring"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Employer of Record",
+            "Global Payroll",
+            "Benefits Administration",
+            "Immigration Support",
+            "Talent Sourcing",
+            "Alfie AI Assistant"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Greenhouse",
+            "ADP",
+            "JazzHR",
+            "Oracle",
+            "See All"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Human Resources",
+            "Finance",
+            "Legal"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "mobile-nav",
+      "className": "w-full order-last mt-3 bg-white border-t border-gray-200 px-4 py-4 space-y-2 text-[15px]",
+      "childCount": 3,
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "16px 16px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "Employer of Record How EOR Works EOR 101 What is EOR? EOR vs Entity Setup How Much Does an EOR Cost? Compare EOR Competitors How EOR Helps Global Expansion HR Compliance Mergers & Acquisitions Global Hiring What's Included Key Features Employer of Record Global Payroll Benefits Administration Immigration Support Talent Sourcing Alfie AI Assistant Integrations Greenhouse ADP JazzHR Oracle See All Who We Serve Teams Human Resources Finance Legal Industries Technology Manufacturing Finance AI Retail Professional Services Countries Hire In Canada France Mexico Philippines United Kingdom See All Countries Tools and Resources Blog Employee Cost Calculator HR Glossary Misclassification Risk Assessment Country Hiring Guides Pricing Watch demo Resources Search Login Get started Contact us",
+      "body": [
+        "EOR 101",
+        "How EOR Helps",
+        "Key Features",
+        "Integrations",
+        "Teams",
+        "Industries",
+        "Hire In",
+        "Tools and Resources"
+      ],
+      "lists": [
+        {
+          "ordered": false,
+          "items": [
+            "Employer of Record How EOR Works EOR 101 What is EOR? EOR vs Entity Setup How Much Does an EOR Cost? Compare EOR Competitors How EOR Helps Global Expansion HR Compliance Mergers & Acquisitions Global Hiring What's Included Key Features Employer of Record Global Payroll Benefits Administration Immigration Support Talent Sourcing Alfie AI Assistant Integrations Greenhouse ADP JazzHR Oracle See All Who We Serve Teams Human Resources Finance Legal Industries Technology Manufacturing Finance AI Retail Professional Services",
+            "Countries Hire In Canada France Mexico Philippines United Kingdom See All Countries Tools and Resources Blog Employee Cost Calculator HR Glossary Misclassification Risk Assessment Country Hiring Guides",
+            "Pricing"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "What is EOR?",
+            "EOR vs Entity Setup",
+            "How Much Does an EOR Cost?",
+            "Compare EOR Competitors"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Global Expansion",
+            "HR Compliance",
+            "Mergers & Acquisitions",
+            "Global Hiring"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Employer of Record",
+            "Global Payroll",
+            "Benefits Administration",
+            "Immigration Support",
+            "Talent Sourcing",
+            "Alfie AI Assistant"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Greenhouse",
+            "ADP",
+            "JazzHR",
+            "Oracle",
+            "See All"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Human Resources",
+            "Finance",
+            "Legal"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "main",
+      "role": "main",
+      "id": null,
+      "className": null,
+      "childCount": 2,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 144,
+        "height": 9493
+      },
+      "innerText": "Build teams anywhere. Yes, even there. Pebl’s AI-powered EOR platform lets you scale your global workforce fast, with built-in compliance guidance across 185+ countries. Get started Watch demo Trusted by global leaders End-to-End Global HR Let us handle international hiring, payroll, compliance, benefits, and more. Employer of Record Compliantly hire, onboard, and pay global employees through our 185+ local entities. Let us handle local hiring requirements, corporate taxes, document storage, and more. Payroll We handle global payroll, including onboarding, documentation, currency conversion, and deductions. Compliance Stay compliant across employment contracts, benefits, payroll, terminations, etc. Local HR Experts Access locally-based HR experts, including a dedicated point of contact for local labor laws, admin, etc. Get done-for-you employee lifecycle management. Benefits Offer competitive benefits, including medical, life insurance, and social security. Provide pensions and retirement plans. Stand out and attract the best talent. Relocation Get every step of relocation done for you, including visas, passports, employment contracts, and permits. Get a demo Meet Pebl The only platform you need to build global teams Manage your global workforce in one place with AI-powered tools, real-time insights, and seamless integrations. Hire, pay, and support talent anywhere with confidence. Rated #1 in compliance on G2 Customer reviews don’t lie. Pebl delivers the local expertise to successfully navigate labor laws, tax codes, and regulations. Keep your growth on track with less risk. Simplify compliance Hire anywhere in 24 hours Build your team where the talent is. With Pebl, you can onboard global employees instantly—no entities, minimal delays, and stronger compliance everywhere you grow. Start hiring Experience the competition can’t match More years in the global workforce game mean Pebl spots issues faster. That expertise saves you time and money while reducing the headaches of hiring worldwide. See how Pebl compares Over the past year, we've doubled—if not tripled—our global headcount. That growth has been largely thanks to our partnership… David Andreasson, VP of Finance & Operations Read the case study Explore Pebl insights Explore all Report Oct 20, 2025 2025 Global Hiring Report In a time of turbulent economies, shifting H-1B regulations, and an ever-changing geopolitical landscape, we surveyed 400+ leaders to see how they’re managing... Read this report Case Study Strategic Workforce Expansion With Human-Centered EOR Rapid7 scales cybersecurity talent globally while simplifying transitions and compliance with Pebl’s expert partnership. Read this case study Blog Oct 9, 2025 What Is an Employer of Record (EOR)? A Complete Guide for Global Employers Expanding a global presence is a natural and savvy move for any growing business. Hiring... Read this blog FAQs How does Pebl ensure compliance with local labor laws in 185+ countries? Every country has its own labor laws concerning employment contracts, statutory benefits, taxes, termination, and other matters. These mandates are highly dynamic, requiring continuous oversight to stay ahead of evolving labor law changes. Pebl ensures compliance with local labor laws through a proactive, multi-layered approach. Our regional legal teams monitor regulatory shifts, flag issues before they become problems, and keep every EOR engagement up to date. In addition to our own employment law monitoring, we’re backed by Baker McKenzie, the #1 global employment law firm. Our legal expertise is a big reason why our platform is rated #1 for compliance on G2. How does Pebl prevent worker misclassification when hiring internationally? Does Pebl manage payroll taxes, benefits, employment contracts, onboarding, and offboarding compliance in each country? What is included in Pebl's EOR pricing? How does it vary by country? How does Pebl's EOR pricing compare to setting up a local entity? Are there any hidden fees in Pebl's EOR services? How do Pebl's EOR services reduce legal and financial risk when expanding globally? Build teams anywhere. No local entities needed. Get started Contact us",
+      "body": [
+        "Pebl’s AI-powered EOR platform lets you scale your global workforce fast, with built-in compliance guidance across 185+ countries.",
+        "Let us handle international hiring, payroll, compliance, benefits, and more.",
+        "Compliantly hire, onboard, and pay global employees through our 185+ local entities. Let us handle local hiring requirements, corporate taxes, document storage, and more.",
+        "We handle global payroll, including onboarding, documentation, currency conversion, and deductions.",
+        "Stay compliant across employment contracts, benefits, payroll, terminations, etc.",
+        "Access locally-based HR experts, including a dedicated point of contact for local labor laws, admin, etc. Get done-for-you employee lifecycle management.",
+        "Offer competitive benefits, including medical, life insurance, and social security. Provide pensions and retirement plans. Stand out and attract the best talent.",
+        "Get every step of relocation done for you, including visas, passports, employment contracts, and permits.",
+        "Manage your global workforce in one place with AI-powered tools, real-time insights, and seamless integrations. Hire, pay, and support talent anywhere with confidence.",
+        "Manage your global workforce in one place with AI-powered tools, real-time insights, and seamless integrations. Hire, pay, and support talent anywhere with confidence.",
+        "Swipe",
+        "Add job and contract details in minutes with clear guidance at every step."
+      ],
+      "lists": [
+        {
+          "ordered": false,
+          "items": [
+            "How does Pebl ensure compliance with local labor laws in 185+ countries? Every country has its own labor laws concerning employment contracts, statutory benefits, taxes, termination, and other matters. These mandates are highly dynamic, requiring continuous oversight to stay ahead of evolving labor law changes. Pebl ensures compliance with local labor laws through a proactive, multi-layered approach. Our regional legal teams monitor regulatory shifts, flag issues before they become problems, and keep every EOR engagement up to date. In addition to our own employment law monitoring, we’re backed by Baker McKenzie, the #1 global employment law firm. Our legal expertise is a big reason why our platform is rated #1 for compliance on G2.",
+            "How does Pebl prevent worker misclassification when hiring internationally? It doesn't matter if misclassification is an accidental administrative mistake or an intentional staffing workaround. In most countries, it can trigger audits, retroactive taxes, and fines that can be quite costly. With Pebl as the legal Employer of Record (EOR), your hire is properly classified under local law from day one. You maintain the day-to-day working relationship; we bear the legal responsibility for ensuring appropriate classification, among other mandates.",
+            "Does Pebl manage payroll taxes, benefits, employment contracts, onboarding, and offboarding compliance in each country? Yes! Pebl's global EOR services cover the full employment lifecycle, including locally compliant contracts, payroll, tax filings, statutory benefits, paid leave, onboarding, and offboarding processes that align with local labor law requirements. Every component of the complete employment dynamic is connected because we know that a mistake in one area tends to create ripple effects in others. With our AI-powered infrastructure and self-service portal, you can onboard in as little as 24 hours.",
+            "What is included in Pebl's EOR pricing? How does it vary by country? Across all markets, Pebl's pricing structure uses a flat-rate model with a single predictable monthly fee per employee. That fee covers EOR services, in-country compliance, payroll, onboarding, expense and leave management, and 24/7 support. For current pricing, reach out to us directly for a custom quote.",
+            "How does Pebl's EOR pricing compare to setting up a local entity? Setting up a legal entity in a new country can be incredibly expensive, slow, and operationally heavy. The cost alone can range from five to six figures, depending on the market. The registration process can take several months, and the ongoing expenses can include legal, accounting, and administrative overhead. Not only is our pricing structure significantly lower than the cost of setting up a local entity, but our EOR services let you onboard in as little as 24 hours. You trade high, uncertain costs for speed and a simple, predictable per-employee monthly fee. For companies testing a new market or hiring a small team abroad, the math makes choosing an EOR a no-brainer.",
+            "Are there any hidden fees in Pebl's EOR services? No. Pebl provides full transparency with pricing. Before you hire, we share the full employment costs beyond EOR costs, including employer tax contributions and statutory requirements specific to the market you’re hiring in. What you see on the platform is what you pay. Every country carries its own mandatory obligations, and those costs vary. You can rest assured that we don’t mark them up or layer on hidden fees. We strongly believe in providing full visibility before you commit.",
+            "How do Pebl's EOR services reduce legal and financial risk when expanding globally? Global hiring risks often stay invisible until you face an audit or a labor dispute. By then, the costs can be high. Pebl owns the legal employer responsibility, so liability for global compliance rests with us rather than with your organization. You keep full control over the work and the relationship. Pebl holds the legal exposure across 185+ countries, backed by in-country experts who stay ahead of regulatory changes before they become your problem."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "section",
+      "role": null,
+      "id": null,
+      "className": "content-slider-block simple-slider",
+      "childCount": 3,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "Meet Pebl The only platform you need to build global teamsManage your global workforce in one place with AI-powered tools, real-time insights, and seamless integrations. Hire, pay, and support talent anywhere with confidence. Swipe Add job and contract details in minutes with clear guidance at every step. Set a start date that aligns with local rules, including notice periods and more. We flag compliance issues instantly so your hire is aligned with local laws. Get salary guidance tailored to local markets so your offer stands out. Get paid leave guidance tailored to each country’s rules and your goals. Offer competitive local benefits that support employees and their families. See the total costs up front, then click to hire. Your team just went global.",
+      "body": [
+        "Manage your global workforce in one place with AI-powered tools, real-time insights, and seamless integrations. Hire, pay, and support talent anywhere with confidence.",
+        "Swipe",
+        "Add job and contract details in minutes with clear guidance at every step.",
+        "Set a start date that aligns with local rules, including notice periods and more.",
+        "We flag compliance issues instantly so your hire is aligned with local laws.",
+        "Get salary guidance tailored to local markets so your offer stands out.",
+        "Get paid leave guidance tailored to each country’s rules and your goals.",
+        "Offer competitive local benefits that support employees and their families.",
+        "See the total costs up front, then click to hire. Your team just went global."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "section",
+      "role": null,
+      "id": null,
+      "className": null,
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 4306,
+        "height": 690
+      },
+      "innerText": "Rated #1 in compliance on G2 Customer reviews don’t lie. Pebl delivers the local expertise to successfully navigate labor laws, tax codes, and regulations. Keep your growth on track with less risk. Simplify compliance",
+      "body": [
+        "Customer reviews don’t lie. Pebl delivers the local expertise to successfully navigate labor laws, tax codes, and regulations. Keep your growth on track with less risk."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "section",
+      "role": null,
+      "id": null,
+      "className": null,
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 5006,
+        "height": 690
+      },
+      "innerText": "Hire anywhere in 24 hours Build your team where the talent is. With Pebl, you can onboard global employees instantly—no entities, minimal delays, and stronger compliance everywhere you grow. Start hiring",
+      "body": [
+        "Build your team where the talent is. With Pebl, you can onboard global employees instantly—no entities, minimal delays, and stronger compliance everywhere you grow."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "section",
+      "role": null,
+      "id": null,
+      "className": null,
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 5706,
+        "height": 690
+      },
+      "innerText": "Experience the competition can’t match More years in the global workforce game mean Pebl spots issues faster. That expertise saves you time and money while reducing the headaches of hiring worldwide. See how Pebl compares",
+      "body": [
+        "More years in the global workforce game mean Pebl spots issues faster. That expertise saves you time and money while reducing the headaches of hiring worldwide."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "section",
+      "role": null,
+      "id": "block--unique-id-25686",
+      "className": "type--explorer block block--layout-builder block--inline-blockexplorer component--explorer block--unique-class-25686",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 7163,
+        "height": 813
+      },
+      "innerText": "Explore Pebl insights Explore all Report Oct 20, 2025 2025 Global Hiring Report In a time of turbulent economies, shifting H-1B regulations, and an ever-changing geopolitical landscape, we surveyed 400+ leaders to see how they’re managing... Read this report Case Study Strategic Workforce Expansion With Human-Centered EOR Rapid7 scales cybersecurity talent globally while simplifying transitions and compliance with Pebl’s expert partnership. Read this case study Blog Oct 9, 2025 What Is an Employer of Record (EOR)? A Complete Guide for Global Employers Expanding a global presence is a natural and savvy move for any growing business. Hiring... Read this blog",
+      "body": [
+        "In a time of turbulent economies, shifting H-1B regulations, and an ever-changing geopolitical landscape, we surveyed 400+ leaders to see how they’re managing...",
+        "Rapid7 scales cybersecurity talent globally while simplifying transitions and compliance with Pebl’s expert partnership.",
+        "Expanding a global presence is a natural and savvy move for any growing business. Hiring..."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": "acc-panel-hreg460",
+      "className": "accordion-content",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "24px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 8102,
+        "height": 213
+      },
+      "innerText": "Every country has its own labor laws concerning employment contracts, statutory benefits, taxes, termination, and other matters. These mandates are highly dynamic, requiring continuous oversight to stay ahead of evolving labor law changes. Pebl ensures compliance with local labor laws through a proactive, multi-layered approach. Our regional legal teams monitor regulatory shifts, flag issues before they become problems, and keep every EOR engagement up to date. In addition to our own employment law monitoring, we’re backed by Baker McKenzie, the #1 global employment law firm. Our legal expertise is a big reason why our platform is rated #1 for compliance on G2.",
+      "body": [
+        "Every country has its own labor laws concerning employment contracts, statutory benefits, taxes, termination, and other matters. These mandates are highly dynamic, requiring continuous oversight to stay ahead of evolving labor law changes. Pebl ensures compliance with local labor laws through a proactive, multi-layered approach. Our regional legal teams monitor regulatory shifts, flag issues before they become problems, and keep every EOR engagement up to date. In addition to our own employment law monitoring, we’re backed by Baker McKenzie, the #1 global employment law firm. Our legal expertise is a big reason why our platform is rated #1 for compliance on G2."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": "acc-panel-z78c3jv",
+      "className": "accordion-content",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "24px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "It doesn't matter if misclassification is an accidental administrative mistake or an intentional staffing workaround. In most countries, it can trigger audits, retroactive taxes, and fines that can be quite costly. With Pebl as the legal Employer of Record (EOR), your hire is properly classified under local law from day one. You maintain the day-to-day working relationship; we bear the legal responsibility for ensuring appropriate classification, among other mandates.",
+      "body": [
+        "It doesn't matter if misclassification is an accidental administrative mistake or an intentional staffing workaround. In most countries, it can trigger audits, retroactive taxes, and fines that can be quite costly. With Pebl as the legal Employer of Record (EOR), your hire is properly classified under local law from day one. You maintain the day-to-day working relationship; we bear the legal responsibility for ensuring appropriate classification, among other mandates."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": "acc-panel-fsu3230",
+      "className": "accordion-content",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "24px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "Yes! Pebl's global EOR services cover the full employment lifecycle, including locally compliant contracts, payroll, tax filings, statutory benefits, paid leave, onboarding, and offboarding processes that align with local labor law requirements. Every component of the complete employment dynamic is connected because we know that a mistake in one area tends to create ripple effects in others. With our AI-powered infrastructure and self-service portal, you can onboard in as little as 24 hours.",
+      "body": [
+        "Yes! Pebl's global EOR services cover the full employment lifecycle, including locally compliant contracts, payroll, tax filings, statutory benefits, paid leave, onboarding, and offboarding processes that align with local labor law requirements. Every component of the complete employment dynamic is connected because we know that a mistake in one area tends to create ripple effects in others. With our AI-powered infrastructure and self-service portal, you can onboard in as little as 24 hours."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": "acc-panel-a2ruzjr",
+      "className": "accordion-content",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "24px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "Across all markets, Pebl's pricing structure uses a flat-rate model with a single predictable monthly fee per employee. That fee covers EOR services, in-country compliance, payroll, onboarding, expense and leave management, and 24/7 support. For current pricing, reach out to us directly for a custom quote.",
+      "body": [
+        "Across all markets, Pebl's pricing structure uses a flat-rate model with a single predictable monthly fee per employee. That fee covers EOR services, in-country compliance, payroll, onboarding, expense and leave management, and 24/7 support. For current pricing, reach out to us directly for a custom quote."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": "acc-panel-xk1j1r4",
+      "className": "accordion-content",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "24px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "Setting up a legal entity in a new country can be incredibly expensive, slow, and operationally heavy. The cost alone can range from five to six figures, depending on the market. The registration process can take several months, and the ongoing expenses can include legal, accounting, and administrative overhead. Not only is our pricing structure significantly lower than the cost of setting up a local entity, but our EOR services let you onboard in as little as 24 hours. You trade high, uncertain costs for speed and a simple, predictable per-employee monthly fee. For companies testing a new market or hiring a small team abroad, the math makes choosing an EOR a no-brainer.",
+      "body": [
+        "Setting up a legal entity in a new country can be incredibly expensive, slow, and operationally heavy. The cost alone can range from five to six figures, depending on the market. The registration process can take several months, and the ongoing expenses can include legal, accounting, and administrative overhead.",
+        "Not only is our pricing structure significantly lower than the cost of setting up a local entity, but our EOR services let you onboard in as little as 24 hours. You trade high, uncertain costs for speed and a simple, predictable per-employee monthly fee. For companies testing a new market or hiring a small team abroad, the math makes choosing an EOR a no-brainer."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": "acc-panel-hiqcuwu",
+      "className": "accordion-content",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "24px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "No. Pebl provides full transparency with pricing. Before you hire, we share the full employment costs beyond EOR costs, including employer tax contributions and statutory requirements specific to the market you’re hiring in. What you see on the platform is what you pay. Every country carries its own mandatory obligations, and those costs vary. You can rest assured that we don’t mark them up or layer on hidden fees. We strongly believe in providing full visibility before you commit.",
+      "body": [
+        "No. Pebl provides full transparency with pricing. Before you hire, we share the full employment costs beyond EOR costs, including employer tax contributions and statutory requirements specific to the market you’re hiring in. What you see on the platform is what you pay. Every country carries its own mandatory obligations, and those costs vary. You can rest assured that we don’t mark them up or layer on hidden fees. We strongly believe in providing full visibility before you commit."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": "acc-panel-wifxcnf",
+      "className": "accordion-content",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "paddingBlock": "24px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 0,
+        "height": 0
+      },
+      "innerText": "Global hiring risks often stay invisible until you face an audit or a labor dispute. By then, the costs can be high. Pebl owns the legal employer responsibility, so liability for global compliance rests with us rather than with your organization. You keep full control over the work and the relationship. Pebl holds the legal exposure across 185+ countries, backed by in-country experts who stay ahead of regulatory changes before they become your problem.",
+      "body": [
+        "Global hiring risks often stay invisible until you face an audit or a labor dispute. By then, the costs can be high. Pebl owns the legal employer responsibility, so liability for global compliance rests with us rather than with your organization. You keep full control over the work and the relationship. Pebl holds the legal exposure across 185+ countries, backed by in-country experts who stay ahead of regulatory changes before they become your problem."
+      ],
+      "lists": []
+    },
+    {
+      "tag": "footer",
+      "role": "contentinfo",
+      "id": null,
+      "className": "main-footer bg-[#171717] text-white py-12 text-sm",
+      "childCount": 1,
+      "bg": "rgb(23, 23, 23)",
+      "color": "rgb(255, 255, 255)",
+      "paddingBlock": "48px 48px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 9637,
+        "height": 983
+      },
+      "innerText": "Join our newsletter Enter email By subscribing you agree to with our Privacy Policy Platform Employer of Record Global Payroll Global Benefits International Pensions Global Equity Program Global Immigration Global Talent Sourcing Alfie AI Assistant Integration Directory Platform Updates Who We Serve Human Resources Finance Teams Legal Teams Technology Manufacturing Finance AI Retail Professional Services How EOR Helps Go Global Faster Build Competitive Teams Compliance Made Easy Mergers & Acquisitions Contractor Conversion Resources Blog Glossary Country Employment Guides Case Studies Compare Competitors Employee Cost Calculator Misclassification Risk Assessment Help Center About Us Our Company Our New Brand Events Newsroom Careers Pricing Sitemap Choose Language: English © 2026 Pebl (Velocity Global, LLC). All rights reserved. Accessibility Policy Privacy Policy SpeakUp! Hotline Terms of Use Cookies Settings",
+      "body": [
+        "By subscribing you agree to with our Privacy Policy",
+        "© 2026 Pebl (Velocity Global, LLC). All rights reserved.",
+        "We care about your privacy. By submitting this form, you will receive the requested information, as well as occasional related business insights from Pebl. You can unsubscribe at any time. For details, view our Privacy Policy."
+      ],
+      "lists": [
+        {
+          "ordered": false,
+          "items": [
+            "Employer of Record",
+            "Global Payroll",
+            "Global Benefits",
+            "International Pensions",
+            "Global Equity Program",
+            "Global Immigration",
+            "Global Talent Sourcing",
+            "Alfie AI Assistant",
+            "Integration Directory",
+            "Platform Updates"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Human Resources",
+            "Finance Teams",
+            "Legal Teams",
+            "Technology",
+            "Manufacturing",
+            "Finance",
+            "AI",
+            "Retail",
+            "Professional Services"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Go Global Faster",
+            "Build Competitive Teams",
+            "Compliance Made Easy",
+            "Mergers & Acquisitions",
+            "Contractor Conversion"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Blog",
+            "Glossary",
+            "Country Employment Guides",
+            "Case Studies",
+            "Compare Competitors",
+            "Employee Cost Calculator",
+            "Misclassification Risk Assessment",
+            "Help Center"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "Our Company",
+            "Our New Brand",
+            "Events",
+            "Newsroom",
+            "Careers",
+            "Pricing",
+            "Sitemap"
+          ]
+        },
+        {
+          "ordered": false,
+          "items": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Portuguese"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "div",
+      "role": "navigation",
+      "id": "block-pebl-languageswitcher",
+      "className": "language-switcher-language-url block block--language block--language-blocklanguage-interface block-pebl-languageswitcher",
+      "childCount": 1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "paddingBlock": "0px 0px",
+      "borderRadius": "0px",
+      "rect": {
+        "top": 10427,
+        "height": 47
+      },
+      "innerText": "English",
+      "body": [],
+      "lists": [
+        {
+          "ordered": false,
+          "items": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Portuguese"
+          ]
+        }
+      ]
+    }
+  ],
+  "ctas": [
+    {
+      "label": "×",
+      "href": null,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "0px",
+      "padding": "0px"
+    },
+    {
+      "label": "Search",
+      "href": null,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(23, 23, 23)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "0px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Employer of Record",
+      "href": "/employer-of-record/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "20px",
+      "padding": "18px 14px"
+    },
+    {
+      "label": "Countries",
+      "href": "/countries/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "20px",
+      "padding": "18px 14px"
+    },
+    {
+      "label": "Pricing",
+      "href": "/eor-pricing/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "20px",
+      "padding": "18px 14px"
+    },
+    {
+      "label": "Get started",
+      "href": "https://signup.hellopebl.com/self-signup",
+      "bg": "rgb(107, 218, 205)",
+      "color": "rgb(23, 23, 23)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "borderRadius": "20px",
+      "padding": "20px 24px"
+    },
+    {
+      "label": "Contact us",
+      "href": "/contact/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(23, 23, 23)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "700",
+      "borderRadius": "20px",
+      "padding": "20px 24px"
+    },
+    {
+      "label": "Menu",
+      "href": null,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "0px",
+      "padding": "12px 0px 12px 12px"
+    },
+    {
+      "label": "How EOR Works",
+      "href": null,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "0px",
+      "padding": "8px 12px"
+    },
+    {
+      "label": "What is EOR?",
+      "href": "/resources/blog/what-is-an-employer-of-record/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "EOR vs Entity Setup",
+      "href": "/resources/blog/eor-vs-entity-establishment/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "How Much Does an EOR Cost?",
+      "href": "/resources/blog/eor-cost/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Compare EOR Competitors",
+      "href": "/compare/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Global Expansion",
+      "href": "/global-expansion/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "HR Compliance",
+      "href": "/compliance/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Mergers & Acquisitions",
+      "href": "/mergers-and-acquisitions/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Global Hiring",
+      "href": "/hire-globally/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "What's Included",
+      "href": null,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "0px",
+      "padding": "8px 12px"
+    },
+    {
+      "label": "Global Payroll",
+      "href": "/global-payroll/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Benefits Administration",
+      "href": "/global-benefits/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Immigration Support",
+      "href": "/global-immigration/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Talent Sourcing",
+      "href": "/global-talent-sourcing/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Alfie AI Assistant",
+      "href": "/alfie-ai-assistant/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Greenhouse",
+      "href": "/integrations/greenhouse/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "ADP",
+      "href": "/integrations/adp-workforce-now/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "JazzHR",
+      "href": "/integrations/jazzhr/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Oracle",
+      "href": "/integrations/oracle/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "See All",
+      "href": "/integrations/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Who We Serve",
+      "href": null,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "0px",
+      "padding": "8px 12px"
+    },
+    {
+      "label": "Human Resources",
+      "href": "/human-resources/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Finance",
+      "href": "/finance-teams/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Legal",
+      "href": "/legal-teams/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Technology",
+      "href": "/industries/technology/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Manufacturing",
+      "href": "/industries/manufacturing/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "AI",
+      "href": "/industries/ai/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Retail",
+      "href": "/industries/retail/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    },
+    {
+      "label": "Professional Services",
+      "href": "/industries/professional-services/",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "fontFamily": "\"Sharp Earth\", serif",
+      "fontWeight": "400",
+      "borderRadius": "4px",
+      "padding": "6px 8px"
+    }
+  ],
+  "links": {
+    "internal": [
+      "/velocity-global-is-now-pebl/",
+      "/demo/",
+      "/resources/",
+      "/",
+      "/employer-of-record/",
+      "/resources/blog/what-is-an-employer-of-record/",
+      "/resources/blog/eor-vs-entity-establishment/",
+      "/resources/blog/eor-cost/",
+      "/compare/",
+      "/global-expansion/",
+      "/compliance/",
+      "/mergers-and-acquisitions/",
+      "/hire-globally/",
+      "/global-payroll/",
+      "/global-benefits/",
+      "/global-immigration/",
+      "/global-talent-sourcing/",
+      "/alfie-ai-assistant/",
+      "/integrations/greenhouse/",
+      "/integrations/adp-workforce-now/",
+      "/integrations/jazzhr/",
+      "/integrations/oracle/",
+      "/integrations/",
+      "/human-resources/",
+      "/finance-teams/",
+      "/legal-teams/",
+      "/industries/technology/",
+      "/industries/manufacturing/",
+      "/industries/finance/",
+      "/industries/ai/",
+      "/industries/retail/",
+      "/industries/professional-services/",
+      "/countries/",
+      "/countries/employer-of-record-canada/",
+      "/countries/employer-of-record-france/",
+      "/countries/employer-of-record-mexico/",
+      "/countries/employer-of-record-philippines/",
+      "/countries/employer-of-record-united-kingdom/",
+      "/resources/blog/",
+      "/resources/tool/employee-cost-calculator/",
+      "/glossary/",
+      "/resources/tool/misclassification-risk-assessment/",
+      "/resources/blog/country-guides/",
+      "/eor-pricing/",
+      "/contact/",
+      "/resources/case-study/startup-global-hiring-success-story-paige/",
+      "/resources/case-study/employee-relocation-success-story-attentive/",
+      "/resources/case-study/anuvu-compliantly-expanding-multiple-markets/",
+      "/resources/report/2025-global-hiring-report/",
+      "/resources/case-study/rapid7-avoiding-costly-expansions-and-managing-employee-transitions/"
+    ],
+    "external": [
+      "cloud.hellopebl.com",
+      "signup.hellopebl.com",
+      "help.hellopebl.com",
+      "velocityglobal.whispli.com",
+      "www.linkedin.com",
+      "www.instagram.com",
+      "www.youtube.com"
+    ]
+  },
+  "media": {
+    "images": [
+      {
+        "src": "https://hellopebl.com/themes/custom/pebl/logo.svg",
+        "alt": "Home",
+        "naturalWidth": 108,
+        "naturalHeight": 39,
+        "rectTop": 75,
+        "rendW": 107,
+        "rendH": 39
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-05/honeywell-logo.png?itok=Fu1g-HZ8",
+        "alt": "Honeywell logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-05/Yelp_Logo%201.png?itok=9Q_jHfqX",
+        "alt": "Yelp logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-05/CAA-logo.png?itok=rUuq9R9Z",
+        "alt": "CAA logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DPenguin_Random_House%201.png?itok=2Nhlz5Ug",
+        "alt": "Penguin Random House logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Dcrunchbase%201.png?itok=v1WAr0b1",
+        "alt": "crunchbase logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DGlaukos%201.png?itok=8VPbaxHh",
+        "alt": "Glaukos logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Danuvu---boxed%201.png?itok=mcMUwlIG",
+        "alt": "anuvu Logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DLastPass_logo_2016%201.png?itok=puCcLJ2s",
+        "alt": "lastpass logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DLinksys%201.png?itok=otOdbsL2",
+        "alt": "Linksys logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Dmaterialize_logo%201.png?itok=fUejCXzx",
+        "alt": "materialize logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DPaige%201.png?itok=MsUKsgOh",
+        "alt": "Paige logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Darray-logo%201.png?itok=5xDSh5wI",
+        "alt": "array logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DClientLogo-Attentive-234x1000%201.png?itok=qfDGHlC0",
+        "alt": "Attentive logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DConsensys-new%201.png?itok=DrOYA6Wc",
+        "alt": "consensys logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DDragonfly-testimonials%201.png?itok=EFxQP2pd",
+        "alt": "Dragonfly Logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Dhellow-yellow-350x592%201.png?itok=UIjXsoTm",
+        "alt": "hellow-yellow logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DMercury-Gate-testimonial%201.png?itok=MRoopQy4",
+        "alt": "Mercury-Gate logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-05/honeywell-logo.png?itok=Fu1g-HZ8",
+        "alt": "Honeywell logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-05/Yelp_Logo%201.png?itok=9Q_jHfqX",
+        "alt": "Yelp logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-05/CAA-logo.png?itok=rUuq9R9Z",
+        "alt": "CAA logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DPenguin_Random_House%201.png?itok=2Nhlz5Ug",
+        "alt": "Penguin Random House logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Dcrunchbase%201.png?itok=v1WAr0b1",
+        "alt": "crunchbase logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DGlaukos%201.png?itok=8VPbaxHh",
+        "alt": "Glaukos logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Danuvu---boxed%201.png?itok=mcMUwlIG",
+        "alt": "anuvu Logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DLastPass_logo_2016%201.png?itok=puCcLJ2s",
+        "alt": "lastpass logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DLinksys%201.png?itok=otOdbsL2",
+        "alt": "Linksys logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Dmaterialize_logo%201.png?itok=fUejCXzx",
+        "alt": "materialize logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3DPaige%201.png?itok=MsUKsgOh",
+        "alt": "Paige logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      },
+      {
+        "src": "https://hellopebl.com/sites/default/files/styles/media_library/public/image/2026-01/Logos%3Darray-logo%201.png?itok=5xDSh5wI",
+        "alt": "array logo",
+        "naturalWidth": 220,
+        "naturalHeight": 130,
+        "rectTop": 903,
+        "rendW": 175,
+        "rendH": 103
+      }
+    ],
+    "cssBackgrounds": [
+      {
+        "urls": [
+          "https://hellopebl.com/sites/default/files/image/2025-12/Testimonials-background-Water-5.jpg"
+        ],
+        "pseudo": null,
+        "rectTop": 6496,
+        "w": 1364,
+        "h": 567,
+        "backgroundSize": "cover"
+      }
+    ]
+  },
+  "cssVars": [
+    {
+      "name": "--container-md",
+      "value": "28rem"
+    },
+    {
+      "name": "--tw-inset-shadow-alpha",
+      "value": "100%"
+    },
+    {
+      "name": "--header-height",
+      "value": "0"
+    },
+    {
+      "name": "--P0-letter-spacing",
+      "value": "0.2px"
+    },
+    {
+      "name": "--tw-ring-shadow",
+      "value": "0 0 #0000"
+    },
+    {
+      "name": "--text-2xl",
+      "value": "1.5rem"
+    },
+    {
+      "name": "--aspect-video",
+      "value": "16 / 9"
+    },
+    {
+      "name": "--Primary-Arctic-300",
+      "value": "#04404e"
+    },
+    {
+      "name": "--H5-letter-spacing",
+      "value": "-0.26px"
+    },
+    {
+      "name": "--tw-drop-shadow-alpha",
+      "value": "100%"
+    },
+    {
+      "name": "--text-7xl",
+      "value": "4.5rem"
+    },
+    {
+      "name": "--text-lg",
+      "value": "1.125rem"
+    },
+    {
+      "name": "--Super-letter-spacing",
+      "value": "-6px"
+    },
+    {
+      "name": "--color-neutral-500",
+      "value": "oklch(55.6% 0 0)"
+    },
+    {
+      "name": "--P1",
+      "value": "20px"
+    },
+    {
+      "name": "--P2-letter-spacing",
+      "value": "0.18px"
+    },
+    {
+      "name": "--Primary-Pacific-100",
+      "value": "#6bdacd"
+    },
+    {
+      "name": "--tw-outline-style",
+      "value": "solid"
+    },
+    {
+      "name": "--text-5xl--line-height",
+      "value": "1"
+    },
+    {
+      "name": "--tw-inset-ring-shadow",
+      "value": "0 0 #0000"
+    },
+    {
+      "name": "--text-base--line-height",
+      "value": "calc(1.5 / 1)"
+    },
+    {
+      "name": "--color-gray-300",
+      "value": "oklch(87.2% 0.01 258.338)"
+    },
+    {
+      "name": "--font-mono",
+      "value": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New"
+    },
+    {
+      "name": "--tracking-wider",
+      "value": "0.05em"
+    },
+    {
+      "name": "--color-gray-500",
+      "value": "oklch(55.1% 0.027 264.364)"
+    },
+    {
+      "name": "--H3",
+      "value": "38px"
+    },
+    {
+      "name": "--color-gray-50",
+      "value": "oklch(98.5% 0.002 247.839)"
+    },
+    {
+      "name": "--Super",
+      "value": "120px"
+    },
+    {
+      "name": "--tw-inset-shadow",
+      "value": "0 0 #0000"
+    },
+    {
+      "name": "--tw-ring-offset-color",
+      "value": "#fff"
+    },
+    {
+      "name": "--text-lg--line-height",
+      "value": "calc(1.75 / 1.125)"
+    },
+    {
+      "name": "--tw-divide-x-reverse",
+      "value": "0"
+    },
+    {
+      "name": "--tw-gradient-from",
+      "value": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "name": "--P1-letter-spacing",
+      "value": "0.2px"
+    },
+    {
+      "name": "--color-white",
+      "value": "#fff"
+    },
+    {
+      "name": "--color-gray-400",
+      "value": "oklch(70.7% 0.022 261.325)"
+    },
+    {
+      "name": "--tw-gradient-to",
+      "value": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "name": "--tw-shadow-alpha",
+      "value": "100%"
+    },
+    {
+      "name": "--H5",
+      "value": "26px"
+    },
+    {
+      "name": "--Primary-Text-25",
+      "value": "hsla(0,0%,100%,.25)"
+    },
+    {
+      "name": "--radius-sm",
+      "value": "0.25rem"
+    },
+    {
+      "name": "--font-sans",
+      "value": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe U"
+    },
+    {
+      "name": "--tw-scale-z",
+      "value": "1"
+    },
+    {
+      "name": "--font-weight-bold",
+      "value": "700"
+    },
+    {
+      "name": "--color-gray-100",
+      "value": "oklch(96.7% 0.003 264.542)"
+    },
+    {
+      "name": "--H3-letter-spacing",
+      "value": "-0.88px"
+    },
+    {
+      "name": "--container-sm",
+      "value": "24rem"
+    },
+    {
+      "name": "--tw-ring-offset-width",
+      "value": "0px"
+    },
+    {
+      "name": "--tw-gradient-via-position",
+      "value": "50%"
+    },
+    {
+      "name": "--P3-letter-spacing",
+      "value": "0.18px"
+    },
+    {
+      "name": "--tw-scroll-snap-strictness",
+      "value": "proximity"
+    },
+    {
+      "name": "--Primary-Text-100",
+      "value": "#171717"
+    },
+    {
+      "name": "--default-font-family",
+      "value": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe U"
+    },
+    {
+      "name": "--text-xs--line-height",
+      "value": "calc(1 / 0.75)"
+    },
+    {
+      "name": "--tw-space-x-reverse",
+      "value": "0"
+    },
+    {
+      "name": "--H6",
+      "value": "20px"
+    },
+    {
+      "name": "--container-lg",
+      "value": "32rem"
+    },
+    {
+      "name": "--tw-gradient-to-position",
+      "value": "100%"
+    },
+    {
+      "name": "--default-transition-duration",
+      "value": "150ms"
+    },
+    {
+      "name": "--animate-pulse",
+      "value": "pulse 2s cubic-bezier(0.4,0,0.6,1) infinite"
+    },
+    {
+      "name": "--radius-2xl",
+      "value": "1rem"
+    },
+    {
+      "name": "--radius-md",
+      "value": "0.375rem"
+    },
+    {
+      "name": "--H4",
+      "value": "28px"
+    },
+    {
+      "name": "--text-7xl--line-height",
+      "value": "1"
+    },
+    {
+      "name": "--color-neutral-900",
+      "value": "oklch(20.5% 0 0)"
+    },
+    {
+      "name": "--radius-lg",
+      "value": "0.5rem"
+    },
+    {
+      "name": "--text-xl",
+      "value": "1.25rem"
+    },
+    {
+      "name": "--H2",
+      "value": "52px"
+    },
+    {
+      "name": "--tw-gradient-from-position",
+      "value": "0%"
+    },
+    {
+      "name": "--ease-in-out",
+      "value": "cubic-bezier(0.4,0,0.2,1)"
+    },
+    {
+      "name": "--tw-ring-offset-shadow",
+      "value": "0 0 #0000"
+    },
+    {
+      "name": "--Tertiary-stone-pale",
+      "value": "#f5f3ef"
+    },
+    {
+      "name": "--Primary-Pacific-300",
+      "value": "#6bdacd"
+    },
+    {
+      "name": "--color-gray-800",
+      "value": "oklch(27.8% 0.033 256.848)"
+    },
+    {
+      "name": "--P3",
+      "value": "15px"
+    },
+    {
+      "name": "--leading-relaxed",
+      "value": "1.625"
+    },
+    {
+      "name": "--leading-snug",
+      "value": "1.375"
+    },
+    {
+      "name": "--default-transition-timing-function",
+      "value": "cubic-bezier(0.4,0,0.2,1)"
+    },
+    {
+      "name": "--radius-3xl",
+      "value": "1.5rem"
+    },
+    {
+      "name": "--text-2xl--line-height",
+      "value": "calc(2 / 1.5)"
+    },
+    {
+      "name": "--P0",
+      "value": "26px"
+    },
+    {
+      "name": "--spacing",
+      "value": "0.25rem"
+    },
+    {
+      "name": "--tw-translate-z",
+      "value": "0"
+    },
+    {
+      "name": "--H1",
+      "value": "70px"
+    },
+    {
+      "name": "--tw-gradient-via",
+      "value": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "name": "--tw-scale-y",
+      "value": "1"
+    },
+    {
+      "name": "--container-6xl",
+      "value": "72rem"
+    },
+    {
+      "name": "--text-xl--line-height",
+      "value": "calc(1.75 / 1.25)"
+    },
+    {
+      "name": "--font-weight-semibold",
+      "value": "600"
+    },
+    {
+      "name": "--container-3xl",
+      "value": "48rem"
+    },
+    {
+      "name": "--text-sm",
+      "value": "0.875rem"
+    },
+    {
+      "name": "--tw-translate-y",
+      "value": "0"
+    },
+    {
+      "name": "--ease-out",
+      "value": "cubic-bezier(0,0,0.2,1)"
+    },
+    {
+      "name": "--color-gray-900",
+      "value": "oklch(21% 0.034 264.665)"
+    },
+    {
+      "name": "--container-4xl",
+      "value": "56rem"
+    },
+    {
+      "name": "--tw-content",
+      "value": "\"\""
+    },
+    {
+      "name": "--Primary-Text-6",
+      "value": "hsla(0,0%,9%,.06)"
+    },
+    {
+      "name": "--leading-tight",
+      "value": "1.25"
+    },
+    {
+      "name": "--P2",
+      "value": "18px"
+    },
+    {
+      "name": "--Body-Font",
+      "value": "\"Sharp Earth\",serif"
+    },
+    {
+      "name": "--font-weight-extrabold",
+      "value": "800"
+    },
+    {
+      "name": "--H1-letter-spacing",
+      "value": "-3.2px"
+    },
+    {
+      "name": "--text-4xl",
+      "value": "2.25rem"
+    },
+    {
+      "name": "--tw-divide-y-reverse",
+      "value": "0"
+    },
+    {
+      "name": "--tw-border-style",
+      "value": "solid"
+    },
+    {
+      "name": "--H4-letter-spacing",
+      "value": "-0.38px"
+    },
+    {
+      "name": "--container-2xl",
+      "value": "42rem"
+    },
+    {
+      "name": "--tw-shadow",
+      "value": "0 0 #0000"
+    },
+    {
+      "name": "--text-sm--line-height",
+      "value": "calc(1.25 / 0.875)"
+    },
+    {
+      "name": "--tw-translate-x",
+      "value": "0"
+    },
+    {
+      "name": "--color-gray-200",
+      "value": "oklch(92.8% 0.006 264.531)"
+    },
+    {
+      "name": "--text-3xl--line-height",
+      "value": "calc(2.25 / 1.875)"
+    },
+    {
+      "name": "--text-5xl",
+      "value": "3rem"
+    },
+    {
+      "name": "--text-3xl",
+      "value": "1.875rem"
+    },
+    {
+      "name": "--text-xs",
+      "value": "0.75rem"
+    },
+    {
+      "name": "--color-black",
+      "value": "#000"
+    },
+    {
+      "name": "--tracking-widest",
+      "value": "0.1em"
+    },
+    {
+      "name": "--font-weight-medium",
+      "value": "500"
+    },
+    {
+      "name": "--font-weight-normal",
+      "value": "400"
+    },
+    {
+      "name": "--tw-scale-x",
+      "value": "1"
+    },
+    {
+      "name": "--H6-letter-spacing",
+      "value": "-0.2px"
+    },
+    {
+      "name": "--Primary-Stroke-Light",
+      "value": "hsla(40,12%,80%,.33)"
+    },
+    {
+      "name": "--color-neutral-800",
+      "value": "oklch(26.9% 0 0)"
+    },
+    {
+      "name": "--radius-xl",
+      "value": "0.75rem"
+    },
+    {
+      "name": "--tw-space-y-reverse",
+      "value": "0"
+    },
+    {
+      "name": "--container-xl",
+      "value": "36rem"
+    },
+    {
+      "name": "--H2-letter-spacing",
+      "value": "-1.56px"
+    },
+    {
+      "name": "--text-4xl--line-height",
+      "value": "calc(2.5 / 2.25)"
+    },
+    {
+      "name": "--container-7xl",
+      "value": "80rem"
+    },
+    {
+      "name": "--text-base",
+      "value": "1rem"
+    },
+    {
+      "name": "--default-mono-font-family",
+      "value": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New"
+    },
+    {
+      "name": "--tracking-tight",
+      "value": "-0.025em"
+    }
+  ],
+  "forms": [
+    {
+      "action": "https://hellopebl.com/home-new/",
+      "method": "get",
+      "fields": [
+        {
+          "type": "text",
+          "name": "s"
+        },
+        {
+          "type": "submit",
+          "name": null
+        }
+      ]
+    },
+    {
+      "action": "https://hellopebl.com/",
+      "method": "post",
+      "fields": [
+        {
+          "type": "email",
+          "name": "business_email"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_source__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_campaign__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_medium__c"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_sid"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_token"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_response"
+        },
+        {
+          "type": "textarea",
+          "name": "g-recaptcha-response"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_cacheable"
+        },
+        {
+          "type": "submit",
+          "name": "op"
+        },
+        {
+          "type": "hidden",
+          "name": "form_build_id"
+        },
+        {
+          "type": "hidden",
+          "name": "form_id"
+        }
+      ]
+    },
+    {
+      "action": "https://hellopebl.com/",
+      "method": "post",
+      "fields": [
+        {
+          "type": "text",
+          "name": "first_name"
+        },
+        {
+          "type": "text",
+          "name": "last_name"
+        },
+        {
+          "type": "email",
+          "name": "business_email"
+        },
+        {
+          "type": "tel",
+          "name": "phone_number"
+        },
+        {
+          "type": "text",
+          "name": "how_can_we_help"
+        },
+        {
+          "type": "checkbox",
+          "name": "i_m_looking_for_a_job"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_medium__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_source__c"
+        },
+        {
+          "type": "hidden",
+          "name": "gclid__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_campaign__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utmterm"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_content__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_marketing_tactic__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_source_platform__c"
+        },
+        {
+          "type": "hidden",
+          "name": "utm_term__c"
+        },
+        {
+          "type": "hidden",
+          "name": "ga_client_id__c"
+        },
+        {
+          "type": "hidden",
+          "name": "internal_campaign__c"
+        },
+        {
+          "type": "hidden",
+          "name": "channel_grouping__c"
+        },
+        {
+          "type": "hidden",
+          "name": "entrance_page__c"
+        },
+        {
+          "type": "hidden",
+          "name": "microsoft_click_id__c"
+        },
+        {
+          "type": "hidden",
+          "name": "facebook_browser_id__c"
+        },
+        {
+          "type": "hidden",
+          "name": "facebook_click_id__c"
+        },
+        {
+          "type": "hidden",
+          "name": "zoominfomatchtype"
+        },
+        {
+          "type": "hidden",
+          "name": "zoominfomatchedfieldcount"
+        },
+        {
+          "type": "hidden",
+          "name": "zoominfomappedfieldcount"
+        },
+        {
+          "type": "hidden",
+          "name": "cro_campaign__c"
+        },
+        {
+          "type": "hidden",
+          "name": "impactclickid__c"
+        },
+        {
+          "type": "hidden",
+          "name": "twopartformbooktimeorsubmit"
+        },
+        {
+          "type": "hidden",
+          "name": "linkedin_clickid__c"
+        },
+        {
+          "type": "hidden",
+          "name": "tiktok_clickid__c"
+        },
+        {
+          "type": "hidden",
+          "name": "internal_source__c"
+        },
+        {
+          "type": "hidden",
+          "name": "alfie_conversation_id"
+        },
+        {
+          "type": "hidden",
+          "name": "referral_url__c"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_sid"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_token"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_response"
+        },
+        {
+          "type": "textarea",
+          "name": "g-recaptcha-response"
+        },
+        {
+          "type": "hidden",
+          "name": "captcha_cacheable"
+        },
+        {
+          "type": "hidden",
+          "name": "form_build_id"
+        },
+        {
+          "type": "hidden",
+          "name": "form_id"
+        },
+        {
+          "type": "submit",
+          "name": "op"
+        }
+      ]
+    }
+  ],
+  "logo": {
+    "kind": "og:image",
+    "src": "https://hellopebl.com/sites/default/files/image/2025-09/pebl-og-img.jpg"
+  },
+  "voice": {
+    "firstPara": "Pebl’s AI-powered EOR platform lets you scale your global workforce fast, with built-in compliance guidance across 185+ countries.",
+    "h1": "Build teams anywhere. Yes, even there."
+  },
+  "bodyBg": "rgba(0, 0, 0, 0)",
+  "bodyColor": "rgb(0, 0, 0)",
+  "bodyFont": "\"Sharp Earth\", serif",
+  "htmlFont": "\"Sharp Earth\", serif"
+}

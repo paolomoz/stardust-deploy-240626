@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pebl — Build teams anywhere. Yes, even there.</title>
+<meta name="description" content="Pebl's AI-powered Employer of Record platform lets you build global teams across 185+ countries, with compliance handled, hiring in 24 hours, and the #1 G2 rating for compliance.">
+
+<style>
+/* ============================================================
+   FONTS — captured Pebl type system (Mode A, do not substitute)
+   FK Roman Standard = display serif · Sharp Earth = body sans
+   ============================================================ */
+@font-face{font-family:"FK Roman Standard";src:url("../current/assets/fonts/FKRomanStandard-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"FK Roman Standard";src:url("../current/assets/fonts/FKRomanStandard-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Sharp Earth";src:url("../current/assets/fonts/SharpEarth-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Sharp Earth";src:url("../current/assets/fonts/SharpEarth-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Sharp Earth";src:url("../current/assets/fonts/SharpEarth-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+
+/* ============================================================
+   TOKENS — pinned Pebl palette
+   arctic #04404e · pacific #6bdacd · soft mint bg from screenshot
+   ============================================================ */
+:root{
+  --arctic:#04404e;          /* signature deep teal */
+  --arctic-900:#022b34;      /* darker teal (footer, depth) */
+  --arctic-700:#05566a;      /* lifted teal */
+  --pacific:#6bdacd;         /* signature mint accent */
+  --pacific-deep:#2f9e90;    /* mint, contrast-safe on light */
+  --mint-bg:#e8f4f0;         /* soft arctic-mint page ground */
+  --mint-card:#f4faf7;       /* lifted card on mint */
+  --cream:#faf8f2;
+  --ink:#11201f;
+  --ink-soft:#3c4b49;
+  --line-dark:rgba(107,218,205,.20);
+  --line-light:rgba(4,64,78,.14);
+
+  --serif:"FK Roman Standard",Georgia,"Times New Roman",serif;
+  --body:"Sharp Earth","Inter",system-ui,-apple-system,sans-serif;
+
+  --maxw:1280px;
+  --pad:clamp(20px,5vw,64px);
+
+  --ease:cubic-bezier(.16,1,.3,1);   /* ease-out-expo-ish */
+
+  /* z scale */
+  --z-sticky:100; --z-overlay:200;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--body);
+  background:var(--mint-bg);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+h1,h2,h3{
+  font-family:var(--serif);
+  font-weight:700;
+  line-height:1.0;
+  letter-spacing:-.035em;
+  text-wrap:balance;
+}
+p{text-wrap:pretty}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+
+/* ---- buttons ---- */
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:var(--body);font-weight:700;font-size:.97rem;
+  letter-spacing:.01em;
+  padding:.92rem 1.85rem;border-radius:999px;
+  border:1.5px solid transparent;cursor:pointer;
+  transition:transform .35s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);
+  white-space:nowrap;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--pacific);outline-offset:3px}
+.btn-primary{background:var(--pacific);color:var(--arctic-900)}
+.btn-primary:hover{background:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:var(--pacific)}
+.btn-dark{background:var(--arctic);color:#fff}
+.btn-dark:hover{background:var(--arctic-900)}
+.btn-outline-dark{border-color:var(--arctic);color:var(--arctic)}
+.btn-outline-dark:hover{background:var(--arctic);color:#fff}
+.btn .play{width:1.5rem;height:1.5rem;border-radius:50%;display:inline-grid;place-items:center;background:currentColor;flex:none}
+.btn .play svg{width:.55rem;height:.55rem;display:block}
+
+.kicker{
+  font-family:var(--body);font-weight:700;font-size:.74rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--pacific-deep);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header.site{
+  position:sticky;top:0;z-index:var(--z-sticky);
+  background:rgba(4,64,78,.78);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid var(--line-dark);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:.5rem;font-family:var(--serif);font-weight:700;font-size:1.7rem;color:#fff;letter-spacing:-.04em}
+.brand .mark{width:13px;height:16px;flex:none;color:var(--pacific)}
+.nav-links{display:flex;gap:2.2rem;font-weight:400;font-size:.95rem}
+.nav-links a{color:rgba(255,255,255,.82);transition:color .2s}
+.nav-links a:hover{color:var(--pacific)}
+.nav-right{display:flex;align-items:center;gap:1.3rem}
+.nav-right .login{font-weight:700;font-size:.95rem;color:rgba(255,255,255,.85)}
+.nav-right .login:hover{color:var(--pacific)}
+@media(max-width:920px){.nav-links,.nav-right .login{display:none}}
+
+/* ============================================================
+   HERO — FULL-BLEED cinematic film (single video) with copy OVER it.
+   One full-screen background video (Ken-Burns + parallax). A legibility
+   scrim/gradient sits over the video so the white/mint headline reads
+   cleanly. NO second/inset video. The copy sits on top, bottom-left.
+   ============================================================ */
+.hero{
+  position:relative;isolation:isolate;color:#fff;
+  min-height:clamp(560px,92vh,940px);
+  display:flex;align-items:flex-end;overflow:hidden;
+  background:var(--arctic-900);
+}
+/* ---- Plane A: the single full-bleed cinematic video ---- */
+.hero-media{position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--arctic-900)}
+.hero-media video,.hero-media .poster{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;object-position:60% center;
+}
+.hero-media .planeA{transform:scale(1.06);transform-origin:62% 42%;will-change:transform}
+/* ---- legibility scrim/gradient OVER the video (needed, intentional) ---- */
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(2,43,52,.42) 0%,rgba(2,43,52,0) 26%,rgba(2,43,52,0) 48%,rgba(2,43,52,.55) 80%,rgba(2,43,52,.86) 100%),
+    linear-gradient(80deg,rgba(2,43,52,.78) 0%,rgba(2,43,52,.34) 42%,rgba(2,43,52,0) 70%);
+}
+.hero-inner{
+  width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad);
+  padding-block:clamp(56px,9vh,116px);
+}
+.hero-copy{display:flex;flex-direction:column;justify-content:flex-end;max-width:30ch}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.7rem;align-self:flex-start;
+  font-family:var(--body);font-weight:700;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--pacific);margin-bottom:clamp(20px,3.5vh,34px);
+  text-shadow:0 1px 10px rgba(2,43,52,.55);
+}
+.hero-eyebrow::before{content:"";width:34px;height:1.5px;background:var(--pacific)}
+.hero h1{
+  font-size:clamp(2.9rem,7vw,5.8rem);
+  line-height:.94;color:#fff;max-width:15ch;
+  text-shadow:0 2px 30px rgba(2,43,52,.5);
+}
+.hero h1 .em{font-style:italic;color:var(--pacific)}
+.hero-foot{
+  display:flex;flex-direction:column;align-items:flex-start;
+  gap:clamp(22px,3.5vh,34px);margin-top:clamp(24px,4vh,40px);
+}
+.hero-foot p{font-size:clamp(1.05rem,1.4vw,1.28rem);color:rgba(255,255,255,.92);max-width:46ch;line-height:1.5;text-shadow:0 1px 16px rgba(2,43,52,.6)}
+.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap}
+
+@media(max-width:560px){
+  .hero h1{max-width:none}
+  .hero-copy{max-width:none}
+}
+
+/* ============================================================
+   TRUST BAND — pulled UP, directly under hero (FIX #3)
+   ============================================================ */
+.trust{background:var(--arctic);color:#fff;border-bottom:1px solid var(--line-dark)}
+.trust .wrap{padding-block:clamp(36px,5vw,56px)}
+.trust .label{
+  font-family:var(--body);font-weight:700;font-size:.78rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--pacific);line-height:1.4;
+  text-align:center;margin-bottom:clamp(24px,3vw,38px);
+}
+/* all 12 client logos — 6×2 grid, every cell aligned */
+.logo-row{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  gap:clamp(20px,3vw,40px) clamp(28px,4vw,56px);
+  align-items:center;justify-items:center;
+}
+.logo-row img{
+  height:26px;width:auto;max-width:100%;object-fit:contain;
+  /* logos are black-on-transparent → invert to a soft white on teal */
+  filter:brightness(0) invert(1);
+  opacity:.72;transition:opacity .3s var(--ease),transform .3s var(--ease);
+}
+.logo-row img:hover{opacity:1;transform:translateY(-2px)}
+.logo-row img.tall{height:36px}
+@media(max-width:760px){
+  .logo-row{grid-template-columns:repeat(3,1fr);gap:24px 28px}
+  .logo-row img{height:22px}
+  .logo-row img.tall{height:30px}
+}
+
+/* ============================================================
+   METRIC BAND — confident, numbers first (FIX #4)
+   ============================================================ */
+.metrics{background:var(--pacific);color:var(--arctic-900)}
+.metrics .wrap{
+  display:grid;grid-template-columns:repeat(3,1fr);padding-inline:0;
+}
+.metric{
+  padding:clamp(48px,6vw,80px) clamp(24px,3.5vw,52px);
+  border-right:1px solid rgba(4,64,78,.16);
+  display:flex;flex-direction:column;gap:.5rem;
+}
+.metric:last-child{border-right:none}
+.metric .num{
+  font-family:var(--serif);font-weight:700;line-height:.9;
+  font-size:clamp(3.4rem,7vw,5.6rem);letter-spacing:-.05em;color:var(--arctic-900);
+}
+.metric .num sup{font-size:.42em;vertical-align:.7em;letter-spacing:0;margin-left:.04em}
+.metric .lbl{font-family:var(--serif);font-weight:700;font-size:clamp(1.05rem,1.5vw,1.35rem);letter-spacing:-.02em;color:var(--arctic)}
+.metric .sub{font-family:var(--body);font-weight:400;font-size:.92rem;color:rgba(4,64,78,.72);max-width:30ch}
+@media(max-width:780px){
+  .metrics .wrap{grid-template-columns:1fr}
+  .metric{border-right:none;border-bottom:1px solid rgba(4,64,78,.16);padding-block:40px}
+  .metric:last-child{border-bottom:none}
+}
+
+/* ============================================================
+   SECTION scaffolding (mint ground)
+   ============================================================ */
+.section{padding-block:clamp(72px,9vw,128px)}
+.section-head{max-width:62ch;margin-bottom:clamp(40px,5vw,64px)}
+.section-head .kicker{display:block;margin-bottom:1rem}
+.section-head h2{font-size:clamp(2.2rem,4.6vw,3.7rem);color:var(--arctic-900);max-width:18ch}
+.section-head p{margin-top:1.1rem;font-size:1.15rem;color:var(--ink-soft);max-width:54ch}
+
+/* capabilities — editorial ruled list, not a card grid */
+.caps{border-top:1px solid var(--line-light)}
+.cap{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,56px);
+  padding-block:clamp(26px,3vw,38px);
+  border-bottom:1px solid var(--line-light);
+  align-items:start;
+  transition:background .3s var(--ease);
+}
+.cap:hover{background:linear-gradient(90deg,rgba(107,218,205,.16),transparent 70%)}
+.cap .idx{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--pacific-deep);padding-top:.35rem}
+.cap-body{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(16px,4vw,56px);align-items:baseline}
+.cap-body h3{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--arctic-900);letter-spacing:-.03em}
+.cap-body p{color:var(--ink-soft);font-size:1.05rem;max-width:46ch}
+@media(max-width:760px){
+  .cap{grid-template-columns:1fr;gap:8px}
+  .cap .idx{padding-top:0}
+  .cap-body{grid-template-columns:1fr;gap:8px}
+}
+/* capabilities visual — the "Your team" dashboard mockup as a wide banner */
+.caps-visual{
+  margin-top:clamp(40px,5vw,64px);
+  border-radius:16px;overflow:hidden;
+  border:1px solid var(--line-light);
+  box-shadow:0 40px 90px -50px rgba(4,64,78,.4);
+  background:var(--mint-card);
+}
+.caps-visual img{width:100%;height:auto;display:block}
+
+/* ============================================================
+   EXPERIENCE — full-bleed photographic moment (content-3)
+   "Experience the competition can't match"
+   ============================================================ */
+.experience{
+  position:relative;color:#fff;overflow:hidden;isolation:isolate;
+  background:var(--arctic-900);
+}
+.experience .bg{position:absolute;inset:0;z-index:-2;object-fit:cover;width:100%;height:100%}
+.experience::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(2,43,52,.9) 0%,rgba(2,43,52,.62) 42%,rgba(2,43,52,.15) 78%,rgba(2,43,52,0) 100%)}
+.experience .wrap{padding-block:clamp(96px,13vw,180px)}
+.experience .ex-copy{max-width:32ch}
+.experience .kicker{color:var(--pacific);display:block;margin-bottom:1.1rem}
+.experience h2{font-size:clamp(2.3rem,4.8vw,4rem);color:#fff;line-height:1.0}
+.experience h2 .em{font-style:italic;color:var(--pacific)}
+.experience p{margin-top:1.4rem;font-size:1.18rem;color:rgba(255,255,255,.9);max-width:42ch;line-height:1.55}
+.experience .ex-cta{margin-top:2.2rem;display:flex;gap:.9rem;flex-wrap:wrap}
+
+/* ============================================================
+   HIRE IN 24 HOURS — video section (hire-anywhere.mp4)
+   ============================================================ */
+.hire{background:var(--mint-bg)}
+.hire .wrap{
+  display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,80px);
+  align-items:center;padding-block:clamp(72px,9vw,128px);
+}
+.hire .kicker{display:block;margin-bottom:1rem}
+.hire h2{font-size:clamp(2.2rem,4.4vw,3.5rem);color:var(--arctic-900);max-width:16ch}
+.hire h2 .em{font-style:italic;color:var(--pacific-deep)}
+.hire p{margin-top:1.3rem;font-size:1.15rem;color:var(--ink-soft);max-width:46ch}
+.hire .hire-cta{margin-top:2rem;display:flex;gap:.9rem;flex-wrap:wrap}
+.hire-media{
+  position:relative;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line-light);
+  box-shadow:0 40px 90px -48px rgba(4,64,78,.45);
+  aspect-ratio:16/10;background:var(--arctic-900);
+}
+.hire-media video,.hire-media .poster{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+@media(max-width:840px){
+  .hire .wrap{grid-template-columns:1fr;gap:36px}
+}
+
+/* ============================================================
+   MEET PEBL — single marquee moment (FIX #2), teal + mint
+   ============================================================ */
+.meet{background:var(--arctic);color:#fff;overflow:hidden;position:relative}
+.meet .wrap{
+  display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,6vw,80px);
+  align-items:center;padding-block:clamp(72px,9vw,120px);
+}
+.meet .kicker{color:var(--pacific)}
+.meet h2{font-size:clamp(2.3rem,4.6vw,3.9rem);color:#fff;margin-top:1rem;max-width:16ch}
+.meet h2 .em{font-style:italic;color:var(--pacific)}
+.meet p{margin-top:1.4rem;font-size:1.2rem;color:rgba(255,255,255,.85);max-width:46ch;line-height:1.55}
+.meet .meet-cta{margin-top:2rem;display:flex;gap:.9rem;flex-wrap:wrap}
+.meet-visual{
+  position:relative;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line-dark);
+  box-shadow:0 40px 80px -30px rgba(2,43,52,.7);
+  aspect-ratio:4/5;background:var(--arctic-900);
+}
+.meet-visual video,.meet-visual img{width:100%;height:100%;object-fit:cover}
+@media(max-width:840px){
+  .meet .wrap{grid-template-columns:1fr;gap:36px}
+  .meet-visual{aspect-ratio:16/11;max-height:420px}
+}
+
+/* ============================================================
+   G2 PROOF — real photography (content-1: woman + G2 badges + 4.7 stars)
+   ============================================================ */
+.g2{padding-block:clamp(64px,8vw,112px)}
+.g2 .wrap{
+  display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,5vw,72px);
+  align-items:center;
+}
+.g2-media{
+  border-radius:18px;overflow:hidden;
+  border:1px solid var(--line-light);
+  box-shadow:0 40px 90px -48px rgba(4,64,78,.4);
+  background:var(--mint-card);
+}
+.g2-media img{width:100%;height:auto;display:block}
+.g2 .kicker{display:block;margin-bottom:1rem}
+.g2 h2{font-size:clamp(2rem,4vw,3.2rem);color:var(--arctic-900);max-width:16ch;line-height:1.02}
+.g2 p{margin-top:1.3rem;font-size:1.12rem;color:var(--ink-soft);max-width:48ch}
+.g2 .g2-link{margin-top:1.8rem;font-weight:700;color:var(--pacific-deep);display:inline-flex;align-items:center;gap:.45rem;transition:gap .25s var(--ease)}
+.g2 .g2-link:hover{gap:.8rem}
+@media(max-width:820px){.g2 .wrap{grid-template-columns:1fr;gap:32px}.g2-media{order:-1}}
+
+/* ============================================================
+   TESTIMONIAL — board-grade quote over the water still
+   ============================================================ */
+.quote{
+  position:relative;color:#fff;overflow:hidden;isolation:isolate;
+  background:var(--arctic-900);
+}
+.quote .bg{position:absolute;inset:0;z-index:-2;object-fit:cover;width:100%;height:100%;opacity:.55}
+.quote::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(115deg,rgba(2,43,52,.92) 0%,rgba(4,64,78,.7) 55%,rgba(4,64,78,.45) 100%)}
+.quote .wrap{padding-block:clamp(80px,10vw,140px)}
+.quote blockquote{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.14;letter-spacing:-.03em;
+  max-width:24ch;
+}
+.quote blockquote .em{font-style:italic;color:var(--pacific)}
+.quote .attr{margin-top:2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.quote .attr .who{font-family:var(--body);font-weight:700;font-size:1rem}
+.quote .attr .who span{display:block;font-weight:400;color:rgba(255,255,255,.7);font-size:.92rem;margin-top:.15rem}
+.quote .attr .cs{font-weight:700;color:var(--pacific);display:inline-flex;align-items:center;gap:.4rem;transition:gap .25s var(--ease)}
+.quote .attr .cs:hover{gap:.7rem}
+
+/* ============================================================
+   INSIGHTS — editorial index (no equal-weight card grid)
+   ============================================================ */
+.insights{padding-block:clamp(72px,9vw,120px)}
+.insights .ins-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,52px)}
+.insights h2{font-size:clamp(2.2rem,4.6vw,3.7rem);color:var(--arctic-900)}
+.insights .all{font-weight:700;color:var(--pacific-deep);display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap;transition:gap .25s var(--ease)}
+.insights .all:hover{gap:.8rem}
+/* photo-led cards — each insight is led by its real photograph */
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.5vw,30px)}
+.ins-card{
+  display:flex;flex-direction:column;
+  background:var(--mint-card);border:1px solid var(--line-light);
+  border-radius:16px;overflow:hidden;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+}
+.ins-card:hover{transform:translateY(-5px);box-shadow:0 34px 70px -40px rgba(4,64,78,.4)}
+.ins-figure{aspect-ratio:16/10;overflow:hidden;background:var(--arctic-900)}
+.ins-figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.ins-card:hover .ins-figure img{transform:scale(1.04)}
+.ins-card .ins-text{padding:clamp(22px,2.5vw,30px);display:flex;flex-direction:column;flex:1}
+.ins-card .meta{font-family:var(--body);font-size:.82rem;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:.8rem}
+.ins-card .meta strong{color:var(--pacific-deep);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-right:.6rem}
+.ins-card h3{font-size:clamp(1.2rem,1.9vw,1.5rem);color:var(--arctic-900);letter-spacing:-.025em;line-height:1.1;flex:1}
+.ins-card .arrow{margin-top:1.4rem;font-weight:700;color:var(--pacific-deep);display:inline-flex;align-items:center;gap:.45rem;transition:gap .3s var(--ease)}
+.ins-card:hover .arrow{gap:.8rem}
+@media(max-width:900px){.ins-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.ins-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   FAQ — accordion, on teal
+   ============================================================ */
+.faq-sec{background:var(--arctic);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.faq-sec .kicker{color:var(--pacific)}
+.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(36px,6vw,80px);align-items:start}
+.faq-sec h2{font-size:clamp(2.2rem,4.4vw,3.4rem);color:#fff}
+.faq-sec .fl{margin-top:1.2rem;color:rgba(255,255,255,.78);max-width:34ch}
+.faq details{border-bottom:1px solid var(--line-dark);padding-block:1.5rem}
+.faq details:first-child{border-top:1px solid var(--line-dark)}
+.faq summary{
+  font-family:var(--serif);font-weight:700;font-size:clamp(1.15rem,2vw,1.5rem);
+  letter-spacing:-.02em;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline;color:#fff;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{flex:none;color:var(--pacific);font-size:1.6rem;line-height:1;transition:transform .3s var(--ease)}
+.faq details[open] summary .ic{transform:rotate(45deg)}
+.faq details p{margin-top:1rem;color:rgba(255,255,255,.8);font-size:1.05rem;max-width:62ch;line-height:1.6}
+@media(max-width:820px){.faq-grid{grid-template-columns:1fr;gap:28px}}
+
+/* ============================================================
+   END CTA — mint drench, full FK Roman voice (FIX #5)
+   ============================================================ */
+.endcta{background:var(--pacific);color:var(--arctic-900);text-align:center;padding-block:clamp(90px,12vw,150px)}
+.endcta .kicker{color:var(--arctic);display:block;margin-bottom:1.3rem}
+.endcta h2{font-size:clamp(2.8rem,8vw,6rem);line-height:.94;color:var(--arctic-900);max-width:16ch;margin-inline:auto}
+.endcta h2 .em{font-style:italic}
+.endcta .ec-cta{display:flex;gap:1rem;justify-content:center;margin-top:2.6rem;flex-wrap:wrap}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer.site{background:var(--arctic-900);color:rgba(255,255,255,.62);padding-block:clamp(64px,8vw,96px) 40px}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:clamp(28px,4vw,48px)}
+.foot-brand{display:flex;align-items:center;margin-bottom:1.2rem}
+.foot-brand img{height:34px;width:auto;filter:brightness(0) invert(1)}
+.foot-col h4{font-family:var(--body);font-weight:700;color:var(--pacific);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.1rem}
+.foot-col a{display:block;padding-block:.32rem;font-size:.95rem;color:rgba(255,255,255,.62);transition:color .2s}
+.foot-col a:hover{color:var(--pacific)}
+.foot-blurb{max-width:34ch;font-size:.98rem;color:rgba(255,255,255,.6)}
+.foot-bottom{margin-top:clamp(48px,6vw,72px);padding-top:24px;border-top:1px solid rgba(255,255,255,.12);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.86rem;color:rgba(255,255,255,.5)}
+@media(max-width:880px){.foot-top{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot-top{grid-template-columns:1fr}}
+
+/* ============================================================
+   MOTION — first-load reveal, enhances already-visible content
+   ============================================================ */
+/* Reveal is OPT-IN: content is visible by default. Only when JS confirms
+   IntersectionObserver support does <html class="js-anim"> arm the hidden
+   start state, so no-JS / headless / hidden-tab renders never ship blank. */
+@media(prefers-reduced-motion:no-preference){
+  .js-anim .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .js-anim .reveal.in{opacity:1;transform:none}
+  .hero h1,.hero-eyebrow,.hero-foot{opacity:0;transform:translateY(28px);animation:rise 1.1s var(--ease) forwards}
+  .hero-eyebrow{animation-delay:.1s}
+  .hero h1{animation-delay:.22s}
+  .hero-foot{animation-delay:.42s}
+
+  /* HERO ZOOM — slow continuous Ken-Burns on the full-bleed film */
+  .hero-media .planeA{animation:kenA 24s var(--ease) infinite alternate}
+}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes kenA{
+  0%{transform:scale(1.06) translate(0,0)}
+  100%{transform:scale(1.15) translate(-1.6%,-1.3%)}
+}
+
+/* Reduced motion: hero film freezes to poster still,
+   no zoom, no parallax, no reveals */
+@media(prefers-reduced-motion:reduce){
+  #hero-video,#hire-video{display:none!important}
+  .hero-media .poster,.hire-media .poster{display:block!important}
+  .hero-media .planeA{animation:none!important;transform:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  *{scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="Pebl home">
+      <svg class="mark" viewBox="0 0 13 16" fill="none" aria-hidden="true"><path d="M6.5 0C3 0 .5 2.4.5 6c0 2.6 1.7 4.6 4 5.4V16h2.2v-2.2c.1 0 .2 0 .3-.1.9.6 2.1.1 2.4-.9.3-.9-.3-1.9-1.2-2.1l.1-.1C10.9 9.9 12.5 8 12.5 6 12.5 2.4 10 0 6.5 0Z" fill="currentColor"/></svg>
+      Pebl
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#capabilities">Employer of Record</a>
+      <a href="#metrics">Why Pebl</a>
+      <a href="#insights">Insights</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    <div class="nav-right">
+      <a class="login" href="#">Login</a>
+      <a class="btn btn-primary" href="#">Get started</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ========================= HERO ========================= -->
+  <!-- Full-bleed cinematic hero: ONE full-screen background film (Ken-Burns +
+       parallax) with a legibility scrim over it. Copy reads cleanly on top.
+       No inset / second video. -->
+  <section class="hero" aria-label="Build teams anywhere">
+    <!-- Plane A: the single full-bleed cinematic film -->
+    <div class="hero-media" aria-hidden="true">
+      <img class="poster" src="../current/assets/media/hero-poster.jpg" alt="">
+      <video id="hero-video" class="planeA" autoplay muted loop playsinline preload="auto"
+             poster="../current/assets/media/hero-poster.jpg">
+        <source src="../current/assets/media/hero-mobile.mp4" type="video/mp4" media="(max-width:640px)">
+        <source src="../current/assets/media/hero-desktop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">AI-Powered Employer of Record</span>
+        <h1>Build teams anywhere.<br><span class="em">Yes, even there.</span></h1>
+        <div class="hero-foot">
+          <p>Pebl's AI-powered EOR platform lets you scale your global workforce fast, with built-in compliance guidance across 185+ countries.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#">Get started</a>
+            <a class="btn btn-ghost" href="#">
+              <span class="play" aria-hidden="true"><svg viewBox="0 0 8 8" fill="none"><path d="M0 0l8 4-8 4V0z" fill="var(--arctic-900)"/></svg></span>
+              Watch demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= TRUST ========================= -->
+  <!-- FIX #3: trust wall pulled up to anchor credibility immediately -->
+  <section class="trust" aria-label="Trusted by global leaders">
+    <div class="wrap">
+      <span class="label">Trusted by global leaders</span>
+      <div class="logo-row">
+        <img src="../current/assets/media/logo-honeywell.png" alt="Honeywell" loading="lazy">
+        <img src="../current/assets/media/logo-yelp.png" alt="Yelp" loading="lazy">
+        <img src="../current/assets/media/logo-caa.png" alt="CAA" loading="lazy">
+        <img class="tall" src="../current/assets/media/logo-penguin.png" alt="Penguin Random House" loading="lazy">
+        <img src="../current/assets/media/logo-crunchbase.png" alt="Crunchbase" loading="lazy">
+        <img src="../current/assets/media/logo-glaukos.png" alt="Glaukos" loading="lazy">
+        <img src="../current/assets/media/logo-lastpass.png" alt="LastPass" loading="lazy">
+        <img src="../current/assets/media/logo-attentive.png" alt="Attentive" loading="lazy">
+        <img src="../current/assets/media/logo-consensys.png" alt="Consensys" loading="lazy">
+        <img src="../current/assets/media/logo-anuvu.png" alt="Anuvu" loading="lazy">
+        <img src="../current/assets/media/logo-linksys.png" alt="Linksys" loading="lazy">
+        <img src="../current/assets/media/logo-paige.png" alt="Paige" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= METRICS ========================= -->
+  <!-- FIX #4: confident dedicated metric band, numbers first -->
+  <section class="metrics reveal" id="metrics" aria-label="Pebl by the numbers">
+    <div class="wrap">
+      <div class="metric">
+        <div class="num">185<sup>+</sup></div>
+        <div class="lbl">Countries covered</div>
+        <p class="sub">Hire, pay, and support talent anywhere through local entities.</p>
+      </div>
+      <div class="metric">
+        <div class="num">24<span style="font-size:.42em;vertical-align:.2em">hr</span></div>
+        <div class="lbl">To hire anywhere</div>
+        <p class="sub">Onboard global employees in as little as a day, with no entity setup.</p>
+      </div>
+      <div class="metric">
+        <div class="num">#1</div>
+        <div class="lbl">Rated for compliance on G2</div>
+        <p class="sub">Backed by Baker McKenzie, the #1 global employment law firm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CAPABILITIES ========================= -->
+  <section class="section reveal" id="capabilities" aria-label="End-to-end global HR">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">End-to-End Global HR</span>
+        <h2>One platform for the entire employment lifecycle.</h2>
+        <p>Hiring, payroll, compliance, benefits, and relocation, handled in every market by people who know the local rules.</p>
+      </div>
+      <div class="caps">
+        <div class="cap"><span class="idx">i</span><div class="cap-body"><h3>Employer of Record</h3><p>Compliantly hire, onboard, and pay global employees through 185+ local entities.</p></div></div>
+        <div class="cap"><span class="idx">ii</span><div class="cap-body"><h3>Global Payroll</h3><p>Onboarding, documentation, currency conversion, and deductions, managed for you.</p></div></div>
+        <div class="cap"><span class="idx">iii</span><div class="cap-body"><h3>Compliance</h3><p>Stay ahead of employment contracts, benefits, payroll, and terminations in every jurisdiction.</p></div></div>
+        <div class="cap"><span class="idx">iv</span><div class="cap-body"><h3>Local HR Experts</h3><p>A dedicated, locally-based point of contact for labor laws, admin, and lifecycle management.</p></div></div>
+        <div class="cap"><span class="idx">v</span><div class="cap-body"><h3>Benefits</h3><p>Competitive medical, life, social security, and pensions that help you win the best talent.</p></div></div>
+        <div class="cap"><span class="idx">vi</span><div class="cap-body"><h3>Relocation</h3><p>Visas, passports, employment contracts, and permits. Every step handled for you.</p></div></div>
+      </div>
+      <!-- "Your team" dashboard mockup — the platform you actually manage in -->
+      <figure class="caps-visual">
+        <img src="../current/assets/media/your-team-mockup.png" alt="The Pebl platform 'Your team' dashboard, showing global employees managed in one place." loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========================= MEET PEBL ========================= -->
+  <!-- FIX #2: a SINGLE Meet-Pebl moment (the live page had two) -->
+  <section class="meet reveal" aria-label="Meet Pebl">
+    <div class="wrap">
+      <div class="meet-copy">
+        <span class="kicker">Meet Pebl</span>
+        <h2>The only platform you need to <span class="em">build global teams.</span></h2>
+        <p>Manage your global workforce in one place with AI-powered tools, real-time insights, and seamless integrations. Hire, pay, and support talent anywhere, with confidence.</p>
+        <div class="meet-cta">
+          <a class="btn btn-primary" href="#">Get a demo</a>
+          <a class="btn btn-ghost" href="#">Explore the platform</a>
+        </div>
+      </div>
+      <div class="meet-visual">
+        <img src="../current/assets/media/pebl-og-img.jpg" alt="The Pebl platform: hire, pay, and support global teams in one place." loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= HIRE IN 24 HOURS ========================= -->
+  <!-- hire-anywhere.mp4 lives here (NOT in the hero) -->
+  <section class="hire reveal" aria-label="Hire anywhere in 24 hours">
+    <div class="wrap">
+      <div class="hire-copy">
+        <span class="kicker">Hire in 24 hours</span>
+        <h2>Hire anywhere, <span class="em">in as little as a day.</span></h2>
+        <p>Onboard global employees instantly, with no entities to set up, minimal delays, and stronger compliance everywhere you grow. Build your team where the talent is.</p>
+        <div class="hire-cta">
+          <a class="btn btn-dark" href="#">Get started</a>
+          <a class="btn btn-outline-dark" href="#">See how Pebl compares</a>
+        </div>
+      </div>
+      <figure class="hire-media">
+        <img class="poster" src="../current/assets/media/pebl-og-img.jpg" alt="" aria-hidden="true">
+        <video id="hire-video" autoplay muted loop playsinline preload="none"
+               poster="../current/assets/media/pebl-og-img.jpg">
+          <source src="../current/assets/media/hire-anywhere.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========================= EXPERIENCE ========================= -->
+  <!-- content-3.png: two people laughing at a laptop -->
+  <section class="experience reveal" aria-label="Experience the competition can't match">
+    <img class="bg" src="../current/assets/media/content-3.png" alt="" aria-hidden="true">
+    <div class="wrap">
+      <div class="ex-copy">
+        <span class="kicker">Why Pebl</span>
+        <h2>An experience the <span class="em">competition can't match.</span></h2>
+        <p>People-first support, AI-powered tools, and local experts on the ground. Pebl makes building a global team feel effortless for everyone involved.</p>
+        <div class="ex-cta">
+          <a class="btn btn-primary" href="#">Get a demo</a>
+          <a class="btn btn-ghost" href="#">Explore the platform</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= G2 PROOF ========================= -->
+  <!-- content-1.png already includes woman + 5 G2 badges + 4.7 stars -->
+  <section class="g2 reveal" aria-label="Rated #1 on G2 for compliance">
+    <div class="wrap">
+      <div class="g2-copy">
+        <span class="kicker">Rated #1 on G2</span>
+        <h2>Compliance you can put in front of a board.</h2>
+        <p>Pebl delivers the local expertise to navigate labor laws, tax codes, and regulations across 185+ countries. Our legal teams flag issues before they become problems, keeping your growth on track with less risk, and earning the top G2 rating for compliance.</p>
+        <a class="g2-link" href="#">Simplify compliance →</a>
+      </div>
+      <figure class="g2-media">
+        <img src="../current/assets/media/content-1.png" alt="Pebl rated 4.7 stars and #1 on G2 for compliance, with five G2 badges." loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========================= TESTIMONIAL ========================= -->
+  <section class="quote reveal" aria-label="Customer testimonial">
+    <img class="bg" src="../current/assets/media/testimonials-water-real.jpg" alt="" aria-hidden="true">
+    <div class="wrap">
+      <blockquote>“Over the past year, we've doubled — if not tripled — our global headcount. That growth has been largely thanks to our <span class="em">partnership with Pebl.</span>”</blockquote>
+      <div class="attr">
+        <span class="who">David Andreasson<span>VP of Finance &amp; Operations</span></span>
+        <a class="cs" href="#">Read the case study →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= INSIGHTS ========================= -->
+  <section class="insights reveal" id="insights" aria-label="Pebl insights">
+    <div class="wrap">
+      <div class="ins-head">
+        <h2>Explore Pebl insights</h2>
+        <a class="all" href="#">Explore all →</a>
+      </div>
+      <div class="ins-grid">
+        <a class="ins-card" href="#">
+          <div class="ins-figure"><img src="../current/assets/media/insight-hiring-report.jpg" alt="2025 Global Hiring Report" loading="lazy"></div>
+          <div class="ins-text">
+            <span class="meta"><strong>Report</strong>Oct 20, 2025</span>
+            <h3>2025 Global Hiring Report</h3>
+            <span class="arrow">Read the report →</span>
+          </div>
+        </a>
+        <a class="ins-card" href="#">
+          <div class="ins-figure"><img src="../current/assets/media/insight-rapid7.jpg" alt="Rapid7 case study" loading="lazy"></div>
+          <div class="ins-text">
+            <span class="meta"><strong>Case Study</strong>Rapid7</span>
+            <h3>Strategic Workforce Expansion With Human-Centered EOR</h3>
+            <span class="arrow">Read the case study →</span>
+          </div>
+        </a>
+        <a class="ins-card" href="#">
+          <div class="ins-figure"><img src="../current/assets/media/insight-eor.jpg" alt="What Is an Employer of Record guide" loading="lazy"></div>
+          <div class="ins-text">
+            <span class="meta"><strong>Guide</strong>Oct 9, 2025</span>
+            <h3>What Is an Employer of Record? A Complete Guide for Global Employers</h3>
+            <span class="arrow">Read the guide →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FAQ ========================= -->
+  <section class="faq-sec reveal" id="faq" aria-label="Frequently asked questions">
+    <div class="wrap faq-grid">
+      <div>
+        <span class="kicker">Questions</span>
+        <h2 style="margin-top:1rem">FAQs</h2>
+        <p class="fl">The questions a board asks before approving global expansion, answered.</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>How does Pebl ensure compliance with local labor laws in 185+ countries?<span class="ic" aria-hidden="true">+</span></summary>
+          <p>Our regional legal teams monitor regulatory shifts, flag issues before they become problems, and keep every EOR engagement up to date. We're also backed by Baker McKenzie, the #1 global employment law firm. That legal depth is a big reason our platform is rated #1 for compliance on G2.</p>
+        </details>
+        <details>
+          <summary>How does Pebl prevent worker misclassification when hiring internationally?<span class="ic" aria-hidden="true">+</span></summary>
+          <p>With Pebl as the legal Employer of Record, your hire is properly classified under local law from day one. You maintain the day-to-day working relationship; we bear the legal responsibility for appropriate classification.</p>
+        </details>
+        <details>
+          <summary>How does Pebl's pricing compare to setting up a local entity?<span class="ic" aria-hidden="true">+</span></summary>
+          <p>Setting up an entity can cost five to six figures and take months. Our flat per-employee monthly fee is significantly lower, and our EOR services let you onboard in as little as 24 hours. You trade high, uncertain costs for speed and predictability.</p>
+        </details>
+        <details>
+          <summary>How do Pebl's EOR services reduce legal and financial risk?<span class="ic" aria-hidden="true">+</span></summary>
+          <p>Pebl owns the legal employer responsibility, so liability for global compliance rests with us rather than your organization. You keep full control of the work and the relationship; we hold the legal exposure across 185+ countries, backed by in-country experts.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= END CTA ========================= -->
+  <!-- FIX #5: full FK Roman voice + mint drench as the signature -->
+  <section class="endcta reveal" aria-label="Get started with Pebl">
+    <div class="wrap">
+      <span class="kicker">Build teams anywhere</span>
+      <h2>No local entities. <span class="em">No limits.</span></h2>
+      <div class="ec-cta">
+        <a class="btn btn-dark" href="#">Get started</a>
+        <a class="btn btn-outline-dark" href="#">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <img src="../current/assets/media/logo.svg" alt="Pebl">
+        </div>
+        <p class="foot-blurb">The AI-powered Employer of Record for teams that build everywhere. Hire, pay, and support talent across 185+ countries.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <a href="#">Employer of Record</a>
+        <a href="#">Global Payroll</a>
+        <a href="#">Global Benefits</a>
+        <a href="#">Global Immigration</a>
+        <a href="#">Alfie AI Assistant</a>
+      </div>
+      <div class="foot-col">
+        <h4>Who We Serve</h4>
+        <a href="#">Human Resources</a>
+        <a href="#">Finance Teams</a>
+        <a href="#">Legal Teams</a>
+        <a href="#">Technology</a>
+        <a href="#">Professional Services</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+        <a href="#">Newsroom</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Pebl (Velocity Global, LLC). All rights reserved.</span>
+      <span>Privacy Policy · Terms of Use · Accessibility</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Scroll reveal — enhances already-visible content (no visibility gating
+   beyond an opacity lift), respects reduced motion via CSS guard. */
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(rm || !('IntersectionObserver' in window)){
+    return; /* content already visible by default; nothing to arm */
+  }
+  /* Arm the hidden start state only now that we can guarantee we'll reveal it */
+  document.documentElement.classList.add('js-anim');
+  var reveal = function(el){ if(el && !el.classList.contains('in')) el.classList.add('in'); };
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ reveal(e.target); io.unobserve(e.target); }
+    });
+  },{rootMargin:'0px 0px -12% 0px',threshold:.08});
+  els.forEach(function(el){io.observe(el)});
+
+  /* Guaranteed floor: nothing may stay invisible. If an observer callback
+     never fires (hidden tab, headless render, paused transitions, JS error
+     elsewhere), reveal everything outright so no section can ship blank. */
+  var revealAll = function(){ els.forEach(reveal); };
+  if(document.visibilityState !== 'visible'){ revealAll(); }
+  document.addEventListener('visibilitychange',function(){
+    if(document.visibilityState !== 'visible') revealAll();
+  });
+  window.setTimeout(revealAll, 2600);
+})();
+
+/* HERO PARALLAX — soft pointer + scroll drift on the full-bleed film.
+   Ken-Burns zoom lives in CSS animation; this layers a gentle translate on
+   the media wrapper so the film drifts under the copy. Fully gated by
+   reduced motion (no listeners attached) so the film stays frozen. */
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hero = document.querySelector('.hero');
+  var media = document.querySelector('.hero-media');
+  if(!hero || !media) return;
+  var px = 0, py = 0, sy = 0, raf = 0;
+  function apply(){
+    raf = 0;
+    /* film drifts subtly; the CSS keyframe owns scale, we only translate */
+    media.style.transform = 'translate('+(px*-9)+'px,'+(py*-6 + sy*0.05)+'px)';
+  }
+  function schedule(){ if(!raf) raf = requestAnimationFrame(apply); }
+  window.addEventListener('pointermove', function(e){
+    var r = hero.getBoundingClientRect();
+    if(r.bottom < 0) return;
+    px = (e.clientX / window.innerWidth) - 0.5;
+    py = (e.clientY / window.innerHeight) - 0.5;
+    schedule();
+  }, {passive:true});
+  window.addEventListener('scroll', function(){
+    var r = hero.getBoundingClientRect();
+    if(r.bottom < 0){ return; }
+    sy = -r.top; schedule();
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>

@@ -1,12 +1,10 @@
 /**
- * capabilities — editorial ruled list + wide dashboard mockup banner.
+ * capabilities — full-width editorial ruled list.
  *
  * A section head (kicker + h2 + intro), then SIX ruled rows (each: an
- * auto-generated roman numeral i..vi, a serif h3 title, and a description),
- * then a fixed wide "Your team" dashboard mockup banner.
+ * auto-generated roman numeral i..vi, a serif h3 title, and a description).
  *
  * The roman numerals are GENERATED in JS by index — do NOT author them.
- * The mockup image is a FIXED block asset, root-relative under /img (#67).
  *
  * Authoring — section head first, then ONE capability per row.
  *
@@ -32,7 +30,6 @@
  * Falls back to a single flat cell: kicker/h2/intro lead, then h3+p pairs.
  */
 
-const BASE = '/img/velocity-global-refined';
 const ROMAN = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'];
 
 function rowNodes(block) {
@@ -130,16 +127,6 @@ export default async function decorate(block) {
     list.append(cap);
   });
   wrap.append(list);
-
-  // --- fixed dashboard mockup banner ---
-  const figure = document.createElement('figure');
-  figure.className = 'caps-visual';
-  const img = document.createElement('img');
-  img.src = `${BASE}/your-team-mockup.png`;
-  img.alt = "The Pebl platform 'Your team' dashboard, showing global employees managed in one place.";
-  img.loading = 'lazy';
-  figure.append(img);
-  wrap.append(figure);
 
   block.replaceChildren(wrap);
 }
