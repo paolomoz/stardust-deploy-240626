@@ -1,0 +1,57 @@
+.closing {
+  border-top: 8px solid #232323;
+  padding: var(--section-pad) 0;
+  text-align: left;
+}
+
+.closing h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.closing .capture { max-width: 680px; }
+
+.closing .capture-label {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.closing .capture-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.closing .capture input {
+  flex: 1 1 300px;
+  min-width: 220px;
+  background: rgb(22 22 22 / 85%);
+  border: 1px solid #808080;
+  border-radius: var(--radius);
+  color: #fff;
+  padding: 16px 18px;
+  font-size: 1.05rem;
+  font-family: var(--font);
+}
+
+.closing .capture input::placeholder { color: var(--text-muted); }
+
+.closing .capture .btn-capture {
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 16px 30px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: var(--font);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.15s var(--ease);
+}
+
+.closing .capture .btn-capture:hover { background: var(--primary-hover); }

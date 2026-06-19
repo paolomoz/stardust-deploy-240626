@@ -1,12 +1,9 @@
 /**
- * hero — full-bleed editorial display hero with email capture.
+ * closing — final "Ready to watch?" heading with an email capture form.
  *
- * Authoring (single flattened cell or rows):
- *   - <h1> headline (may contain <em> for the red accent + <br>)
- *   - subhead paragraph (price line)
- *   - capture label paragraph
- *   The background image is a fixed brand asset (root-relative /img/netflix/hero.jpg),
- *   so it lives in CSS — not authored.
+ * Authoring rows:
+ *   1. heading text
+ *   2. capture label paragraph
  */
 
 function collectNodes(block) {
@@ -26,21 +23,15 @@ function collectNodes(block) {
 export default async function decorate(block) {
   const nodes = collectNodes(block);
   const heading = nodes.find((n) => n.matches('h1, h2, h3, h4, h5, h6'));
-  const paras = nodes.filter((n) => n.matches('p'));
-  const sub = paras[0];
-  const label = paras[1];
+  const label = nodes.find((n) => n.matches('p'));
 
   const wrap = document.createElement('div');
   wrap.className = 'wrap';
 
   if (heading) {
-    const h1 = document.createElement('h1');
-    [...heading.childNodes].forEach((n) => h1.append(n.cloneNode(true)));
-    wrap.append(h1);
-  }
-  if (sub) {
-    sub.classList.add('hero-sub');
-    wrap.append(sub);
+    const h2 = document.createElement('h2');
+    h2.textContent = heading.textContent.trim();
+    wrap.append(h2);
   }
 
   const form = document.createElement('div');
@@ -56,12 +47,5 @@ export default async function decorate(block) {
   form.append(row);
   wrap.append(form);
 
-  const bg = document.createElement('div');
-  bg.className = 'hero-bg';
-  bg.setAttribute('role', 'img');
-  bg.setAttribute('aria-label', 'A wall of Netflix original series and film key art');
-  const scrim = document.createElement('div');
-  scrim.className = 'hero-scrim';
-
-  block.replaceChildren(bg, scrim, wrap);
+  block.replaceChildren(wrap);
 }

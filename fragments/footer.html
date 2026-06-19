@@ -1,0 +1,59 @@
+<style>
+  footer.footer {
+    background: #000;
+    border-top: 8px solid #232323;
+    color: var(--text-muted);
+    padding: 50px 0;
+  }
+
+  footer.footer .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+  }
+
+  footer.footer a {
+    color: var(--text-muted);
+    text-decoration: underline;
+    font-size: 0.9rem;
+  }
+
+  footer.footer .site-footer__top {
+    font-size: 1rem;
+    margin-bottom: 26px;
+  }
+
+  footer.footer .fcols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px 20px;
+  }
+
+  footer.footer .fcols a {
+    display: block;
+    padding: 6px 0;
+  }
+
+  footer.footer .site-footer__wordmark {
+    font-size: clamp(3rem, 12vw, 9rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+    margin-top: 30px;
+    line-height: 0.9;
+  }
+
+  @media (width <= 767px) {
+    footer.footer .fcols { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+<div class="wrap">
+  <p class="site-footer__top">Questions? <a href="/netflix/index">Contact us.</a></p>
+  <nav class="fcols" aria-label="Footer">
+    <a href="/netflix/index">FAQ</a><a href="/netflix/index">Help Center</a><a href="/netflix/index">Account</a><a href="/netflix/index">Media Center</a>
+    <a href="/netflix/index">Investor Relations</a><a href="/netflix/index">Jobs</a><a href="/netflix/index">Ways to Watch</a><a href="/netflix/index">Terms of Use</a>
+    <a href="/netflix/index">Privacy</a><a href="/netflix/index">Cookie Preferences</a><a href="/netflix/index">Corporate Information</a><a href="/netflix/index">Contact Us</a>
+    <a href="/netflix/index">Speed Test</a><a href="/netflix/index">Legal Notices</a><a href="/netflix/index">Only on Netflix</a><a href="/netflix/index">Ad Choices</a>
+  </nav>
+  <div class="site-footer__wordmark">NETFLIX</div>
+</div>

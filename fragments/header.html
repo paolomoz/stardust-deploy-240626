@@ -1,0 +1,57 @@
+<style>
+  header.header .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px clamp(20px, 5vw, 56px);
+  }
+
+  header.header .brand {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: clamp(1.7rem, 3vw, 2.1rem);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  header.header .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  header.header .lang {
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: var(--radius);
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    background: rgb(0 0 0 / 35%);
+    color: var(--text);
+  }
+
+  header.header .signin {
+    background: var(--primary);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: background 0.15s var(--ease);
+  }
+
+  header.header .signin:hover { background: var(--primary-hover); }
+</style>
+<div class="nav">
+  <a href="/netflix/index" class="brand">NETFLIX</a>
+  <div class="nav-right">
+    <span class="lang">&#127760; English</span>
+    <button type="button" class="signin">Sign In</button>
+  </div>
+</div>

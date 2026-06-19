@@ -1,37 +1,93 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 70px;
+  isolation: isolate;
 }
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("/img/netflix/hero.jpg") center / cover no-repeat;
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 92%) 0%, rgb(0 0 0 / 55%) 45%, rgb(0 0 0 / 20%) 100%),
+    linear-gradient(0deg, #000 0%, rgb(0 0 0 / 20%) 45%, rgb(0 0 0 / 55%) 100%);
+}
+
+.hero .wrap { width: 100%; }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  font-size: var(--fs-display);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero h1 em {
+  font-style: normal;
+  color: var(--primary);
 }
 
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.hero-sub {
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  font-weight: 500;
+  margin-top: 22px;
+  color: #fff;
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
+.hero .capture {
+  margin-top: 26px;
+  max-width: 640px;
 }
+
+.hero .capture-label {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.hero .capture-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero .capture input {
+  flex: 1 1 300px;
+  min-width: 220px;
+  background: rgb(22 22 22 / 85%);
+  border: 1px solid #808080;
+  border-radius: var(--radius);
+  color: #fff;
+  padding: 16px 18px;
+  font-size: 1.05rem;
+  font-family: var(--font);
+}
+
+.hero .capture input::placeholder { color: var(--text-muted); }
+
+.hero .capture .btn-capture {
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 16px 30px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: var(--font);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.15s var(--ease);
+}
+
+.hero .capture .btn-capture:hover { background: var(--primary-hover); }

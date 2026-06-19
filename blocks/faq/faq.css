@@ -1,0 +1,61 @@
+.faq {
+  border-top: 8px solid #232323;
+  padding: var(--section-pad) 0;
+}
+
+.faq .eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.faq h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-top: 10px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.faq .faq-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq details {
+  background: var(--surface-raised);
+  border-radius: var(--radius);
+}
+
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "+";
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.faq details[open] summary::after { content: "\00d7"; }
+
+.faq .faq-body {
+  padding: 0 24px 24px;
+  color: var(--text);
+  font-size: 1.15rem;
+}
