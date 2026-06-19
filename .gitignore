@@ -17,5 +17,5 @@ helix-importer-ui
 .env.*
 qa/
 samples/
-brands/
+/brands/
 node_modules/
