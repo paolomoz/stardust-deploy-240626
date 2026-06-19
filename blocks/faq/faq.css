@@ -1,0 +1,92 @@
+/* faq — accordion on dark teal (lifted from prototype .faq-sec, renamed → .faq) */
+.faq {
+  background: var(--arctic);
+  color: #fff;
+  padding-block: clamp(72px, 9vw, 120px);
+}
+
+.faq .kicker {
+  color: var(--pacific);
+}
+
+.faq .faq-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: clamp(36px, 6vw, 80px);
+  align-items: start;
+}
+
+.faq h2 {
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.faq .fl {
+  margin-top: 1.2rem;
+  color: rgb(255 255 255 / 78%);
+  max-width: 34ch;
+}
+
+.faq details {
+  border-bottom: 1px solid var(--line-dark);
+  padding-block: 1.5rem;
+}
+
+.faq details:first-child {
+  border-top: 1px solid var(--line-dark);
+}
+
+.faq summary {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  letter-spacing: -.02em;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: baseline;
+  color: #fff;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary .ic {
+  flex: none;
+  color: var(--pacific);
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: transform .3s var(--ease);
+}
+
+.faq details[open] summary .ic {
+  transform: rotate(45deg);
+}
+
+.faq details p {
+  margin-top: 1rem;
+  color: rgb(255 255 255 / 80%);
+  font-size: 1.05rem;
+  max-width: 62ch;
+  line-height: 1.6;
+}
+
+@media (width <= 820px) {
+  .faq .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq summary .ic {
+    transition: none;
+  }
+}

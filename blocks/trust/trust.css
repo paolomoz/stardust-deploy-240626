@@ -1,0 +1,79 @@
+/* trust — logo wall on dark teal (lifted from prototype .trust, scoped) */
+.trust {
+  background: var(--arctic);
+  color: #fff;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.trust .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  padding-block: clamp(36px, 5vw, 56px);
+}
+
+.trust .label {
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--pacific);
+  line-height: 1.4;
+  text-align: center;
+  display: block;
+  margin-bottom: clamp(24px, 3vw, 38px);
+}
+
+/* all 12 client logos — 6×2 grid, every cell aligned */
+.trust .logo-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(20px, 3vw, 40px) clamp(28px, 4vw, 56px);
+  place-items: center center;
+}
+
+.trust .logo-row img {
+  height: 26px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+
+  /* logos are black-on-transparent → invert to a soft white on teal */
+  filter: brightness(0) invert(1);
+  opacity: .72;
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+}
+
+.trust .logo-row img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.trust .logo-row img.tall {
+  height: 36px;
+}
+
+@media (width <= 760px) {
+  .trust .logo-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 28px;
+  }
+
+  .trust .logo-row img {
+    height: 22px;
+  }
+
+  .trust .logo-row img.tall {
+    height: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust .logo-row img {
+    transition: none;
+  }
+
+  .trust .logo-row img:hover {
+    transform: none;
+  }
+}

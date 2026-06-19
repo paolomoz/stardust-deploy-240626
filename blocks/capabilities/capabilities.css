@@ -1,0 +1,109 @@
+/* ============================================================
+   capabilities — editorial ruled list + wide dashboard mockup
+   Lifted from prototype home-D-refined.html (.section / .caps), scoped.
+   Brand tokens are GLOBAL in styles/styles.css — not redefined here.
+   ============================================================ */
+.capabilities { padding-block: clamp(72px, 9vw, 128px); }
+
+.capabilities .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+}
+
+.capabilities .section-head {
+  max-width: 62ch;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.capabilities .section-head .kicker {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.capabilities .section-head h2 {
+  font-size: clamp(2.2rem, 4.6vw, 3.7rem);
+  color: var(--arctic-900);
+  max-width: 18ch;
+}
+
+.capabilities .section-head p {
+  margin-top: 1.1rem;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 54ch;
+}
+
+/* editorial ruled list, not a card grid */
+.capabilities .caps { border-top: 1px solid var(--line-light); }
+
+.capabilities .cap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(20px, 4vw, 56px);
+  padding-block: clamp(26px, 3vw, 38px);
+  border-bottom: 1px solid var(--line-light);
+  align-items: start;
+  transition: background 0.3s var(--ease);
+}
+
+.capabilities .cap:hover {
+  background: linear-gradient(90deg, rgb(107 218 205 / 16%), transparent 70%);
+}
+
+.capabilities .cap .idx {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--pacific-deep);
+  padding-top: 0.35rem;
+}
+
+.capabilities .cap-body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(16px, 4vw, 56px);
+  align-items: baseline;
+}
+
+.capabilities .cap-body h3 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  color: var(--arctic-900);
+  letter-spacing: -0.03em;
+}
+
+.capabilities .cap-body p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  max-width: 46ch;
+}
+
+@media (width <= 760px) {
+  .capabilities .cap {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .capabilities .cap .idx { padding-top: 0; }
+
+  .capabilities .cap-body {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* the "Your team" dashboard mockup as a wide banner */
+.capabilities .caps-visual {
+  margin-top: clamp(40px, 5vw, 64px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line-light);
+  box-shadow: 0 40px 90px -50px rgb(4 64 78 / 40%);
+  background: var(--mint-card);
+}
+
+.capabilities .caps-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

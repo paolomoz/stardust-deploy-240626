@@ -1,37 +1,164 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
+/* hero — full-bleed cinematic film with copy over it (Pebl Variant D) */
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  isolation: isolate;
+  color: #fff;
+  min-height: clamp(560px, 92vh, 940px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--arctic-900);
+}
+
+.hero .hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  background: var(--arctic-900);
+}
+
+.hero .hero-media video,
+.hero .hero-media .poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.hero .hero-media .plane-a {
+  transform: scale(1.06);
+  transform-origin: 62% 42%;
+  will-change: transform;
+}
+
+/* legibility scrim over the video */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgb(2 43 52 / 42%) 0%, rgb(2 43 52 / 0%) 26%, rgb(2 43 52 / 0%) 48%, rgb(2 43 52 / 55%) 80%, rgb(2 43 52 / 86%) 100%),
+    linear-gradient(80deg, rgb(2 43 52 / 78%) 0%, rgb(2 43 52 / 34%) 42%, rgb(2 43 52 / 0%) 70%);
+}
+
+.hero .hero-inner {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  padding-block: clamp(56px, 9vh, 116px);
+}
+
+.hero .hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 30ch;
+}
+
+.hero .hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  align-self: flex-start;
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pacific);
+  margin-bottom: clamp(20px, 3.5vh, 34px);
+  text-shadow: 0 1px 10px rgb(2 43 52 / 55%);
+}
+
+.hero .hero-eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 1.5px;
+  background: var(--pacific);
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  font-size: clamp(2.9rem, 7vw, 5.8rem);
+  line-height: 0.94;
+  color: #fff;
+  max-width: 15ch;
+  text-shadow: 0 2px 30px rgb(2 43 52 / 50%);
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero h1 .em,
+.hero h1 em {
+  font-style: italic;
+  color: var(--pacific);
 }
 
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.hero .hero-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(22px, 3.5vh, 34px);
+  margin-top: clamp(24px, 4vh, 40px);
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
+.hero .hero-foot p {
+  font-size: clamp(1.05rem, 1.4vw, 1.28rem);
+  color: rgb(255 255 255 / 92%);
+  max-width: 46ch;
+  line-height: 1.5;
+  text-shadow: 0 1px 16px rgb(2 43 52 / 60%);
+}
+
+.hero .hero-cta {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+@media (width <= 560px) {
+  .hero h1,
+  .hero .hero-copy { max-width: none; }
+}
+
+/* first-load rise + slow Ken-Burns zoom */
+@media (prefers-reduced-motion: no-preference) {
+  .hero .hero-eyebrow,
+  .hero h1,
+  .hero .hero-foot {
+    opacity: 0;
+    transform: translateY(28px);
+    animation: hero-rise 1.1s var(--ease) forwards;
+  }
+
+  .hero .hero-eyebrow { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.22s; }
+  .hero .hero-foot { animation-delay: 0.42s; }
+  .hero .hero-media .plane-a { animation: hero-ken 24s var(--ease) infinite alternate; }
+}
+
+@keyframes hero-rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-ken {
+  0% { transform: scale(1.06) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-1.6%, -1.3%); }
+}
+
+/* reduced motion: hide video, show poster still, no zoom/reveal */
+@media (prefers-reduced-motion: reduce) {
+  .hero #hero-video { display: none !important; }
+  .hero .hero-media .poster { display: block !important; }
+
+  .hero .hero-media .plane-a {
+    animation: none !important;
+    transform: none !important;
   }
 }

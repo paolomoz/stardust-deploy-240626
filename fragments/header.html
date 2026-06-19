@@ -1,0 +1,108 @@
+<style>
+  header.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgb(4 64 78 / 78%);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid rgb(107 218 205 / 20%);
+  }
+
+  header.header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-inline: clamp(20px, 5vw, 64px);
+  }
+
+  header.header .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "FK Roman Standard", "Times New Roman", times, serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #fff;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+  }
+
+  header.header .brand .mark {
+    width: 13px;
+    height: 16px;
+    flex: none;
+    color: #6bdacd;
+  }
+
+  header.header .nav-links {
+    display: flex;
+    gap: 2.2rem;
+    font-weight: 400;
+    font-size: 0.95rem;
+  }
+
+  header.header .nav-links a {
+    color: rgb(255 255 255 / 82%);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  header.header .nav-links a:hover { color: #6bdacd; }
+
+  header.header .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+  }
+
+  header.header .nav-right .login {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: rgb(255 255 255 / 85%);
+    text-decoration: none;
+  }
+
+  header.header .nav-right .login:hover { color: #6bdacd; }
+
+  header.header .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    font-family: "Sharp Earth", arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    background: #6bdacd;
+    color: #022b34;
+    text-decoration: none;
+    border: 1.5px solid #6bdacd;
+    transition: background 0.25s, color 0.25s;
+  }
+
+  header.header .nav-cta:hover { background: #fff; }
+
+  @media (width <= 920px) {
+    header.header .nav-links,
+    header.header .nav-right .login { display: none; }
+  }
+</style>
+<div class="nav">
+  <a class="brand" href="/velocity-global-refined/" aria-label="Pebl home">
+    <svg class="mark" viewBox="0 0 13 16" fill="none" aria-hidden="true"><path d="M6.5 0C3 0 .5 2.4.5 6c0 2.6 1.7 4.6 4 5.4V16h2.2v-2.2c.1 0 .2 0 .3-.1.9.6 2.1.1 2.4-.9.3-.9-.3-1.9-1.2-2.1l.1-.1C10.9 9.9 12.5 8 12.5 6 12.5 2.4 10 0 6.5 0Z" fill="currentColor"/></svg>
+    Pebl
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#capabilities">Employer of Record</a>
+    <a href="#metrics">Why Pebl</a>
+    <a href="#insights">Insights</a>
+    <a href="#faq">FAQs</a>
+  </nav>
+  <div class="nav-right">
+    <a class="login" href="#login">Login</a>
+    <a class="nav-cta" href="#get-started">Get started</a>
+  </div>
+</div>

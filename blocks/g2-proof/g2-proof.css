@@ -1,0 +1,70 @@
+/* ============================================================
+   g2-proof — G2 compliance proof, two-col with photography
+   Lifted from prototype home-D-refined.html (.g2 → .g2-proof), scoped.
+   Brand tokens are GLOBAL in styles/styles.css — not redefined here.
+   ============================================================ */
+.g2-proof { padding-block: clamp(64px, 8vw, 112px); }
+
+.g2-proof .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+
+.g2-proof .g2-media {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line-light);
+  box-shadow: 0 40px 90px -48px rgb(4 64 78 / 40%);
+  background: var(--mint-card);
+}
+
+.g2-proof .g2-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.g2-proof .kicker {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.g2-proof h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--arctic-900);
+  max-width: 16ch;
+  line-height: 1.02;
+}
+
+.g2-proof p {
+  margin-top: 1.3rem;
+  font-size: 1.12rem;
+  color: var(--ink-soft);
+  max-width: 48ch;
+}
+
+.g2-proof .g2-link {
+  margin-top: 1.8rem;
+  font-weight: 700;
+  color: var(--pacific-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: gap 0.25s var(--ease);
+}
+
+.g2-proof .g2-link:hover { gap: 0.8rem; }
+
+@media (width <= 820px) {
+  .g2-proof .wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .g2-proof .g2-media { order: -1; }
+}

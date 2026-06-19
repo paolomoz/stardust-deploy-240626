@@ -1,0 +1,85 @@
+/* testimonial — board-grade quote over the water still (Pebl) */
+.testimonial {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--arctic-900);
+}
+
+.testimonial .bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+}
+
+.testimonial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(115deg, rgb(2 43 52 / 92%) 0%, rgb(4 64 78 / 70%) 55%, rgb(4 64 78 / 45%) 100%);
+}
+
+.testimonial .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  padding-block: clamp(80px, 10vw, 140px);
+}
+
+.testimonial blockquote {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.6vw, 3rem);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  max-width: 24ch;
+}
+
+.testimonial blockquote .em,
+.testimonial blockquote em {
+  font-style: italic;
+  color: var(--pacific);
+}
+
+.testimonial .attr {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.testimonial .attr .who {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.testimonial .attr .who span {
+  display: block;
+  font-weight: 400;
+  color: rgb(255 255 255 / 70%);
+  font-size: 0.92rem;
+  margin-top: 0.15rem;
+}
+
+.testimonial .attr .cs {
+  font-weight: 700;
+  color: var(--pacific);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.25s var(--ease);
+}
+
+.testimonial .attr .cs:hover { gap: 0.7rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial .attr .cs { transition: none; }
+}

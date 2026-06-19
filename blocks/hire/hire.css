@@ -1,0 +1,83 @@
+/* ============================================================
+   hire — "Hire in 24 hours" video section (signature 2nd video)
+   Lifted from prototype home-D-refined.html (.hire), scoped.
+   Brand tokens are GLOBAL in styles/styles.css — not redefined here.
+   ============================================================ */
+.hire { background: var(--mint-bg); }
+
+.hire .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+  padding-block: clamp(72px, 9vw, 128px);
+}
+
+.hire .kicker {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hire h2 {
+  font-size: clamp(2.2rem, 4.4vw, 3.5rem);
+  color: var(--arctic-900);
+  max-width: 16ch;
+}
+
+.hire h2 .em {
+  font-style: italic;
+  color: var(--pacific-deep);
+}
+
+.hire p {
+  margin-top: 1.3rem;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.hire .hire-cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.hire .hire-media {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line-light);
+  box-shadow: 0 40px 90px -48px rgb(4 64 78 / 45%);
+  aspect-ratio: 16 / 10;
+  background: var(--arctic-900);
+}
+
+.hire .hire-media video,
+.hire .hire-media .poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* default: video plays over the poster */
+.hire .hire-media .poster { display: none; }
+.hire #hire-video { display: block; }
+
+@media (width <= 840px) {
+  .hire .wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* reduced motion: freeze — show poster still, hide the video */
+@media (prefers-reduced-motion: reduce) {
+  .hire #hire-video { display: none !important; }
+  .hire .hire-media .poster { display: block !important; }
+}

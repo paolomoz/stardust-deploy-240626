@@ -1,325 +1,310 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * ⚠️  FONT LICENSING REQUIRED BEFORE GOING LIVE  ⚠️
+ * ---------------------------------------------------------------------------
+ * This site self-hosts two PROPRIETARY commercial typefaces for brand fidelity:
+ *   • FK Roman Standard  (display serif)  — Florian Karsten / commercial foundry
+ *   • Sharp Earth        (body sans)      — Sharp Type Co. (commercial)
+ * These woff2 files (styles/fonts/FKRomanStandard-*.woff2, SharpEarth-*.woff2)
+ * are embedded ONLY to reproduce the Pebl (Velocity Global) brand.
+ * DO NOT PUBLISH TO aem.live UNTIL FK ROMAN + SHARP EARTH EMBEDDING/WEBFONT
+ * LICENSES ARE CONFIRMED.  See styles/fonts/LICENSING.md for the remove path
+ * (delete the woff2 + their @font-face rules → stacks fall back to the
+ * metric-matched Times / Arial system fallbacks below).
+ * ---------------------------------------------------------------------------
  */
 
+/* ===========================================================================
+   FONTS — self-hosted, root-relative.  @font-face lives ONLY here (never in
+   head.html). body → metric-matched system fallback; body.session → brand.
+   =========================================================================== */
+@font-face {
+  font-family: "FK Roman Standard";
+  src: url("/styles/fonts/FKRomanStandard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Roman Standard";
+  src: url("/styles/fonts/FKRomanStandard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharp Earth";
+  src: url("/styles/fonts/SharpEarth-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharp Earth";
+  src: url("/styles/fonts/SharpEarth-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharp Earth";
+  src: url("/styles/fonts/SharpEarth-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the SANS body brand (Sharp Earth → Arial).
+   Computed from SharpEarth-Regular.woff2 (xAvg ratio vs Arial). */
+@font-face {
+  font-family: Arial;
+  src: local("Arial");
+  size-adjust: 129.36%;
+  ascent-override: 81.17%;
+  descent-override: 27.06%;
+  line-gap-override: 0%;
+}
+
+/* Metric-matched fallback for the SERIF display brand (FK Roman → Times).
+   Computed from FKRomanStandard-Regular.woff2 (xAvg ratio vs Times). */
+@font-face {
+  font-family: "Times New Roman";
+  src: local("Times New Roman");
+  size-adjust: 146.04%;
+  ascent-override: 65.74%;
+  descent-override: 21.91%;
+  line-gap-override: 0%;
+}
+
+/* ===========================================================================
+   TOKENS — pinned Pebl palette (lifted verbatim from the prototype :root)
+   arctic #04404e · pacific #6bdacd · soft mint ground
+   =========================================================================== */
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --arctic: #04404e;          /* signature deep teal */
+  --arctic-900: #022b34;      /* darker teal (footer, depth) */
+  --arctic-700: #05566a;      /* lifted teal */
+  --pacific: #6bdacd;         /* signature mint accent */
+  --pacific-deep: #2f9e90;    /* mint, contrast-safe on light */
+  --mint-bg: #e8f4f0;         /* soft arctic-mint page ground */
+  --mint-card: #f4faf7;       /* lifted card on mint */
+  --cream: #faf8f2;
+  --ink: #11201f;
+  --ink-soft: #3c4b49;
+  --line-dark: rgb(107 218 205 / 20%);
+  --line-light: rgb(4 64 78 / 14%);
+  --serif: "FK Roman Standard", "Times New Roman", times, serif;
+  --body: "Sharp Earth", arial, sans-serif;
+  --maxw: 1280px;
+  --pad: clamp(20px, 5vw, 64px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);   /* ease-out-expo-ish */
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
+  /* z scale */
+  --z-sticky: 100;
+  --z-overlay: 200;
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
+/* ===========================================================================
+   RESET
+   =========================================================================== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
 }
 
 body {
-  display: none;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  /* font gate: metric-matched Arial at first paint; brand swaps in on .session */
+  font-family: arial, sans-serif;
+  background: var(--mint-bg);
+  color: var(--ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  overflow-x: hidden;
 }
 
-body.appear {
+body.session { font-family: var(--body); }
+
+::selection {
+  background: var(--pacific);
+  color: var(--arctic-900);
+}
+
+img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-header {
-  height: var(--nav-height);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-header .header,
-footer .footer {
-  visibility: hidden;
-}
-
-header .header[data-block-status="loaded"],
-footer .footer[data-block-status="loaded"] {
-  visibility: visible;
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  scroll-margin: 40px;
+h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+p { text-wrap: pretty; }
 
-p,
-dl,
-ol,
-ul,
-pre,
-blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+/* ===========================================================================
+   HEADER — reserve height so the late postlcp.js fragment injection doesn't
+   shift the hero (CLS, #81). Bare <header> styled (applies before .header).
+   =========================================================================== */
+header {
+  min-height: 74px;
+  background: var(--arctic-900);
 }
 
-code,
-pre {
-  font-size: var(--body-font-size-s);
+@media (width <= 920px) {
+  header { min-height: 74px; }
 }
 
-pre {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: var(--light-color);
-  overflow-x: auto;
-  white-space: pre;
-}
+/* ===========================================================================
+   EDS SECTION SCAFFOLD
+   =========================================================================== */
+main .section { display: block; }
 
-main > div {
-  margin: 40px 16px;
-}
+main .section > .default-content,
+main .section > .block-content { display: block; }
 
-input,
-textarea,
-select,
-button {
-  font: inherit;
-}
+main > div,
+.has-template,
+div[data-status] { display: none; }
 
-/* links */
-a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
+/* Each block paints its own full-bleed section; remove default section margins. */
+main > .section { margin: 0; }
 
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
-
-/* buttons */
-p.button-wrapper {
-  margin: 12px 0;
-}
-
-a.button:any-link,
-button.button {
-  box-sizing: border-box;
+/* ===========================================================================
+   GLOBAL BUTTON SYSTEM — the prototype's .btn system, mapped to the EDS
+   author convention (decorateButton in ak.js):
+     <strong><a>          → .btn.btn-primary   (mint fill, dark text)
+     <em><a>              → .btn.btn-secondary (ghost / outline, surface-aware)
+     <em><strong><a>      → .btn.btn-accent    (dark fill, white text)
+   Surface variants are scoped to the owning block class (#41).
+   =========================================================================== */
+a.btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  margin: 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
-  font-weight: 500;
-  line-height: 1.25;
-  text-decoration: none;
+  gap: 0.55rem;
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 0.97rem;
+  letter-spacing: 0.01em;
+  padding: 0.92rem 1.85rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.25s var(--ease),
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease);
 }
 
-a.button[aria-disabled="true"],
-button.button:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
+a.btn:hover { transform: translateY(-2px); }
+
+a.btn:focus-visible {
+  outline: 3px solid var(--pacific);
+  outline-offset: 3px;
 }
 
-a.button.primary,
-button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+/* primary — mint fill (signature CTA) */
+a.btn-primary {
+  background: var(--pacific);
+  color: var(--arctic-900);
+  border-color: var(--pacific);
 }
 
-a.button.primary:hover,
-a.button.primary:focus-visible,
-button.button.primary:hover,
-button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+a.btn-primary:hover {
+  background: #fff;
+  border-color: #fff;
 }
 
-a.button.primary[aria-disabled="true"],
-a.button.primary[aria-disabled="true"]:hover,
-a.button.primary[aria-disabled="true"]:focus-visible,
-button.button.primary:disabled,
-button.button.primary:disabled:hover,
-button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+/* accent — dark teal fill (on light grounds) */
+a.btn-accent {
+  background: var(--arctic);
+  color: #fff;
+  border-color: var(--arctic);
 }
 
-a.button.secondary,
-button.button.secondary {
-  border-color: var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
+a.btn-accent:hover {
+  background: var(--arctic-900);
+  border-color: var(--arctic-900);
 }
 
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
+/* secondary — ghost/outline. Default = on-DARK (light outline + light text). */
+a.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgb(255 255 255 / 40%);
 }
 
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+a.btn-secondary:hover {
+  background: rgb(255 255 255 / 10%);
+  border-color: var(--pacific);
 }
 
-/* high-impact call-to-action */
-a.button.accent,
-button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
+/* On LIGHT sections, secondary uses a dark-tinted outline.
+   List the dark-surface blocks explicitly to exclude them. */
+main .section:not(.hero, .trust, .meet-pebl, .experience, .testimonial, .faq) a.btn-secondary {
+  color: var(--arctic);
+  border-color: var(--arctic);
 }
 
-a.button.accent:hover,
-a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
+main .section:not(.hero, .trust, .meet-pebl, .experience, .testimonial, .faq) a.btn-secondary:hover {
+  background: var(--arctic);
+  color: #fff;
+  border-color: var(--arctic);
 }
 
-a.button.accent[aria-disabled="true"],
-a.button.accent[aria-disabled="true"]:hover,
-a.button.accent[aria-disabled="true"]:focus-visible,
-button.button.accent:disabled,
-button.button.accent:disabled:hover,
-button.button.accent:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+/* button group spacing (decorateButton adds .btn-group to the parent) */
+.btn-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
 }
 
-main img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
+/* shared eyebrow/kicker primitive used across blocks */
+.kicker {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pacific-deep);
 }
 
-.icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
 
-.icon img {
-  height: 100%;
-  width: 100%;
-}
-
-/* sections */
-main > .section {
-  margin: 40px 0;
-}
-
-main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-main > .section:first-of-type {
-  margin-top: 0;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-}
-
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
-  margin: 0;
-  padding: 40px 0;
+  a.btn:hover { transform: none; }
 }

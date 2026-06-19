@@ -1,0 +1,69 @@
+/* experience — full-bleed photographic moment (lifted from prototype .experience, scoped) */
+.experience {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--arctic-900);
+}
+
+.experience .bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(2 43 52 / 90%) 0%, rgb(2 43 52 / 62%) 42%, rgb(2 43 52 / 15%) 78%, rgb(2 43 52 / 0%) 100%);
+}
+
+.experience .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  padding-block: clamp(96px, 13vw, 180px);
+}
+
+.experience .ex-copy {
+  max-width: 32ch;
+}
+
+.experience .kicker {
+  color: var(--pacific);
+  display: block;
+  margin-bottom: 1.1rem;
+}
+
+.experience h2 {
+  font-size: clamp(2.3rem, 4.8vw, 4rem);
+  color: #fff;
+  line-height: 1;
+}
+
+.experience h2 .em,
+.experience h2 em {
+  font-style: italic;
+  color: var(--pacific);
+}
+
+.experience p {
+  margin-top: 1.4rem;
+  font-size: 1.18rem;
+  color: rgb(255 255 255 / 90%);
+  max-width: 42ch;
+  line-height: 1.55;
+}
+
+.experience .ex-cta {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: .9rem;
+  flex-wrap: wrap;
+}

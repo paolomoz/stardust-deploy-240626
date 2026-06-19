@@ -1,0 +1,117 @@
+<style>
+  footer.footer {
+    background: #022b34;
+    color: rgb(255 255 255 / 62%);
+    padding-block: clamp(64px, 8vw, 96px) 40px;
+    font-family: "Sharp Earth", arial, sans-serif;
+  }
+
+  footer.footer .foot-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-inline: clamp(20px, 5vw, 64px);
+  }
+
+  footer.footer .foot-top {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: clamp(28px, 4vw, 48px);
+  }
+
+  footer.footer .foot-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+
+  footer.footer .foot-brand img {
+    height: 34px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  footer.footer .foot-col h4 {
+    font-weight: 700;
+    color: #6bdacd;
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+  }
+
+  footer.footer .foot-col a {
+    display: block;
+    padding-block: 0.32rem;
+    font-size: 0.95rem;
+    color: rgb(255 255 255 / 62%);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  footer.footer .foot-col a:hover { color: #6bdacd; }
+
+  footer.footer .foot-blurb {
+    max-width: 34ch;
+    font-size: 0.98rem;
+    color: rgb(255 255 255 / 60%);
+    line-height: 1.55;
+  }
+
+  footer.footer .foot-bottom {
+    margin-top: clamp(48px, 6vw, 72px);
+    padding-top: 24px;
+    border-top: 1px solid rgb(255 255 255 / 12%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.86rem;
+    color: rgb(255 255 255 / 50%);
+  }
+
+  @media (width <= 880px) {
+    footer.footer .foot-top { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (width <= 520px) {
+    footer.footer .foot-top { grid-template-columns: 1fr; }
+  }
+</style>
+<div class="foot-wrap">
+  <div class="foot-top">
+    <div>
+      <div class="foot-brand">
+        <img src="https://velocity-global-refined--stardust-deploy-240626--paolomoz.aem.page/img/velocity-global-refined/logo.svg" alt="Pebl" width="120" height="34">
+      </div>
+      <p class="foot-blurb">The AI-powered Employer of Record for teams that build everywhere. Hire, pay, and support talent across 185+ countries.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Platform</h4>
+      <a href="#eor">Employer of Record</a>
+      <a href="#payroll">Global Payroll</a>
+      <a href="#benefits">Global Benefits</a>
+      <a href="#immigration">Global Immigration</a>
+      <a href="#alfie">Alfie AI Assistant</a>
+    </div>
+    <div class="foot-col">
+      <h4>Who We Serve</h4>
+      <a href="#hr">Human Resources</a>
+      <a href="#finance">Finance Teams</a>
+      <a href="#legal">Legal Teams</a>
+      <a href="#technology">Technology</a>
+      <a href="#services">Professional Services</a>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#resources">Resources</a>
+      <a href="#newsroom">Newsroom</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Pebl (Velocity Global, LLC). All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use · Accessibility</span>
+  </div>
+</div>

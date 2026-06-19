@@ -1,0 +1,53 @@
+/* endcta — mint drench closing CTA, full FK Roman voice (Pebl) */
+.endcta {
+  background: var(--pacific);
+  color: var(--arctic-900);
+  text-align: center;
+  padding-block: clamp(90px, 12vw, 150px);
+}
+
+.endcta .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+}
+
+.endcta .kicker {
+  color: var(--arctic);
+  display: block;
+  margin-bottom: 1.3rem;
+}
+
+.endcta h2 {
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  line-height: 0.94;
+  color: var(--arctic-900);
+  max-width: 16ch;
+  margin-inline: auto;
+}
+
+.endcta h2 .em,
+.endcta h2 em {
+  font-style: italic;
+}
+
+.endcta .ec-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.6rem;
+  flex-wrap: wrap;
+}
+
+/* On the mint ground the secondary CTA needs a dark outline (the global
+   light-surface rule excludes none of these, but endcta is mint not white). */
+.endcta .ec-cta a.btn-secondary {
+  color: var(--arctic);
+  border-color: var(--arctic);
+}
+
+.endcta .ec-cta a.btn-secondary:hover {
+  background: var(--arctic);
+  color: #fff;
+  border-color: var(--arctic);
+}

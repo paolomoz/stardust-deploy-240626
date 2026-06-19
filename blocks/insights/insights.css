@@ -1,0 +1,136 @@
+/* insights — editorial index of photo-led cards (Pebl) */
+.insights {
+  padding-block: clamp(72px, 9vw, 120px);
+  background: var(--mint-bg);
+}
+
+.insights .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+}
+
+.insights .ins-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(32px, 4vw, 52px);
+}
+
+.insights h2 {
+  font-size: clamp(2.2rem, 4.6vw, 3.7rem);
+  color: var(--arctic-900);
+}
+
+.insights .all {
+  font-weight: 700;
+  color: var(--pacific-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+  transition: gap 0.25s var(--ease);
+}
+
+.insights .all:hover { gap: 0.8rem; }
+
+.insights .ins-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.5vw, 30px);
+}
+
+.insights .ins-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--mint-card);
+  border: 1px solid var(--line-light);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.insights .ins-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 34px 70px -40px rgb(4 64 78 / 40%);
+}
+
+.insights .ins-figure {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--arctic-900);
+}
+
+.insights .ins-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.insights .ins-card:hover .ins-figure img { transform: scale(1.04); }
+
+.insights .ins-card .ins-text {
+  padding: clamp(22px, 2.5vw, 30px);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.insights .ins-card .meta {
+  font-family: var(--body);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin-bottom: 0.8rem;
+}
+
+.insights .ins-card .meta strong {
+  color: var(--pacific-deep);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-right: 0.6rem;
+}
+
+.insights .ins-card h3 {
+  font-size: clamp(1.2rem, 1.9vw, 1.5rem);
+  color: var(--arctic-900);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  flex: 1;
+}
+
+.insights .ins-card .arrow {
+  margin-top: 1.4rem;
+  font-weight: 700;
+  color: var(--pacific-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: gap 0.3s var(--ease);
+}
+
+.insights .ins-card:hover .arrow { gap: 0.8rem; }
+
+@media (width <= 900px) {
+  .insights .ins-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (width <= 620px) {
+  .insights .ins-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .insights .ins-card,
+  .insights .ins-figure img,
+  .insights .all,
+  .insights .arrow { transition: none; }
+
+  .insights .ins-card:hover { transform: none; }
+
+  .insights .ins-card:hover .ins-figure img { transform: none; }
+}
