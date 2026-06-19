@@ -4,9 +4,9 @@
   padding: 96px 0;
 }
 
-.future .head .ht h2 { color: #fff; }
+main .section .future .head .ht h2 { color: #fff; }
 
-.future .head .idx { color: #ffb59a; }
+main .section .future .head .idx { color: #ffb59a; }
 
 .future .future-body {
   display: grid;
