@@ -11,3 +11,11 @@ helix-importer-ui
 # Ensure these files are tracked
 !CLAUDE.md
 !AGENTS.md
+
+# Secrets, local QA harness, generated artifacts
+.env
+.env.*
+qa/
+samples/
+brands/
+node_modules/
