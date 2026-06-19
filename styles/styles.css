@@ -1,102 +1,114 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * Tyson Foods — EDS foundation (converted from prototype home-B-proposed.html, Variant B).
+ * Display-typography amplification: Playfair Display (serif display) + Mulish (sans body).
+ * Both faces are SIL OFL 1.1 — freely redistributable / self-hostable. No licensing alert needed.
  */
 
+/* ---- self-hosted brand faces ---- */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/styles/fonts/playfair-display.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/styles/fonts/playfair-display-italic.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("/styles/fonts/mulish.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("/styles/fonts/mulish-italic.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ---- metric-matched fallbacks (zero-CLS swap) ---- */
+/* Sans body brand -> Arial. */
+@font-face {
+  font-family: "Arial";
+  src: local("Arial");
+  size-adjust: 131.62%;
+  ascent-override: 76.35%;
+  descent-override: 18.99%;
+  line-gap-override: 0%;
+}
+
+/* Serif display brand -> Times New Roman. */
+@font-face {
+  font-family: "Times New Roman";
+  src: local("Times New Roman");
+  size-adjust: 132.49%;
+  ascent-override: 81.67%;
+  descent-override: 18.94%;
+  line-gap-override: 0%;
+}
+
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* brand tokens lifted from prototype :root */
+  --red: #c8102e;
+  --maroon: #7f091c;
+  --ink: #33383d;
+  --body: #4a5157;
+  --bg: #fbf9f4;
+  --paper: #fff;
+  --line: #e4ddcf;
+  --display: "Playfair Display", times, "Times New Roman", serif;
+  --sans: "Mulish", arial, sans-serif;
+  --maxw: 1280px;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
+  /* EDS aliases */
+  --background-color: var(--bg);
+  --text-color: var(--body);
+  --link-color: var(--red);
+  --nav-height: 78px;
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
+/* ---- reset ---- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
 
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
+* { margin: 0; padding: 0; }
 
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  display: none;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
+  background: var(--bg);
+  color: var(--body);
+  font-family: arial, sans-serif; /* metric-matched fallback until session activates */
+  font-size: 16px;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-body.appear {
+body.session { font-family: var(--sans); }
+
+::selection { background: var(--red); color: #fff; }
+
+img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-header {
-  height: var(--nav-height);
-}
+a { color: inherit; text-decoration: none; }
 
-header .header,
-footer .footer {
-  visibility: hidden;
-}
-
-header .header[data-block-status="loaded"],
-footer .footer[data-block-status="loaded"] {
-  visibility: visible;
-}
+button { font: inherit; cursor: pointer; background: none; border: 0; }
 
 h1,
 h2,
@@ -104,222 +116,126 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  scroll-margin: 40px;
-}
-
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
-
-p,
-dl,
-ol,
-ul,
-pre,
-blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-}
-
-code,
-pre {
-  font-size: var(--body-font-size-s);
-}
-
-pre {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: var(--light-color);
-  overflow-x: auto;
-  white-space: pre;
-}
-
-main > div {
-  margin: 40px 16px;
-}
-
-input,
-textarea,
-select,
-button {
-  font: inherit;
-}
-
-/* links */
-a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
-
-/* buttons */
-p.button-wrapper {
-  margin: 12px 0;
-}
-
-a.button:any-link,
-button.button {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  margin: 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
+  font-family: var(--display);
+  color: var(--maroon);
   font-weight: 500;
-  line-height: 1.25;
-  text-decoration: none;
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.04;
 }
 
-a.button[aria-disabled="true"],
-button.button:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
+/* ---- reserve header height to avoid CLS from late fragment injection ---- */
+header {
+  min-height: 78px;
+  background: rgb(251 249 244 / 92%);
+  border-bottom: 1px solid var(--line);
 }
 
-a.button.primary,
-button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+@media (width <= 900px) {
+  header { min-height: 78px; }
 }
 
-a.button.primary:hover,
-a.button.primary:focus-visible,
-button.button.primary:hover,
-button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+/* ---- EDS section scaffold ---- */
+main .section { display: block; }
+
+main .section > .default-content,
+main .section > .block-content { display: block; }
+
+main > div,
+.has-template,
+div[data-status] { display: none; }
+
+main .section { display: block; }
+
+/* shared content container */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
-a.button.primary[aria-disabled="true"],
-a.button.primary[aria-disabled="true"]:hover,
-a.button.primary[aria-disabled="true"]:focus-visible,
-button.button.primary:disabled,
-button.button.primary:disabled:hover,
-button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+@media (width <= 600px) {
+  .wrap { padding: 0 20px; }
 }
 
-a.button.secondary,
-button.button.secondary {
-  border-color: var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
-}
-
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-/* high-impact call-to-action */
-a.button.accent,
-button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
-}
-
-a.button.accent:hover,
-a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
-}
-
-a.button.accent[aria-disabled="true"],
-a.button.accent[aria-disabled="true"]:hover,
-a.button.accent[aria-disabled="true"]:focus-visible,
-button.button.accent:disabled,
-button.button.accent:disabled:hover,
-button.button.accent:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-main img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-.icon {
+/* ---- global button system ---- */
+a.btn,
+a.button {
   display: inline-block;
-  height: 24px;
-  width: 24px;
+  background: var(--maroon);
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: 0;
+  transition: background 0.2s;
 }
 
-.icon img {
-  height: 100%;
-  width: 100%;
+a.btn:hover,
+a.button:hover { background: #5d0715; }
+
+/* secondary / text link with flourish */
+a.lnk {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--red);
 }
 
-/* sections */
-main > .section {
-  margin: 40px 0;
+a.lnk:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+/* shared eyebrow + section-head primitives (used by multiple blocks) */
+.eyebrow {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--red);
 }
 
-main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+.icon { display: inline-block; height: 24px; width: 24px; }
+
+.icon img { height: 100%; width: 100%; }
+
+/* shared section head: big serif title with index numeral (used by 5 blocks) */
+main .section .head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 52px;
 }
 
-main > .section:first-of-type {
-  margin-top: 0;
+main .section .head .idx {
+  font-family: var(--display);
+  font-size: clamp(40px, 6vw, 84px);
+  font-weight: 400;
+  color: var(--red);
+  line-height: 0.8;
+  opacity: 0.85;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
+main .section .head .ht h2 {
+  font-family: var(--display);
+  font-size: clamp(40px, 5.4vw, 76px);
+  font-weight: 500;
+  color: var(--maroon);
+  margin-bottom: 14px;
+}
+
+main .section .head .ht p {
+  font-size: 18px;
+  max-width: 60ch;
+  color: var(--body);
+}
+
+@media (width <= 900px) {
+  main .section .head {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
-}
-
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
-  margin: 0;
-  padding: 40px 0;
 }

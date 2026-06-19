@@ -1,37 +1,52 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
+.hero {
+  padding: 90px 0 70px;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
-}
+.hero .eyebrow { margin-bottom: 22px; }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  font-family: var(--display);
+  font-size: clamp(54px, 10vw, 148px);
+  line-height: 0.92;
+  font-weight: 500;
+  color: var(--maroon);
+  letter-spacing: -0.015em;
 }
 
-.hero picture {
+.hero h1 em { font-style: italic; color: var(--red); }
+
+.hero .meta {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.hero .lede {
+  max-width: 44ch;
+  font-size: 19px;
+  color: var(--body);
+}
+
+.hero .figure {
+  margin-top: 56px;
+  position: relative;
+  aspect-ratio: 21 / 8;
+  background: url("/img/tyson/blog-grilling.jpg") center 58% / cover no-repeat;
+  border-top: 5px solid var(--red);
+}
+
+.hero .figcap {
   position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
+  left: 0;
+  bottom: 0;
+  background: var(--maroon);
+  color: #fff;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 19px;
+  padding: 12px 22px;
 }

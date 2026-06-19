@@ -1,0 +1,43 @@
+.future {
+  background: var(--maroon);
+  color: #fff;
+  padding: 96px 0;
+}
+
+.future .head .ht h2 { color: #fff; }
+
+.future .head .idx { color: #ffb59a; }
+
+.future .future-body {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.future .future-body p {
+  color: rgb(255 255 255 / 92%);
+  font-size: 19px;
+  margin-bottom: 26px;
+}
+
+.future .actions a.btn,
+.future .actions a.button {
+  background: #fff;
+  color: var(--maroon);
+}
+
+.future .actions a.btn:hover,
+.future .actions a.button:hover { background: rgb(255 255 255 / 85%); }
+
+.future .figure {
+  aspect-ratio: 4 / 3;
+  background: url("/img/tyson/blog-chicken.jpg") center / cover no-repeat;
+}
+
+@media (width <= 900px) {
+  .future { padding: 64px 0; }
+
+  .future .future-body { grid-template-columns: 1fr; }
+}

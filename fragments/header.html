@@ -1,0 +1,128 @@
+<style>
+  header.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(251 249 244 / 92%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  header.header .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  header.header .mainnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+  }
+
+  header.header .logo {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--maroon);
+  }
+
+  header.header .logo span { color: var(--red); }
+
+  header.header nav.primary {
+    display: flex;
+    gap: 32px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  header.header nav.primary a:hover { color: var(--maroon); }
+
+  header.header .util {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  header.header .util a:hover { color: var(--maroon); }
+
+  /* mobile menu (CSS-only checkbox hack) */
+  header.header .mnav-toggle { display: none; }
+
+  header.header .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  header.header .burger span {
+    width: 26px;
+    height: 2px;
+    background: var(--maroon);
+    display: block;
+  }
+
+  @media (width <= 900px) {
+    header.header .burger { display: flex; }
+
+    header.header nav.primary,
+    header.header .util {
+      position: fixed;
+      inset: 78px 0 auto;
+      flex-direction: column;
+      gap: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+      padding: 0 32px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    header.header nav.primary a,
+    header.header .util a {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 16px;
+    }
+
+    header.header .mnav-toggle:checked ~ nav.primary {
+      max-height: 60vh;
+      padding: 8px 32px;
+    }
+
+    header.header .mnav-toggle:checked ~ .util {
+      top: auto;
+      max-height: 40vh;
+      padding: 8px 32px;
+    }
+  }
+</style>
+<div class="wrap mainnav">
+  <input type="checkbox" id="mnav-toggle" class="mnav-toggle" aria-hidden="true">
+  <div class="logo">Tyson<span>.</span></div>
+  <nav class="primary" aria-label="Primary">
+    <a href="/tyson/">Who We Are</a>
+    <a href="/tyson/">Innovation</a>
+    <a href="/tyson/#brands">Our Brands</a>
+    <a href="/tyson/">Sustainability</a>
+    <a href="/tyson/#feed">The Feed</a>
+  </nav>
+  <div class="util">
+    <a href="/tyson/">Investors</a>
+    <a href="/tyson/">Careers</a>
+    <a href="/tyson/">Search</a>
+  </div>
+  <label for="mnav-toggle" class="burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+</div>

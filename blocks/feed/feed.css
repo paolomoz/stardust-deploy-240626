@@ -1,0 +1,39 @@
+.feed {
+  background: var(--bg);
+  padding: 96px 0;
+}
+
+.feed .feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feed .feed-card .ph {
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 18px;
+}
+
+.feed .feed-card h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  color: var(--maroon);
+  font-size: 24px;
+  line-height: 1.16;
+  margin-bottom: 10px;
+}
+
+.feed .feed-card p {
+  font-family: var(--sans);
+  font-size: 15.5px;
+  margin-bottom: 14px;
+  color: var(--body);
+}
+
+@media (width <= 900px) {
+  .feed { padding: 64px 0; }
+
+  .feed .feed-grid { grid-template-columns: 1fr; }
+}

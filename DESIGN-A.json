@@ -1,0 +1,6 @@
+{
+  "colors": { "background": "#FFFFFF", "surface": "#FBF9F4", "text": "#4A5157", "primary": "#C8102E", "primaryDeep": "#7F091C", "onPrimary": "#FFFFFF" },
+  "typography": { "display": "Sentinel A, 'Playfair Display', Georgia, serif", "body": "'Proxima Nova', system-ui, -apple-system, sans-serif" },
+  "rounded": "0px",
+  "extensions": { "mode": "A", "voice": { "tagline": "We feed the world like family." } }
+}

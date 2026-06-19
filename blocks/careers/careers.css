@@ -1,0 +1,28 @@
+.careers { padding: 96px 0; }
+
+.careers .body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.careers blockquote {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(26px, 3vw, 40px);
+  color: var(--maroon);
+  line-height: 1.2;
+}
+
+.careers .body p {
+  font-size: 18px;
+  margin: 0 0 24px;
+  color: var(--body);
+}
+
+@media (width <= 900px) {
+  .careers { padding: 64px 0; }
+
+  .careers .body { grid-template-columns: 1fr; }
+}
