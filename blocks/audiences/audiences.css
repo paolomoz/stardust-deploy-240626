@@ -1,0 +1,55 @@
+/* audiences -- white */
+.audiences {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.twoup {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+  padding-block: clamp(56px, 7vw, 92px);
+}
+
+.twoup h2 { font-size: clamp(2.4rem, 5vw, 4rem); }
+
+.twoup .lead {
+  margin-top: 18px;
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+.aud-list {
+  display: grid;
+  gap: 16px;
+}
+
+.aud {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: 26px;
+}
+
+.aud .k {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.aud h4 {
+  font-size: 1.25rem;
+  margin-top: 6px;
+}
+
+.aud p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+@media (width <= 900px) {
+  .twoup { grid-template-columns: 1fr; }
+}

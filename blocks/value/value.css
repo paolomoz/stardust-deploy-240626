@@ -1,0 +1,64 @@
+/* value -- white canvas */
+.value {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding-block: clamp(56px, 7vw, 92px);
+}
+
+.value h2 {
+  margin-top: 18px;
+  font-size: clamp(2.6rem, 5.5vw, 5rem);
+  line-height: 0.96;
+}
+
+.value .rt p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+.value .rt .row {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  align-items: flex-start;
+}
+
+.value .rt .row .n {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--purple);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+}
+
+.value .rt .row .n.y {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.value .rt .row b {
+  font-weight: 500;
+  display: block;
+  font-size: 1.05rem;
+}
+
+.value .rt .row span {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+@media (width <= 900px) {
+  .value-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,21 @@
+/* statement -- purple band #2 */
+.statement {
+  background: var(--purple);
+  color: var(--white);
+  padding-block: clamp(56px, 7vw, 92px);
+  text-align: center;
+}
+
+.statement h2 {
+  font-size: clamp(2.8rem, 8vw, 6.6rem);
+  line-height: 0.94;
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+.statement .sub {
+  margin-top: 18px;
+  font-size: 1.15rem;
+  color: var(--yellow);
+  font-weight: 500;
+}

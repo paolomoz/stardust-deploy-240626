@@ -1,0 +1,81 @@
+/* demo -- purple band #3 */
+.demo {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding-block: clamp(56px, 7vw, 92px);
+}
+
+.demo h2 {
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  line-height: 0.98;
+}
+
+.demo p {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  color: var(--muted-light);
+  max-width: 42ch;
+}
+
+.demo .cta {
+  margin-top: 26px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.demo-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: 0 24px 48px rgb(0 0 0 / 25%);
+  overflow: hidden;
+  color: var(--ink);
+  padding: 22px;
+}
+
+.demo-card .k {
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.demo-card h4 {
+  margin: 6px 0 14px;
+  font-size: 1.15rem;
+}
+
+.demo-card .meter-row { margin-top: 12px; }
+.demo-card .meter-row:first-of-type { margin-top: 0; }
+
+.demo-card .ml {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.demo-card .meter {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--surface);
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.demo-card .meter span {
+  display: block;
+  height: 100%;
+  background: var(--purple);
+}
+.demo-card .meter.y span { background: var(--yellow); }
+
+@media (width <= 900px) {
+  .demo-grid { grid-template-columns: 1fr; }
+}

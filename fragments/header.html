@@ -1,0 +1,106 @@
+<style>
+  header.header { font-family: inherit; }
+  header.header .promo {
+    background: var(--purple);
+    color: var(--white);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 9px 16px;
+  }
+  header.header .promo a { color: var(--yellow); font-weight: 500; text-decoration: underline; }
+
+  header.header .bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(255 255 255 / 94%);
+    backdrop-filter: blur(10px);
+    border-bottom: var(--border);
+  }
+  header.header .nav { display: flex; align-items: center; gap: 32px; height: 68px; }
+  header.header .logo {
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
+    color: var(--purple);
+  }
+  header.header .logo b { color: var(--black); }
+  header.header .nav-links {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 0 0 8px;
+    padding: 0;
+  }
+  header.header .nav-links a { padding: 6px 0; color: var(--ink); opacity: 0.85; }
+  header.header .nav-links a:hover { opacity: 1; color: var(--purple); }
+  header.header .spacer { flex: 1; }
+  header.header .auth { display: flex; align-items: center; gap: 18px; }
+  header.header .auth .login { font-weight: 500; font-size: 0.95rem; }
+
+  header.header .btn-y {
+    display: inline-flex;
+    align-items: center;
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 12px 22px;
+    border-radius: var(--radius-btn);
+    transition: transform 0.18s ease;
+  }
+  header.header .btn-y:hover { transform: translateY(-2px); }
+
+  /* CSS-only mobile menu (checkbox hack -- fragment JS is inert) */
+  header.header #mnav-toggle { position: absolute; left: -9999px; }
+  header.header .burger {
+    display: none;
+    font-size: 1.6rem;
+    color: var(--purple);
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  @media (max-width: 900px) {
+    header.header .nav-links,
+    header.header .auth .login { display: none; }
+    header.header .burger { display: block; }
+    header.header #mnav-toggle:checked ~ .bar .nav-links {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      margin: 0;
+      padding: 12px 24px 20px;
+      background: var(--white);
+      border-bottom: var(--border);
+    }
+    header.header #mnav-toggle:checked ~ .bar .nav-links a { padding: 12px 0; opacity: 1; }
+  }
+</style>
+
+<div class="promo">Smartly named a Leader in cross-platform AI advertising. <a href="/#demo">See how it works &rarr;</a></div>
+
+<input type="checkbox" id="mnav-toggle" aria-hidden="true">
+<div class="bar">
+  <div class="wrap nav">
+    <a class="logo" href="/">Smart<b>ly</b></a>
+    <ul class="nav-links">
+      <li><a href="/platform-overview">Platform</a></li>
+      <li><a href="/#solutions">Solutions</a></li>
+      <li><a href="/#resources">Resources</a></li>
+      <li><a href="/#company">Company</a></li>
+    </ul>
+    <span class="spacer"></span>
+    <div class="auth">
+      <a class="login" href="/login">Log in</a>
+      <a class="btn-y" href="/#demo">Get a Demo</a>
+    </div>
+    <label class="burger" for="mnav-toggle" aria-label="Toggle menu">&#9776;</label>
+  </div>
+</div>
