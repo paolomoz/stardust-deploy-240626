@@ -59,6 +59,12 @@
   background: var(--arctic-900);
 }
 
+.meet-pebl .meet-visual picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .meet-pebl .meet-visual img {
   width: 100%;
   height: 100%;

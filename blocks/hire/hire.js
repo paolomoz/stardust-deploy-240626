@@ -81,15 +81,50 @@ export default async function decorate(block) {
   }
 
   // --- media column (poster + video) — built, not authored ---
+  // This video is below the fold and 5.4MB; it must NOT download on first paint.
+  // The poster (webp + jpg) shows immediately; the <video> is preload=none with
+  // no <source> attached, and is only loaded + played when the section nears the
+  // viewport (IntersectionObserver, rootMargin 200px).
   const media = document.createElement('figure');
   media.className = 'hire-media';
   media.setAttribute('aria-hidden', 'true');
   media.innerHTML = `
-    <img class="poster" src="${BASE}/pebl-og-img.jpg" alt="" aria-hidden="true">
-    <video id="hire-video" autoplay muted loop playsinline preload="none"
+    <picture>
+      <source type="image/webp" srcset="${BASE}/pebl-og-img.webp">
+      <img class="poster" src="${BASE}/pebl-og-img.jpg" alt="" aria-hidden="true"
+           loading="lazy" decoding="async" width="1100" height="619">
+    </picture>
+    <video id="hire-video" muted loop playsinline preload="none"
            poster="${BASE}/pebl-og-img.jpg">
-      <source src="${BASE}/hire-anywhere.mp4" type="video/mp4">
     </video>`;
+
+  const startHireVideo = () => {
+    const video = media.querySelector('#hire-video');
+    if (!video || video.dataset.loaded) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    video.dataset.loaded = 'true';
+    const src = document.createElement('source');
+    src.src = `${BASE}/hire-anywhere.mp4`;
+    src.type = 'video/mp4';
+    video.append(src);
+    video.load();
+    const p = video.play();
+    if (p && p.catch) p.catch(() => {});
+  };
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          startHireVideo();
+          obs.disconnect();
+        }
+      });
+    }, { rootMargin: '200px' });
+    io.observe(media);
+  } else {
+    startHireVideo();
+  }
 
   const wrap = document.createElement('div');
   wrap.className = 'wrap';

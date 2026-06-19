@@ -23,6 +23,8 @@
   background: var(--mint-card);
 }
 
+.g2-proof .g2-media picture { display: block; }
+
 .g2-proof .g2-media img {
   width: 100%;
   height: auto;

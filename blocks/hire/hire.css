@@ -57,6 +57,7 @@
 }
 
 .hire .hire-media video,
+.hire .hire-media picture,
 .hire .hire-media .poster {
   position: absolute;
   inset: 0;

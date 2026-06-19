@@ -78,7 +78,13 @@ export default async function decorate(block) {
 
   const visual = document.createElement('div');
   visual.className = 'meet-visual';
-  visual.innerHTML = `<img src="${BASE}/pebl-og-img.jpg" alt="The Pebl platform: hire, pay, and support global teams in one place." loading="lazy">`;
+  visual.innerHTML = `
+    <picture>
+      <source type="image/webp" srcset="${BASE}/pebl-og-img.webp">
+      <img src="${BASE}/pebl-og-img.jpg"
+           alt="The Pebl platform: hire, pay, and support global teams in one place."
+           loading="lazy" decoding="async" width="1100" height="619">
+    </picture>`;
 
   const wrap = document.createElement('div');
   wrap.className = 'wrap';

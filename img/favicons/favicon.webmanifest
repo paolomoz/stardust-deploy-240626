@@ -1,0 +1,10 @@
+{
+  "name": "Pebl",
+  "short_name": "Pebl",
+  "icons": [
+    { "src": "/img/favicons/favicon-180.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#04404e",
+  "background_color": "#04404e",
+  "display": "standalone"
+}

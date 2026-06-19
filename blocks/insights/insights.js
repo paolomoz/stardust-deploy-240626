@@ -14,9 +14,9 @@
 
 const BASE = '/img/velocity-global-refined';
 const CARD_IMAGES = [
-  'insight-hiring-report.jpg',
-  'insight-rapid7.jpg',
-  'insight-eor.jpg',
+  { base: 'insight-hiring-report', w: 900, h: 472 },
+  { base: 'insight-rapid7', w: 900, h: 643 },
+  { base: 'insight-eor', w: 900, h: 643 },
 ];
 
 export default async function decorate(block) {
@@ -91,11 +91,15 @@ export default async function decorate(block) {
     // figure
     const fig = document.createElement('div');
     fig.className = 'ins-figure';
-    const img = document.createElement('img');
-    img.src = `${BASE}/${CARD_IMAGES[i] || CARD_IMAGES[CARD_IMAGES.length - 1]}`;
-    img.alt = titleNode ? titleNode.textContent.trim() : '';
-    img.loading = 'lazy';
-    fig.append(img);
+    const meta = CARD_IMAGES[i] || CARD_IMAGES[CARD_IMAGES.length - 1];
+    const alt = titleNode ? titleNode.textContent.trim() : '';
+    fig.innerHTML = `
+      <picture>
+        <source type="image/webp" srcset="${BASE}/${meta.base}.webp">
+        <img src="${BASE}/${meta.base}.jpg" loading="lazy" decoding="async"
+             width="${meta.w}" height="${meta.h}">
+      </picture>`;
+    fig.querySelector('img').alt = alt;
     card.append(fig);
 
     const txt = document.createElement('div');

@@ -19,6 +19,7 @@
 }
 
 .hero .hero-media video,
+.hero .hero-media picture,
 .hero .hero-media .poster {
   position: absolute;
   inset: 0;

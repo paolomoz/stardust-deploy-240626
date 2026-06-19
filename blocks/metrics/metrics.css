@@ -52,7 +52,8 @@
   font-family: var(--body);
   font-weight: 400;
   font-size: 0.92rem;
-  color: rgb(4 64 78 / 72%);
+  /* AA-safe: same brand teal, raised to 90% opacity → 5.48:1 on --pacific (was 72% = 3.68:1) */
+  color: rgb(4 64 78 / 90%);
   max-width: 30ch;
 }
 

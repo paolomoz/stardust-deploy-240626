@@ -55,7 +55,8 @@
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.05rem;
-  color: var(--pacific-deep);
+  /* AA-safe darker brand teal on --mint-bg (5.27:1). --pacific-deep was 2.9:1. */
+  color: #157065;
   padding-top: 0.35rem;
 }
 

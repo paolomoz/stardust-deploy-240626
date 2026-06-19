@@ -83,11 +83,13 @@ export default async function decorate(block) {
   // --- media column (fixed asset) ---
   const figure = document.createElement('figure');
   figure.className = 'g2-media';
-  const img = document.createElement('img');
-  img.src = `${BASE}/content-1.jpg`;
-  img.alt = 'Pebl rated 4.7 stars and #1 on G2 for compliance, with five G2 badges.';
-  img.loading = 'lazy';
-  figure.append(img);
+  figure.innerHTML = `
+    <picture>
+      <source type="image/webp" srcset="${BASE}/content-1.webp">
+      <img src="${BASE}/content-1.jpg"
+           alt="Pebl rated 4.7 stars and #1 on G2 for compliance, with five G2 badges."
+           loading="lazy" decoding="async" width="1200" height="910">
+    </picture>`;
 
   const wrap = document.createElement('div');
   wrap.className = 'wrap';

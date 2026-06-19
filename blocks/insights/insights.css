@@ -63,6 +63,12 @@
   background: var(--arctic-900);
 }
 
+.insights .ins-figure picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .insights .ins-figure img {
   width: 100%;
   height: 100%;

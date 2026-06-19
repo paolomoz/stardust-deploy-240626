@@ -300,7 +300,9 @@ main .section:not(.hero, .trust, .meet-pebl, .experience, .testimonial, .faq) a.
   font-size: 0.74rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--pacific-deep);
+  /* AA-safe darker brand teal on light grounds (5.27:1 on --mint-bg).
+     Dark-section blocks override to --pacific. (--pacific-deep #2f9e90 = 2.9:1, fails) */
+  color: var(--kicker-ink, #157065);
 }
 
 @media (prefers-reduced-motion: reduce) {

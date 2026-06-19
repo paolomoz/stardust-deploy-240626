@@ -37,13 +37,13 @@ export default async function decorate(block) {
   const linkP = nodes.find((n) => n.matches?.('p') && n.querySelector('a'));
   const whoP = nodes.find((n) => n.matches?.('p') && n !== quoteNode && !n.querySelector('a'));
 
-  // background plane
-  const bg = document.createElement('img');
-  bg.className = 'bg';
-  bg.src = `${BASE}/testimonials-water-real.jpg`;
-  bg.alt = '';
-  bg.setAttribute('aria-hidden', 'true');
-  bg.loading = 'lazy';
+  // background plane (webp + jpg fallback)
+  const bgPic = document.createElement('picture');
+  bgPic.className = 'bg';
+  bgPic.innerHTML = `
+    <source type="image/webp" srcset="${BASE}/testimonials-water-real.webp">
+    <img src="${BASE}/testimonials-water-real.jpg" alt="" aria-hidden="true"
+         loading="lazy" decoding="async" width="1600" height="681">`;
 
   const wrap = document.createElement('div');
   wrap.className = 'wrap';
@@ -85,5 +85,5 @@ export default async function decorate(block) {
 
   if (attr.childNodes.length) wrap.append(attr);
 
-  block.replaceChildren(bg, wrap);
+  block.replaceChildren(bgPic, wrap);
 }

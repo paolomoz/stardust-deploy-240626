@@ -30,10 +30,14 @@
     filter: brightness(0) invert(1);
   }
 
-  footer.footer .foot-col h4 {
+  /* Promoted h4 → h3 for correct heading order (no h2→h4 jump). Visual size is
+     pinned here so the tag change is purely semantic — the look is unchanged. */
+  footer.footer .foot-col h3 {
+    font-family: "Sharp Earth", arial, sans-serif;
     font-weight: 700;
     color: #6bdacd;
     font-size: 0.76rem;
+    line-height: 1.4;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 1.1rem;
@@ -86,7 +90,7 @@
       <p class="foot-blurb">The AI-powered Employer of Record for teams that build everywhere. Hire, pay, and support talent across 185+ countries.</p>
     </div>
     <div class="foot-col">
-      <h4>Platform</h4>
+      <h3>Platform</h3>
       <a href="#eor">Employer of Record</a>
       <a href="#payroll">Global Payroll</a>
       <a href="#benefits">Global Benefits</a>
@@ -94,7 +98,7 @@
       <a href="#alfie">Alfie AI Assistant</a>
     </div>
     <div class="foot-col">
-      <h4>Who We Serve</h4>
+      <h3>Who We Serve</h3>
       <a href="#hr">Human Resources</a>
       <a href="#finance">Finance Teams</a>
       <a href="#legal">Legal Teams</a>
@@ -102,7 +106,7 @@
       <a href="#services">Professional Services</a>
     </div>
     <div class="foot-col">
-      <h4>Company</h4>
+      <h3>Company</h3>
       <a href="#about">About Us</a>
       <a href="#pricing">Pricing</a>
       <a href="#resources">Resources</a>

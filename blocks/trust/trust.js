@@ -64,6 +64,9 @@ export default async function decorate(block) {
     img.src = `${BASE}/${file}`;
     img.alt = alt;
     img.loading = 'lazy';
+    img.decoding = 'async';
+    img.width = 220;
+    img.height = 130;
     if (tall) img.className = 'tall';
     row.append(img);
   });

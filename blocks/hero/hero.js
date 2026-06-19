@@ -41,17 +41,47 @@ export default async function decorate(block) {
   const eyebrow = textPs[0];
   const lede = textPs[1];
 
-  // media plane (poster + video) — built, not authored
+  // media plane (poster + video) — built, not authored.
+  // The poster is the LCP element: an eager <img> (webp + jpg fallback) sized to
+  // the hero box, painted instantly. The video is preload=none and does NOT
+  // autoplay-load; its <source>s are attached + played only after window load
+  // (so it never competes with LCP). Below the hero the look is identical because
+  // the poster is the video's first frame.
   const media = document.createElement('div');
   media.className = 'hero-media';
   media.setAttribute('aria-hidden', 'true');
   media.innerHTML = `
-    <img class="poster" src="${BASE}/hero-poster.jpg" alt="" loading="eager">
-    <video id="hero-video" class="plane-a" autoplay muted loop playsinline preload="auto"
+    <picture>
+      <source type="image/webp" srcset="${BASE}/hero-poster.webp">
+      <img class="hero-poster poster" src="${BASE}/hero-poster.jpg" alt=""
+           fetchpriority="high" loading="eager" decoding="async" width="1600" height="787">
+    </picture>
+    <video id="hero-video" class="plane-a" muted loop playsinline preload="none"
            poster="${BASE}/hero-poster.jpg">
-      <source src="${BASE}/hero-mobile.mp4" type="video/mp4" media="(max-width:640px)">
-      <source src="${BASE}/hero-desktop.mp4" type="video/mp4">
     </video>`;
+
+  // Lazily build the video sources + start playback only after the page has
+  // loaded, so the 1.3–3.7MB mp4 never blocks LCP. Skip entirely under
+  // reduced-motion (CSS keeps the poster shown, video hidden).
+  const startHeroVideo = () => {
+    const video = media.querySelector('#hero-video');
+    if (!video || video.dataset.loaded) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    video.dataset.loaded = 'true';
+    const mobile = document.createElement('source');
+    mobile.src = `${BASE}/hero-mobile.mp4`;
+    mobile.type = 'video/mp4';
+    mobile.media = '(max-width:640px)';
+    const desktop = document.createElement('source');
+    desktop.src = `${BASE}/hero-desktop.mp4`;
+    desktop.type = 'video/mp4';
+    video.append(mobile, desktop);
+    video.load();
+    const p = video.play();
+    if (p && p.catch) p.catch(() => {});
+  };
+  if (document.readyState === 'complete') startHeroVideo();
+  else window.addEventListener('load', startHeroVideo, { once: true });
 
   const copy = document.createElement('div');
   copy.className = 'hero-copy';
