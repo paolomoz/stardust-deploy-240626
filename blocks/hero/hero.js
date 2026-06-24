@@ -61,6 +61,14 @@ export default async function decorate(block) {
 
   const bg = document.createElement('div');
   bg.className = 'hero-bg';
+  // The hero background is AUTHORABLE: an authored <picture>/<img> in the cell
+  // becomes the background (in content → authorable, in .plain.html, carries
+  // alt). If none is authored, hero.css paints the fixed brand asset fallback.
+  const picSrc = nodes.find((n) => n.matches('picture, img') || n.querySelector?.('picture, img'));
+  if (picSrc) {
+    const media = picSrc.matches('picture, img') ? picSrc : picSrc.querySelector('picture, img');
+    bg.append(media.cloneNode(true));
+  }
   const scrim = document.createElement('div');
   scrim.className = 'hero-scrim';
 

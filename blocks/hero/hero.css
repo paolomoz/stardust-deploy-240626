@@ -10,8 +10,11 @@
 .hero .hero-bg {
   position: absolute;
   inset: 0;
-  background: #3a0000 url("/img/qualcomm/hero-snapdragon-reality.webp") center / cover no-repeat;
+  background: #3a0000 url("/img/qualcomm/hero-snapdragon-reality.webp") center / cover no-repeat; /* fallback if no authored image */
 }
+
+.hero .hero-bg img,
+.hero .hero-bg picture { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 .hero .hero-scrim {
   position: absolute;
