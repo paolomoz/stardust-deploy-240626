@@ -1,0 +1,32 @@
+/* text — canonical prose / CTA band. Base + `feature` variant (full-bleed,
+   image-washed CTA — replaces the bespoke `insider`). Background is a
+   root-relative code-bus asset (browser-fetched; no DA ingestion). */
+
+.text { padding: 6rem 0; }
+.text .wrap { max-width: var(--maxw); margin: 0 auto; }
+.text .eyebrow { margin-bottom: 0.8rem; }
+.text h2 { font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; }
+.text p { margin: 1rem 0 2rem; font-size: 1.1rem; }
+.text .text-actions { display: inline-flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ---- variant: feature (red-washed image band) ---- */
+.text.feature {
+  position: relative;
+  overflow: hidden;
+  background-color: #1a0408;
+  background-image: url("/img/qualcomm/insider-6g.webp");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+.text.feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(228 0 43 / 92%) 0%, rgb(120 0 22 / 60%) 55%, rgb(0 0 0 / 20%) 100%);
+}
+.text.feature .wrap { position: relative; z-index: 2; }
+.text.feature .wrap > * { max-width: 620px; }
+.text.feature .eyebrow,
+.text.feature h2,
+.text.feature p { color: #fff; }

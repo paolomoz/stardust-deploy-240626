@@ -1,0 +1,107 @@
+/* cards — canonical card band. Base + brand VARIANTS (pillars / brands /
+   compact). The JS is generic; everything brand-specific lives here, keyed by
+   the variant class on the block. Imagery is CSS background on .card-media
+   (root-relative code-bus assets — fetched by the browser, never ingested, so
+   no about:error and no DA upload). */
+
+.cards { padding: 6rem 0; }
+.cards .section-head { max-width: 720px; margin-bottom: 3rem; }
+.cards .section-head .eyebrow { margin-bottom: 0.8rem; }
+.cards .section-head h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+.cards .section-head p { margin-top: 1rem; font-size: 1.1rem; }
+.cards .head-actions { display: inline-flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.6rem; }
+.cards .card-actions { display: inline-flex; gap: 1rem; flex-wrap: wrap; margin-top: auto; }
+.cards .cards-grid { display: grid; gap: 1.5rem; }
+
+/* ---- variant: pillars (light, 3-up, image-topped cards) ---- */
+.cards.pillars { background: var(--white); color: var(--ink); }
+.cards.pillars .section-head h2 { color: var(--ink); }
+.cards.pillars .section-head p { color: var(--mute-l); }
+.cards.pillars .cards-grid { grid-template-columns: repeat(3, 1fr); }
+.cards.pillars .card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-l);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e8ec;
+}
+.cards.pillars .card-media { aspect-ratio: 16 / 10; background-size: cover; background-position: center; }
+.cards.pillars .card:nth-child(1) .card-media { background-image: url("/img/qualcomm/pillar-compute.webp"); }
+.cards.pillars .card:nth-child(2) .card-media { background-image: url("/img/qualcomm/pillar-ai.webp"); }
+.cards.pillars .card:nth-child(3) .card-media { background-image: url("/img/qualcomm/pillar-connectivity.webp"); }
+.cards.pillars .card-body { padding: 1.8rem; display: flex; flex-direction: column; flex: 1; }
+.cards.pillars .card-body h3 { font-family: var(--display); font-size: 1.5rem; margin-bottom: 0.5rem; }
+.cards.pillars .card-body p { color: var(--mute-l); font-size: 1rem; flex: 1; margin-bottom: 1.4rem; }
+.cards.pillars .card-link { font-weight: 600; color: var(--blue); display: inline-flex; gap: 0.4rem; align-items: center; }
+
+/* ---- variant: brands (dark, feature + stack) ---- */
+.cards.brands { background: var(--black); color: var(--white); }
+.cards.brands .cards-grid { grid-template-columns: 1.4fr 1fr; }
+.cards.brands .card-media { display: none; }
+.cards.brands .eyebrow { color: var(--blue-accent); margin-bottom: 0.4rem; }
+.cards.brands .card h3 { font-family: var(--display); font-size: 1.6rem; margin-bottom: 0.5rem; }
+.cards.brands .card p { color: var(--mute-d); margin-bottom: 1.2rem; }
+.cards.brands .card-link { font-weight: 600; color: var(--blue-accent); display: inline-flex; gap: 0.4rem; align-items: center; }
+/* feature = first card: brand image as cover background, copy over it */
+.cards.brands .card:first-child {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #1a0408;
+}
+.cards.brands .card:first-child .card-media {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(120deg, rgb(0 0 0 / 75%), rgb(0 0 0 / 10%)), url("/img/qualcomm/brand-agentic-age.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cards.brands .card:first-child .card-body { position: relative; z-index: 2; padding: 2.4rem; }
+.cards.brands .card:first-child h3 { font-size: 2.2rem; margin: 0.6rem 0 0.8rem; }
+.cards.brands .card:first-child p { color: #e9eaee; max-width: 420px; }
+/* stack = remaining cards */
+.cards.brands .card:not(:first-child) {
+  border-radius: 16px;
+  background: var(--surface-d);
+  border: 1px solid rgb(255 255 255 / 8%);
+  padding: 2rem;
+}
+
+/* ---- variant: compact (gradient, intro column + 2x2 tiles) ---- */
+.cards.compact { background: linear-gradient(160deg, #05060a, #0c1530); color: var(--white); }
+.cards.compact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.cards.compact .section-head { margin-bottom: 0; max-width: none; }
+.cards.compact .section-head h2 em { font-style: normal; color: var(--blue-accent); }
+.cards.compact .section-head p { color: var(--mute-d); }
+.cards.compact .cards-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cards.compact .card-media { display: none; }
+.cards.compact .card {
+  background: rgb(255 255 255 / 4%);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 12px;
+  padding: 1.4rem;
+}
+.cards.compact .card h3 { font-family: var(--display); font-size: 1.15rem; margin-bottom: 0.4rem; }
+.cards.compact .card p { font-size: 0.92rem; margin: 0; color: var(--mute-d); }
+
+@media (max-width: 900px) {
+  .cards.pillars .cards-grid { grid-template-columns: 1fr; }
+  .cards.brands .cards-grid { grid-template-columns: 1fr; }
+  .cards.brands .card:first-child { grid-row: auto; }
+  .cards.compact .wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cards.compact .cards-grid { grid-template-columns: 1fr; }
+}
