@@ -59,17 +59,33 @@ export default async function decorate(block) {
 
   const row = document.createElement('div');
   row.className = 'logo-row';
-  LOGOS.forEach(([file, alt, tall]) => {
-    const img = document.createElement('img');
-    img.src = `${BASE}/${file}`;
-    img.alt = alt;
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    img.width = 220;
-    img.height = 130;
-    if (tall) img.className = 'tall';
-    row.append(img);
-  });
+
+  // Logos are AUTHORABLE (image as content): if the author supplied <img>s in
+  // the block, render those; otherwise fall back to the fixed logo wall so the
+  // original contract still renders.
+  const authored = [...block.querySelectorAll('img')];
+  if (authored.length) {
+    authored.forEach((src) => {
+      const img = document.createElement('img');
+      img.src = src.getAttribute('src');
+      img.alt = src.getAttribute('alt') || '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      row.append(img);
+    });
+  } else {
+    LOGOS.forEach(([file, alt, tall]) => {
+      const img = document.createElement('img');
+      img.src = `${BASE}/${file}`;
+      img.alt = alt;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.width = 220;
+      img.height = 130;
+      if (tall) img.className = 'tall';
+      row.append(img);
+    });
+  }
 
   wrap.append(label, row);
   block.replaceChildren(wrap);

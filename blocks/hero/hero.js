@@ -50,14 +50,41 @@ export default async function decorate(block) {
   const media = document.createElement('div');
   media.className = 'hero-media';
   media.setAttribute('aria-hidden', 'true');
-  media.innerHTML = `
+
+  // Poster is AUTHORABLE (image as content): use an authored <picture>/<img>
+  // from the block if present, else fall back to the fixed block asset so the
+  // original contract still renders. The video stays a fixed enhancement.
+  const authoredPic = block.querySelector('picture');
+  const authoredImg = block.querySelector('img');
+  let posterHTML;
+  let posterJpg = `${BASE}/hero-poster.jpg`;
+  if (authoredPic) {
+    const pic = authoredPic.cloneNode(true);
+    const img = pic.querySelector('img');
+    if (img) {
+      img.classList.add('hero-poster', 'poster');
+      img.setAttribute('fetchpriority', 'high');
+      img.setAttribute('loading', 'eager');
+      img.setAttribute('decoding', 'async');
+      img.alt = '';
+      posterJpg = img.getAttribute('src') || posterJpg;
+    }
+    posterHTML = pic.outerHTML;
+  } else if (authoredImg) {
+    posterJpg = authoredImg.getAttribute('src') || posterJpg;
+    posterHTML = `<img class="hero-poster poster" src="${posterJpg}" alt=""
+           fetchpriority="high" loading="eager" decoding="async">`;
+  } else {
+    posterHTML = `
     <picture>
       <source type="image/webp" srcset="${BASE}/hero-poster.webp">
       <img class="hero-poster poster" src="${BASE}/hero-poster.jpg" alt=""
            fetchpriority="high" loading="eager" decoding="async" width="1600" height="787">
-    </picture>
+    </picture>`;
+  }
+  media.innerHTML = `${posterHTML}
     <video id="hero-video" class="plane-a" muted loop playsinline preload="none"
-           poster="${BASE}/hero-poster.jpg">
+           poster="${posterJpg}">
     </video>`;
 
   // Lazily build the video sources + start playback only after the page has

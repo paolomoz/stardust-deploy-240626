@@ -87,7 +87,24 @@ export default async function decorate(block) {
 
     const numEl = document.createElement('div');
     numEl.className = 'num';
-    numEl.innerHTML = (num.innerHTML || num.textContent || '').trim();
+    // Author the figure as PLAIN TEXT ("185+", "24hr", "#1") — no raw <sup> in
+    // content (David's Model #15). Split a leading numeric core from a trailing
+    // unit ("+", "hr") and render the unit as <sup> here. If the author still
+    // supplied a <sup>, honour their markup unchanged (back-compat).
+    const rawNum = (num.innerHTML || num.textContent || '').trim();
+    if (/<sup/i.test(rawNum)) {
+      numEl.innerHTML = rawNum;
+    } else {
+      const m = num.textContent.trim().match(/^(\D*\d[\d.,]*)(.*)$/);
+      if (m && m[2]) {
+        numEl.textContent = m[1];
+        const sup = document.createElement('sup');
+        sup.textContent = m[2];
+        numEl.append(sup);
+      } else {
+        numEl.textContent = num.textContent.trim();
+      }
+    }
     metric.append(numEl);
 
     if (lbl) {

@@ -27,7 +27,8 @@
   max-width: 16ch;
 }
 
-.hire h2 .em {
+.hire h2 .em,
+.hire h2 em {
   font-style: italic;
   color: var(--pacific-deep);
 }

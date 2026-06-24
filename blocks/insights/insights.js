@@ -88,18 +88,33 @@ export default async function decorate(block) {
     const cardLink = linkP && linkP.querySelector('a');
     card.href = cardLink ? cardLink.getAttribute('href') || '#' : '#';
 
-    // figure
+    // figure — AUTHORABLE (image as content): use an authored <picture>/<img>
+    // from the card row if present, else fall back to the fixed block asset
+    // mapped by card index so the original contract still renders.
     const fig = document.createElement('div');
     fig.className = 'ins-figure';
-    const meta = CARD_IMAGES[i] || CARD_IMAGES[CARD_IMAGES.length - 1];
     const alt = titleNode ? titleNode.textContent.trim() : '';
-    fig.innerHTML = `
+    const authoredPic = row.querySelector('picture');
+    const authoredImg = row.querySelector('img');
+    if (authoredPic || authoredImg) {
+      const pic = (authoredPic || authoredImg).cloneNode(true);
+      const img = pic.matches('img') ? pic : pic.querySelector('img');
+      if (img) {
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        if (!img.alt) img.alt = alt;
+      }
+      fig.append(pic);
+    } else {
+      const meta = CARD_IMAGES[i] || CARD_IMAGES[CARD_IMAGES.length - 1];
+      fig.innerHTML = `
       <picture>
         <source type="image/webp" srcset="${BASE}/${meta.base}.webp">
         <img src="${BASE}/${meta.base}.jpg" loading="lazy" decoding="async"
              width="${meta.w}" height="${meta.h}">
       </picture>`;
-    fig.querySelector('img').alt = alt;
+      fig.querySelector('img').alt = alt;
+    }
     card.append(fig);
 
     const txt = document.createElement('div');
