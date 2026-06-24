@@ -31,6 +31,19 @@ export default async function decorate(block) {
   const eyebrow = textPs[0];
   const lede = textPs[1];
 
+  // editorial background: an authored <picture>/<img> becomes the band's
+  // background layer (authorable, in .plain.html, carries alt). CSS overlay/scrim
+  // sits above it; the fixed CSS background is the fallback when none is authored.
+  const out = [];
+  const picSrc = nodes.find((n) => n.matches('picture, img') || n.querySelector?.('picture, img'));
+  if (picSrc) {
+    const media = picSrc.matches('picture, img') ? picSrc : picSrc.querySelector('picture, img');
+    const bg = document.createElement('div');
+    bg.className = 'text-media';
+    bg.append(media.cloneNode(true));
+    out.push(bg);
+  }
+
   const wrap = document.createElement('div');
   wrap.className = 'wrap';
 
@@ -59,5 +72,6 @@ export default async function decorate(block) {
     wrap.append(actions);
   }
 
-  block.replaceChildren(wrap);
+  out.push(wrap);
+  block.replaceChildren(...out);
 }
