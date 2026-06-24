@@ -72,12 +72,16 @@ function renderCard(row) {
 
   const media = document.createElement('div');
   media.className = 'card-media';
-  media.setAttribute('aria-hidden', 'true');
   card.append(media);
 
   const body = document.createElement('div');
   body.className = 'card-body';
   flattenCells(row).forEach((el) => {
+    // editorial image: an authored <picture>/<img> goes in the media slot (in
+    // content → authorable, in .plain.html, carries alt). Decorative imagery is
+    // a CSS background on an empty .card-media instead (variant CSS).
+    const pic = el.matches('picture, img') ? el : el.querySelector('picture, img');
+    if (pic) { media.append(pic.cloneNode(true)); return; }
     const h = headingOf(el);
     if (h) {
       const h3 = document.createElement('h3');
