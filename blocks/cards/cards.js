@@ -131,8 +131,12 @@ export default async function decorate(block) {
   const rows = [...block.children];
   let headEls = [];
   let cardRows = rows;
-  const dcw = block.previousElementSibling;
-  if (dcw && dcw.classList.contains('default-content-wrapper')) {
+  // The default-content head is a sibling of the block's section-level WRAPPER
+  // (`.block-content` in this runtime), not of the block itself. Match both this
+  // runtime's `.default-content` and vanilla EDS `.default-content-wrapper`.
+  const blockWrapper = block.closest('.block-content') || block;
+  const dcw = blockWrapper.previousElementSibling;
+  if (dcw && (dcw.classList.contains('default-content') || dcw.classList.contains('default-content-wrapper'))) {
     headEls = [...dcw.children];
     dcw.remove();
   } else {
